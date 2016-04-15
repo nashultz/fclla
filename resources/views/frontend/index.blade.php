@@ -6,6 +6,6 @@
 
 @section('content')
     <div class="content">
-        <div class="title">Laravel 5</div>
+        <div class="title">Faulkner County Landlords Association<br><small>Coming Soon!</small></div>
     </div>
 @endsection
