@@ -11,3 +11,41 @@ body {
   background-size: cover;
   -o-background-size: cover;
 }
+
+.brand,
+.address-bar {
+  display: none;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.navbar-nav {
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
+.brand-before,
+.brand-name {
+  text-transform: capitalize;
+}
+
+.brand-before {
+  margin: 15px 0;
+}
+
+.brand-name {
+  margin: 0;
+  font-size: 4em;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 30px 15px;
+  background: #fff;
+  background: rgba(255,255,255,0.9);
+}
