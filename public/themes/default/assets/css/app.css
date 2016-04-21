@@ -6778,4 +6778,10 @@ a.bg-danger:focus, a.bg-danger:hover {
   overflow: visible;
   clip: auto; }
 
+body {
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  -o-background-size: cover; }
+
 /*# sourceMappingURL=app.css.map */
