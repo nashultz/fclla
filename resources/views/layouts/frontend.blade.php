@@ -8,7 +8,7 @@
     <link href="themes/default/assets/css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="brand"><!--<img src="#" alt="Faulkner County Landlord Association">--><h1>Faulkner County Landlord Association</h1></div>
+<div class="brand"><img src="themes/default/assets/img/logo.jpg" alt="Faulkner County Landlord Association"><h1>Faulkner County Landlord Association</h1></div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
