@@ -6780,7 +6780,7 @@ a.bg-danger:focus, a.bg-danger:hover {
 
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
-  background: url("../img/bg.jpg") no-repeat center center fixed;
+  background: url("../img/background.jpg") no-repeat center center fixed;
   background-size: cover;
   -o-background-size: cover; }
 
