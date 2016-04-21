@@ -64,6 +64,11 @@ body {
     color: #fff;
   }
 
+  .row {
+    -webkit-justify-content: center; /* Safari */
+    justify-content:   center;
+  }
+
   .address-bar {
     display: inherit;
     margin: 0;
