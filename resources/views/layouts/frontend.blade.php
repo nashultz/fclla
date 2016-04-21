@@ -50,5 +50,7 @@
 <div class="container">
     @yield('content')
 </div>
+
+<script src="themes/default/assets/js/all.js"></script>
 </body>
 </html>
