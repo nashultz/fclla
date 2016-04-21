@@ -8,7 +8,7 @@
     <link href="themes/default/assets/css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<div class="brand"><img src="themes/default/assets/img/logo.jpg" alt="Faulkner County Landlord Association"><h1>Faulkner County Landlord Association</h1></div>
+<div class="brand"><h1>Faulkner County Landlord Association</h1></div>
 
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
@@ -22,7 +22,7 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-            <a class="navbar-brand" href="index.html">Business Casual</a>
+            <a class="navbar-brand" href="index.html"><img src="themes/default/assets/img/logo.jpg" alt="Faulkner County Landlord Association"> Faulkner County Landlord Association</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
