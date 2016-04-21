@@ -12,7 +12,7 @@
 
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
-    <div class="container">
+    <div class="container"><div class="row">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -42,7 +42,7 @@
             </ul>
         </div>
         <!-- /.navbar-collapse -->
-    </div>
+    </div></div>
     <!-- /.container -->
 </nav>
 
