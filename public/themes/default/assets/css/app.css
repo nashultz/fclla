@@ -7983,7 +7983,7 @@ body {
     line-height: normal;
     color: #fff;
     display: table; }
-  .brand .h1 {
+  .brand h1 {
     text-align: center;
     display: table-cell;
     vertical-align: middle; }
