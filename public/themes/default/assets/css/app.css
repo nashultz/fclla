@@ -7951,6 +7951,10 @@ body {
   font-weight: 900;
   letter-spacing: 2px;
   height: auto !important;
+  display: inline;
+  font-size: 14px; }
+
+.navbar-brand > img {
   display: inline; }
 
 .navbar-nav {
