@@ -7931,7 +7931,10 @@ button.close {
   clip: auto; }
 
 body {
-  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
+
+.brand {
+  height: 500px;
   background: url("../img/background.jpg") no-repeat center center fixed;
   background-size: cover;
   -o-background-size: cover; }
