@@ -7949,7 +7949,9 @@ body {
 .navbar-brand {
   text-transform: uppercase;
   font-weight: 900;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  height: auto !important;
+  display: inline; }
 
 .navbar-nav {
   text-transform: uppercase;
