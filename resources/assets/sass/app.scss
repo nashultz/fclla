@@ -7,6 +7,12 @@ body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
+.container {
+  text-align: center;
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .brand {
   height: 300px;
   background: url('../img/background.jpg') no-repeat bottom center fixed;
@@ -14,12 +20,6 @@ body {
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
-  display: table;
-}
-
-.brand .h1 {
-  display: table-cell;
-  vertical-align: middle;
 }
 
 .brand,
@@ -62,7 +62,6 @@ body {
 
 @media screen and (min-width:768px) {
   .brand {
-    display: inherit;
     margin: 0;
     padding: 30px 0 10px;
     text-align: center;
@@ -72,6 +71,13 @@ body {
     font-weight: 700;
     line-height: normal;
     color: #fff;
+    display: table;
+  }
+
+  .brand .h1 {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
   }
 
   .row {
