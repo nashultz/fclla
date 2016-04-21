@@ -7935,7 +7935,10 @@ body {
 
 .brand {
   height: 300px;
-  background: url("../img/background.jpg") no-repeat bottom center fixed;
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-attachment: fixed;
   background-size: cover;
   -o-background-size: cover; }
 
