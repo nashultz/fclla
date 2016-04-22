@@ -7938,7 +7938,6 @@ body {
   background-image: url("../img/background.jpg");
   background-repeat: no-repeat;
   background-position: bottom center;
-  background-attachment: fixed;
   background-size: cover;
   -o-background-size: cover; }
 

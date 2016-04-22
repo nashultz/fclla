@@ -31,7 +31,7 @@ elixir(function(mix) {
 
     mix.scripts([
         'jquery.js', 'bootstrap.js', 'moment.js',
-        'simplemde.js'
+        'simplemde.js', 'app.js'
     ]);
 });
 
