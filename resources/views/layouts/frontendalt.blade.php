@@ -39,6 +39,8 @@
     @yield('content')
 </div>
 
+<div>&nbsp;</div><div class="clearfix"></div>
+
 <!-- Footer -->
 <footer class="text-center">
     <div class="footer-above">
