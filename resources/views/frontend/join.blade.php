@@ -1,57 +1,36 @@
-@extends('layouts.frontend')
+@extends('layouts.frontendalt')
 
 @section('page_title')
-    Home
+    Join
 @endsection
 
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-lg-8 col-lg-offset-2">
-            <h2>Welcome to the Faulkner County Landlord Association</h2>
-            <div>
-                The Faulkner County Landlord Association (FCLLA) holds monthly meetings with fellow landlords for the purpose of networking & educating one another.
-                The FCLLA has guest speakers each month that discusses current issues or problems that affect our industry.
-                By joining the FCLLA you help to enhance the professionalism and importance of Landlords in our community as
-                well as giving us a voice on state and local issues. In addition to education and networking, the FCLLA has
-                also secured discounts at participating businesses in the area for active FCLLA members. We also draw for door prizes
-                each month at our meetings.<br>
-                The Faulkner County Library located at 1900 Tyler St. in Conway, Arkansas. The meetings start at 7:00 pm.
-            </div>
-        </div>
+        <p class="col-lg-8 col-lg-offset-2">
+            <h2>Join the Faulkner County Landlord Association</h2>
+            <p>Help enhance the professionalism and importance of landlords in OUR COMMUNITY.</p>
+
+            <p>Please consider joining your local chapter.</p>
+
+            <p>Monthly Meetings:
+                <ul>
+                    <li>Networking with fellow landlords members.</li>
+                    <li>Guest speakers educate members on current issues and problems.</li>
+                    <li>Learn about discounts at participating local businesses.</li>
+                    <li>Monthly door prizes.</li>
+                </ul>
+            </p>
+            <p>Give landlords a united voice on state and local issues.
+                <ul>
+                    <li>Your membership dues help us have our voices heard by our lawmakers.</li>
+                    <li>This past year much has been accomplished for landlord rights, but work still needs to be done.</li>
+                    <li>Some of the laws, especially the eviction laws changed on August 1, 2007.</li>
+                    <li>These changes are beneficial to the landlords. Do you know what they are?</li>
+                </ul>
+            </p>
+            <p>You can join anytime.</p>
+        </div><div class="clearfix"></div>
     </div>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-lg-12">
-            <h3>2015-2016 Officers</h3>
-            <div class="col-lg-6 col-lg-offset-3">
-                <table class="table table-responsive table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td><strong>President</strong></td>
-                            <td>Mark Burrier</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vice President</strong></td>
-                            <td>Belina Boyd</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Treasurer</strong></td>
-                            <td>Connie Trent</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Secretary</strong></td>
-                            <td>Chris Gilden</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Board Director</strong></td>
-                            <td>Jerrill Smith</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div><div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+</div><div class="clearfix"></div>
 @endsection
