@@ -2,7 +2,7 @@
     <a href="/">Home</a>
 </li>
 <li>
-    <a href="#">Join</a>
+    <a href="join">Join</a>
 </li>
 <li>
     <a href="#">Blog</a>
