@@ -71,7 +71,10 @@
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>About FCLLA</h3>
-                    <p>The Faulkner County Landlord Association (FCLLA) holds monthly meetings with fellow landlords for the purpose of networking & educating one another.</p>
+                    <p>Faulkner County Landlord Association exists to provide our members with opportunities to become
+                        more successful and profitable property managers by networking with other area landlords, offering
+                        educational programs tailored to our individual businesses, and building a united voice to local
+                        and state law makers.</p>
                 </div>
             </div>
         </div>

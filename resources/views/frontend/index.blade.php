@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-lg-12">
+        <div class="col-lg-8 col-lg-offset-2">
             <h2>Welcome to the Faulkner County Landlord Association</h2>
             <div>
                 The Faulkner County Landlord Association (FCLLA) holds monthly meetings with fellow landlords for the purpose of networking & educating one another.
