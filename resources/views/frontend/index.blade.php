@@ -26,7 +26,7 @@
         <div class="col-lg-12">
             <h3>2015-2016 Officers</h3>
             <div class="col-lg-6 col-lg-offset-3">
-                <table class="table table-responsive table-striped">
+                <table class="table table-responsive table-bordered table-striped">
                     <tbody>
                         <tr>
                             <td><strong>President</strong></td>
@@ -50,7 +50,7 @@
                         </tr>
                     </tbody>
                 </table>
-            </div>
+            </div><div class="clearfix"></div>
         </div>
     </div>
 </div>
