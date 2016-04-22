@@ -11,10 +11,9 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+Route::get('/', 'PagesController@index')->name('home');
 
-Route::get('join', function () {
-    return view('frontend.join');
-});
+Route::get('join', 'PagesController@join')->name('join');
+
+Route::get('contact', 'ContactController@index')->name('contact');
+Route::post('contact', 'ContactController@send')->name('sendContact');
