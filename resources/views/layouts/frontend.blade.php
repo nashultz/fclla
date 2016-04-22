@@ -11,7 +11,7 @@
 <div class="brand"><h1>Faulkner County Landlord Association</h1></div>
 
 <!-- Navigation -->
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container"><div class="row">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
