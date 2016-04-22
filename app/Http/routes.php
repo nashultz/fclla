@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('frontend.index');
 });
+
+Route::get('join', function () {
+    return view('frontend.join');
+});
