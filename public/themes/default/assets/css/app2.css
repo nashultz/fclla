@@ -8024,6 +8024,14 @@ footer .footer-below {
   padding: 25px 0;
   background-color: #444444; }
 
+footer a {
+  color: #ffffff;
+  text-decoration: none; }
+
+footer a:hover {
+  color: #ffffff;
+  text-decoration: underline; }
+
 .btn-social {
   display: inline-block;
   width: 50px;
