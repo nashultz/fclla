@@ -69,7 +69,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="row">
-                <div class="footer-col col-lg-12">
+                <div class="col-lg-12">
                     <div class="text-center"><a href="{{route('disclaimers')}}" title="Disclaimers">Disclaimers</a> &mdash; <a href="{{route('mission')}}" title="Mission Statement">Mission Statement</a></div>
                 </div>
             </div>
