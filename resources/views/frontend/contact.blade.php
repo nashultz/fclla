@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="issuetype" class="col-sm-2 control-label">Type of Issue*:</label>
+                        <label for="issuetype" class="col-sm-2 control-label">Issue Type*:</label>
                         <div class="col-sm-10">
                             <select name="issuetype" class="form-control">
                                 <option class="disabled">-Select One-</option>
@@ -52,7 +52,7 @@
                     <div class="form-group">
                         <label for="messagebody" class="col-sm-2 control-label">Message*:</label>
                         <div class="col-sm-10">
-                            <input type="textarea" class="form-control" name="messagebody">
+                            <textarea class="form-control" name="messagebody"></textarea>
                         </div>
                     </div>
                     <div class="help-block">* denotes required fields.</div>
