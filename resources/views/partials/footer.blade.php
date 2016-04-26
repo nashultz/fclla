@@ -26,7 +26,7 @@
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <div class="text-center"><a href="{{route('disclaimers')}}" title="Disclaimers">Disclaimers</a> &mdash; <a href="{{route('mission')}}" title="Mission Statement">Mission Statement</a></div>
+                    <div class="text-center"><a href="{{route('legal')}}" title="Mission Statement and Legal Information">Legal</a></div>
                 </div>
             </div>
         </div>

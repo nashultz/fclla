@@ -18,14 +18,9 @@ class PagesController extends Controller
         return view('frontend.join');
     }
 
-    public function disclaimers()
+    public function legal()
     {
-        return view('frontend.disclaimers');
-    }
-
-    public function mission()
-    {
-        return view('frontend.mission');
+        return view('frontend.legal');
     }
 }
 

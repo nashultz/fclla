@@ -18,5 +18,4 @@ Route::get('join', 'PagesController@join')->name('join');
 Route::get('contact', 'ContactController@index')->name('contact');
 Route::post('contact', 'ContactController@send')->name('sendContact');
 
-Route::get('disclaimers', 'PagesController@disclaimers')->name('disclaimers');
-Route::get('mission', 'PagesController@mission')->name('mission');
+Route::get('legal', 'PagesController@legal')->name('legal');
