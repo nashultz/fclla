@@ -7,7 +7,7 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <p class="col-lg-8 col-lg-offset-2">
+        <div class="col-lg-8 col-lg-offset-2">
             <h2>Join the Faulkner County Landlord Association</h2>
             <p>Help enhance the professionalism and importance of landlords in OUR COMMUNITY.</p>
 
@@ -31,6 +31,12 @@
             </p>
             <p>You can join anytime.</p>
         </div><div class="clearfix"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h2>Membership</h2>
+            <p><a href="{{response()->download('theme/default/assets/file/FCCLAMembershipApplication2015-2016.pdf')}}" title="Print Application">Print Application</a></p>
+        </div>
     </div>
 </div><div class="clearfix"></div>
 @endsection
