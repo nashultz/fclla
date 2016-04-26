@@ -22,6 +22,13 @@ class PagesController extends Controller
     {
         return view('frontend.legal');
     }
+
+    public function downloadapp()
+    {
+        $file_path = 'themes/default/assets/files';
+        $filename = 'FCLLAMembershipApplication2015-2016.pdf';
+        return resource()->download($file_path, $filename);
+    }
 }
 
 
