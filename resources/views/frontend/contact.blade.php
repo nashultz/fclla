@@ -60,6 +60,9 @@
                         </div>
                     </div>
                     <div class="help-block">* denotes required fields.</div>
+                    <div class="form-group">
+                        <input type="submit" class="btn btn-success" value="Send Message">
+                    </div>
                 </form>
             </p>
         </div><div class="clearfix"></div>
