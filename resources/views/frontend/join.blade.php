@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Membership</h2>
-            <p><a href="{{response()->download('themes/default/assets/files/FCLLAMembershipApplication2015-2016.pdf')}}" title="Print Application">Print Application</a></p>
+            <p><a href="{{link('themes/default/assets/files/FCLLAMembershipApplication2015-2016.pdf')}}" title="Print Application">Print Application</a></p>
         </div>
     </div>
 </div><div class="clearfix"></div>
