@@ -25,7 +25,7 @@ class PagesController extends Controller
 
     public function downloadapp()
     {
-        $file_path = 'themes/default/assets/files';
+        $file_path = 'themes/default/assets/files/FCLLAMembershipApplication2015-2016.pdf';
         $filename = 'FCLLAMembershipApplication2015-2016.pdf';
         return response()->download($file_path, $filename);
     }
