@@ -41,7 +41,7 @@
                         </tr>
                         <tr>
                             <td><strong>Secretary</strong></td>
-                            <td>Chris Gilden</td>
+                            <td>Kris Gilden</td>
                         </tr>
                         <tr>
                             <td><strong>Board Director</strong></td>
