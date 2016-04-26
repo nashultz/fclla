@@ -35,8 +35,7 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Membership Application</h2>
-            <p><a href="{{route('downloadapp')}}" title="Print Application">Print Application</a></p>
-            <p>Mail Applications to:
+            <p><a href="{{route('downloadapp')}}" title="Print Application">Print Application</a> &mdash; Mail Applications to:
                 <ul>
                     <li>2125 Harkrider Suite 16, Conway AR 72032</li>
                 </ul>
