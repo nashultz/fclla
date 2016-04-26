@@ -12,6 +12,10 @@
             <p>We hope that you will find the information throughout this website helpful and informative.</p>
 
             <p>If we can be of further assistance to you please contact the FCLLA President via the form below:</p>
+        </div><div class="clearfix"></div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-lg-offset-3">
             <p>
                 <form class="form-horizontal">
                     <div class="form-group">
