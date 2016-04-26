@@ -14,9 +14,8 @@
                 The FCLLA has guest speakers each month that discusses current issues or problems that affect our industry.
                 By joining the FCLLA you help to enhance the professionalism and importance of Landlords in our community as
                 well as giving us a voice on state and local issues. In addition to education and networking, the FCLLA has
-                also secured discounts at participating businesses in the area for active FCLLA members. We also draw for door prizes
-                each month at our meetings.<br>
-                The Faulkner County Library located at 1900 Tyler St. in Conway, Arkansas. The meetings start at 7:00 pm.
+                also secured discounts at participating businesses in the area for active FCLLA members.<br><br>
+                The Faulkner County Library is located at 1900 Tyler St. in Conway, Arkansas. The meetings start at 7:00 pm.
             </div>
         </div>
     </div>
@@ -34,7 +33,7 @@
                         </tr>
                         <tr>
                             <td><strong>Vice President</strong></td>
-                            <td>Belina Boyd</td>
+                            <td>Belinda Boyd</td>
                         </tr>
                         <tr>
                             <td><strong>Treasurer</strong></td>
