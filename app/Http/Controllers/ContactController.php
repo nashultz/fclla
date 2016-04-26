@@ -24,5 +24,6 @@ class ContactController extends Controller
             $m->replyTo($contact->email, $contact->name);
             $m->bcc('nathon@nathonshultz.com', 'Nathon Shultz');
         });
+        flash()->success('Message was sent successfully!');
     }
 }
