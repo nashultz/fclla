@@ -18,6 +18,7 @@
         <div class="col-lg-6 col-lg-offset-3">
             <p>
                 <form action="contact" method="post" class="form-horizontal">
+                    {{csrf_field()}}
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">Name*:</label>
                         <div class="col-sm-10">
