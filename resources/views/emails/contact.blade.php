@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{$contact->issuetype}} from {{$contact->name}}</title>
+    <title>{{$issuetype}} from {{$name}}</title>
     <style>
         /* -------------------------------------
             GLOBAL
@@ -191,12 +191,12 @@
                     <tr>
                         <td>
                             <h2>Info</h2>
-                            <p>Name: {{$contact->name}}</p>
-                            <p>Email: {{$contact->email}}</p>
-                            <p>Is a member: {{$contact->member}}</p>
+                            <p>Name: {{$name}}</p>
+                            <p>Email: {{$email}}</p>
+                            <p>Is a member: {{$member}}</p>
                             <h2>Message</h2>
-                            <p>Issue Type: {{$contact->issuetype}}</p>
-                            <p>{{$contact->messagebody}}</p>
+                            <p>Issue Type: {{$issuetype}}</p>
+                            <p>{{$messagebody}}</p>
                         </td>
                     </tr>
                 </table>
