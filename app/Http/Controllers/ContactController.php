@@ -25,8 +25,8 @@ class ContactController extends Controller
 
         $data = array('name'=>$contName, 'email'=>$contEmail, 'issuetype'=>$contIssueType, 'member'=>$contMember, 'messagebody'=>$contMessageBody);
         Mail::send('emails.contact', $data, function ($m) use ($data) {
-            $m->from('info@fclla.info', 'Faulkner County Landlord Association');
-            $m->to('contact@fclla.info', 'FCLLA President')->subject('FCLLA - ' . $data['issuetype'] . ' from ' . $data['name']);
+            $m->from('info@fclla.org', 'Faulkner County Landlord Association');
+            $m->to('contact@fclla.org', 'FCLLA President')->subject('FCLLA - ' . $data['issuetype'] . ' from ' . $data['name']);
             $m->replyTo($data['email'], $data['name']);
             $m->bcc('nathon@nathonshultz.com', 'Nathon Shultz');
         });
