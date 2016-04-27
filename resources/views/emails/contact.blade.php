@@ -191,7 +191,7 @@
                     <tr>
                         <td>
                             <h2>Info</h2>
-                            <p>Name: {{->name}}</p>
+                            <p>Name: {{$contact->name}}</p>
                             <p>Email: {{$contact->email}}</p>
                             <p>Is a member: {{$contact->member}}</p>
                             <h2>Message</h2>
