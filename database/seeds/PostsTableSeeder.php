@@ -11,6 +11,6 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
-        factory(FCLLA\Post::class)->create(1);
+        factory(FCLLA\Post::class)->create();
     }
 }
