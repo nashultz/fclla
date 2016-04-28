@@ -15,7 +15,7 @@
                 By joining the FCLLA you help to enhance the professionalism and importance of Landlords in our community as
                 well as giving us a voice on state and local issues. In addition to education and networking, the FCLLA has
                 also secured discounts at participating businesses in the area for active FCLLA members.<br><br>
-                The Faulkner County Library is located at 1900 Tyler St. in Conway, Arkansas. The meetings start at 7:00 pm.
+                FCLLA meetings are held every third Thursday at the Faulkner County Library,  located at 1900 Tyler St. in Conway, Arkansas. The meetings start at 7:00 pm.
             </div>
         </div>
     </div>

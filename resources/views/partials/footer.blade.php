@@ -5,7 +5,7 @@
             <div class="row">
                 <div class="footer-col col-md-4">
                     <h3>Location</h3>
-                    <p>Faulkner County Library<br>1900 Tyler Street<br>Conway, AR  72034</p>
+                    <p>Faulkner County Landlord Association<br>2125 Harkrider Street<br>Suite 16<br>Conway, AR  72032</p>
                 </div>
                 <div class="footer-col col-md-4">
                     <h3>Around the Web</h3>
