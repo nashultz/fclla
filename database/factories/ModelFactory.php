@@ -26,7 +26,7 @@ $factory->define(FCLLA\Post::class, function (Faker\Generator $faker) {
         'title' => $faker->sentence,
         'slug' => $faker->slug,
         'excerpt' => $faker->paragraph,
-        'body' => $faker->paragraphs,
+        'body' => $faker->paragraph,
         'published_at' => $faker->dateTime
     ];
 });
