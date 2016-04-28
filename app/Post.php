@@ -21,7 +21,7 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function getAuthorAttribute()
+    public function setAuthorAttribute()
     {
         return 'Nathon Shultz';
     }
