@@ -21,3 +21,5 @@ Route::post('contact', 'ContactController@send')->name('sendContact');
 Route::get('legal', 'PagesController@legal')->name('legal');
 
 Route::get('download/application', 'PagesController@downloadapp')->name('downloadapp');
+
+Route::get('news', 'BlogController@index')->name('blogindex');
