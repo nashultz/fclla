@@ -20,6 +20,11 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function getAuthorAttribute()
+    {
+        return 'Nathon Shultz';
+    }
+
     public function getCreationAttribute()
     {
         return $this->published_at;
