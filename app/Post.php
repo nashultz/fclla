@@ -28,7 +28,7 @@ class Post extends Model
         return 'Nathon Shultz';
     }
 
-    public function getPublishedAtAttribute()
+    public function getPublishedAttribute()
     {
         return $this->published_at->toDayDateTimeString();
     }
