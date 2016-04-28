@@ -23,7 +23,7 @@
                 <a href="#">{{$post->title}}</a>
             </h2>
             <p class="lead">
-                by {{$post->author->name}}
+                by {{$post->author}}
             </p>
             <p><span class="fa fa-clock"></span> Posted on {{$post->published_at}}</p>
             <hr>
