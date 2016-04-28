@@ -11,7 +11,7 @@ class BlogController extends Controller
 {
     protected $posts;
 
-    public function __contruct(Post $posts)
+    public function __construct(Post $posts)
     {
         $this->posts = $posts;
     }
