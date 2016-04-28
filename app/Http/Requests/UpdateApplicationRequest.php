@@ -4,7 +4,7 @@ namespace FCLLA\Http\Requests;
 
 use FCLLA\Http\Requests\Request;
 
-class ContactRequest extends Request
+class UpdateApplicationRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class ContactRequest extends Request
      */
     public function authorize()
     {
-        return true;
+        return false;
     }
 
     /**
@@ -24,11 +24,7 @@ class ContactRequest extends Request
     public function rules()
     {
         return [
-            'name'=>'required|min:3',
-            'member'=>'required',
-            'email'=>'required|email',
-            'issuetype'=>'required',
-            'messagebody'=>'required|min:3'
+            //
         ];
     }
 }

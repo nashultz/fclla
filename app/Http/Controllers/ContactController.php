@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace FCLLA\Http\Controllers;
 
-use App\Http\Requests\ContactRequest;
+use FCLLA\Http\Requests\ContactRequest;
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use FCLLA\Http\Requests;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller

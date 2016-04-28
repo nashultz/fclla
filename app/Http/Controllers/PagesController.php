@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace FCLLA\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Http\Requests;
+use FCLLA\Http\Requests;
 
 class PagesController extends Controller
 {

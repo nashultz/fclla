@@ -151,10 +151,10 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        FCLLA\Providers\AppServiceProvider::class,
+        FCLLA\Providers\AuthServiceProvider::class,
+        FCLLA\Providers\EventServiceProvider::class,
+        FCLLA\Providers\RouteServiceProvider::class,
         Laracasts\Flash\FlashServiceProvider::class,
 
     ],
