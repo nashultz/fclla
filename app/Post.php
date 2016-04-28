@@ -25,9 +25,4 @@ class Post extends Model
     {
         return 'Nathon Shultz';
     }
-
-    public function getCreationAttribute()
-    {
-        return Carbon::now();
-    }
 }

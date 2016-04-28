@@ -25,7 +25,7 @@
             <p class="lead">
                 by {{$post->author->name}}
             </p>
-            <p><span class="fa fa-clock"></span> Posted on {{$post->creation}}</p>
+            <p><span class="fa fa-clock"></span> Posted on {{$post->published_at}}</p>
             <hr>
             <img class="img-responsive" src="http://placehold.it/900x300" alt="">
             <hr>
