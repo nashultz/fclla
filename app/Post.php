@@ -2,6 +2,7 @@
 
 namespace FCLLA;
 
+use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
 class Post extends Model
@@ -27,6 +28,6 @@ class Post extends Model
 
     public function getCreationAttribute()
     {
-        return $this->published_at;
+        return Carbon::now();
     }
 }
