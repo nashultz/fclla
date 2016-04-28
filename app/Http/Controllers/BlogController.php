@@ -18,7 +18,7 @@ class BlogController extends Controller
 
     public function index()
     {
-        $posts = $this->posts->withAuthor()->latest()->get();
+        $posts = $this->posts->with('author')->latest()->get();
         return view('frontend.blog.index', compact('posts'));
     }
 }
