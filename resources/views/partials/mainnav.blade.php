@@ -5,7 +5,7 @@
     <a href="join">Join</a>
 </li>
 <li>
-    <a href="#">Blog</a>
+    <a href="#">News</a>
 </li>
 <li>
     <a href="contact">Contact</a>

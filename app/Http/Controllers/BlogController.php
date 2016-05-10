@@ -21,4 +21,9 @@ class BlogController extends Controller
         $posts = $this->posts->latest()->get();
         return view('frontend.blog.index', compact('posts'));
     }
+
+    public function view($slug)
+    {
+
+    }
 }

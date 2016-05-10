@@ -15,12 +15,11 @@
 
             <h1 class="page-header">
                 News &amp; Announcements
-                <small>Secondary Text</small>
             </h1>
             @foreach($posts as $post)
             <!-- Blog Post -->
             <h2>
-                <a href="#">{{$post->title}}</a>
+                <a href="{{route('blogpost',$post->slug)}}">{{$post->title}}</a>
             </h2>
             <p class="lead">
                 by {{$post->author}}
