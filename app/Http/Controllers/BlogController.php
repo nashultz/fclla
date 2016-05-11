@@ -24,6 +24,9 @@ class BlogController extends Controller
 
     public function view($slug)
     {
-
+        $post = $this->posts->where('slug',$slug)->get();
+        return view('frontent.blog.view', compact('post'));
     }
+
+
 }
