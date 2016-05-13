@@ -1,7 +1,7 @@
 @extends('layouts.frontendalt')
 
 @section('page_title')
-    Join
+    News
 @endsection
 
 @section('content')
