@@ -26,7 +26,7 @@
             <hr>
 
             <!-- Date/Time -->
-            <p><span class="fa fa-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+            <p><span class="fa fa-clock-o"></span> Posted on August 24, 2013 at 9:00 PM</p>
 
             <hr>
 
