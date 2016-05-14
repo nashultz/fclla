@@ -20,7 +20,7 @@
 
             <!-- Author -->
             <p class="lead">
-                by <a href="#">Start Bootstrap</a>
+                by FCLLA President
             </p>
 
             <hr>
