@@ -26,7 +26,7 @@
             </p>
             <p><span class="fa fa-clock"></span> Posted on {{$post->published}}</p>
             <hr>
-            <img class="img-responsive" src="http://placehold.it/900x300" alt="">
+            <img class="img-responsive" src="https://placehold.it/900x300" alt="">
             <hr>
             <p>{{$post->excerpt}}</p>
             <a class="btn btn-primary" href="#">Read More <span class="fa fa-chevron-right"></span></a>
