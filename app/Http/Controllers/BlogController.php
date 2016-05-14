@@ -25,6 +25,7 @@ class BlogController extends Controller
     public function view($slug)
     {
         $post = $this->posts->where('slug',$slug)->get();
+        dd($post);
         return view('frontend.blog.view', compact('post'));
     }
 
