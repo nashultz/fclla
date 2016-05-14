@@ -21,7 +21,7 @@
                 <span class="icon-bar"></span>
             </button>
             <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-            <a class="navbar-brand" href="index.html"><img class="pull-left" src="themes/default/assets/img/logo.jpg" alt="Faulkner County Landlord Association"> Faulkner County<br>Landlord Association</a>
+            <a class="navbar-brand" href="index.html"><img class="pull-left" src="{{theme('img/logo.jpg')}}" alt="Faulkner County Landlord Association"> Faulkner County<br>Landlord Association</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
