@@ -25,7 +25,6 @@ class BlogController extends Controller
     public function view($post)
     {
         $post = $this->posts->findOrFail($post);
-        dd($post);
         return view('frontend.blog.view', compact('post'));
     }
 
