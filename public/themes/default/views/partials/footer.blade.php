@@ -45,8 +45,7 @@
                                 </form>
                             </div>
                             <div class="modal-footer">
-                                New To MyWebsite.com?
-                                <a href="#" class="btn btn-primary">Register</a>
+                                Faulkner County Landlord Association
                             </div>
                         </div>
                     </div>
