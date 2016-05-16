@@ -22,9 +22,9 @@ class BlogController extends Controller
         return view('frontend.blog.index', compact('posts'));
     }
 
-    public function view($slug)
+    public function view($post)
     {
-        $post = $this->posts->where('slug',$slug)->get();
+        $post = $post->get();
         dd($post);
         return view('frontend.blog.view', compact('post'));
     }

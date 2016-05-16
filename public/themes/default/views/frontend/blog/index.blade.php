@@ -19,7 +19,7 @@
             @foreach($posts as $post)
             <!-- Blog Post -->
             <h2>
-                <a href="{{route('blogpost',$post->slug)}}">{{$post->title}}</a>
+                <a href="{{route('blogpost',$post->id)}}">{{$post->title}}</a>
             </h2>
             <p class="lead">
                 by FCLLA President<!--{$post->author}-->
