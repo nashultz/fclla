@@ -32,7 +32,4 @@ Route::get('news', 'BlogController@index')->name('blogindex');
 Route::get('news/{post}', 'BlogController@view')->name('blogpost');
 
 /* MEMBER ROUTES */
-Route::get('member/login', 'Auth\AuthController@getLogin')->name('member.login');
-Route::post('member/login', 'Auth\AuthController@postLogin')->name('member.postlogin');
-Route::get('member/logout', 'Auth\AuthController@logout')->name('member.logout');
-
+Route::auth();

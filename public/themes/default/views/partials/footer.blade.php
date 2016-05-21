@@ -28,7 +28,7 @@
                 <div class="col-lg-12">
                     <div class="text-center">
                         <a href="{{route('legal')}}" title="Mission Statement and Legal Information">Legal</a> |
-                        <a href="{{route('member.login')}}" title="Members Area">Member Login</a>
+                        <a href="login" title="Members Area">Member Login</a>
                     </div>
                 </div>
             </div>
