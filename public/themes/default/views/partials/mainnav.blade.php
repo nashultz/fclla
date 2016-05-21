@@ -10,3 +10,8 @@
 <li>
     <a href="contact">Contact</a>
 </li>
+@if(Auth::check())
+    <li>
+        <a href="#">Forum</a>
+    </li>
+@endif
