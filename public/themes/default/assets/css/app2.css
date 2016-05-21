@@ -7992,7 +7992,7 @@ body {
     background: rgba(255, 255, 255, 0.9); }
   .nav > li > a {
     padding: 35px; }
-  #membernav.nav > li > a {
+  #membernav .nav > li > a {
     padding: 5px; }
   .navbar-nav > li > a {
     line-height: normal; }
