@@ -9,12 +9,35 @@
 </head>
 <body id="page-top">
 
+<!-- Member Navigation -->
+@if(Auth::check())
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container">
+        <div class="row">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#membernavbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse" id="membernavbar">
+                <ul class="nav navbar-nav">
+                    @include('partials.membernav')
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
+
 <!-- Navigation -->
 <nav class="navbar navbar-default" role="navigation">
     <div class="container"><div class="row">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mainnavbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
@@ -24,7 +47,7 @@
             <a class="navbar-brand" href="index.html"><img class="pull-left" src="{{theme('img/logo.jpg')}}" alt="Faulkner County Landlord Association"> Faulkner County<br>Landlord Association</a>
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="collapse navbar-collapse" id="mainnavbar">
             <ul class="nav navbar-nav">
                 @include('partials.mainnav')
             </ul>
