@@ -29,12 +29,6 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="passsword_confirmation" class="col-sm-2 control-label">Password Confirmation:</label>
-                        <div class="col-sm-10">
-                            <input type="password" class="form-control" name="password_confirmation">
-                        </div>
-                    </div>
-                    <div class="form-group">
                         <input type="submit" class="btn btn-primary" value="Login">
                     </div>
                 </form>
