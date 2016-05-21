@@ -8,6 +8,30 @@
     <link href="themes/default/assets/css/app.css" rel="stylesheet" type="text/css">
 </head>
 <body id="page-top">
+
+<!-- Member Navigation -->
+@if(Auth::check())
+    <div class="navbar navbar-inverse" role="navigation">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#membernavbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="membernavbar">
+                    <ul id="membernav" class="nav navbar-nav">
+                        @include('partials.membernav')
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
+
 <div class="brand"><h1>Faulkner County Landlord Association</h1></div>
 
 <!-- Navigation -->

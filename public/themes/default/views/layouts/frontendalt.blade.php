@@ -23,7 +23,7 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="membernavbar">
-                <ul class="nav navbar-nav">
+                <ul id="membernav" class="nav navbar-nav">
                     @include('partials.membernav')
                 </ul>
             </div>
