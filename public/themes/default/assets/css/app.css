@@ -7979,7 +7979,7 @@ nav .box {
   background: rgba(255, 255, 255, 0.9); }
 
 @media screen and (min-width: 768px) {
-  nav .brand {
+  .brand {
     width: 100%;
     margin: 0;
     padding: 30px 0 10px;
@@ -7991,7 +7991,7 @@ nav .box {
     line-height: normal;
     color: #fff;
     display: table; }
-  nav .brand h1 {
+  .brand h1 {
     text-align: center;
     display: table-cell;
     vertical-align: middle; }
