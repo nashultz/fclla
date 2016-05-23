@@ -47,6 +47,10 @@ nav .box {
   background: rgba(255,255,255,0.9);
 }
 
+div .navbar {
+  margin-bottom: 0px;
+}
+
 @media screen and (min-width:768px) {
   .row {
     -webkit-justify-content: center; /* Safari */
