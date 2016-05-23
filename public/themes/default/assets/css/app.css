@@ -7972,6 +7972,9 @@ nav .brand-name {
   margin: 0;
   font-size: 4em; }
 
+div .navbar {
+  margin-bottom: 0px; }
+
 nav .box {
   margin-bottom: 20px;
   padding: 30px 15px;
