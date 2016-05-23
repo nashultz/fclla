@@ -7933,7 +7933,7 @@ button.close {
 body {
   font-family: "Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif; }
 
-.navbar-brand {
+nav .navbar-brand {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
@@ -7941,26 +7941,26 @@ body {
   display: inline;
   font-size: 14px; }
 
-.navbar-brand > img {
+nav .navbar-brand > img {
   display: inline; }
 
-.navbar-nav {
+nav .navbar-nav {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 3px; }
 
-.brand-before,
-.brand-name {
+nav .brand-before,
+nav .brand-name {
   text-transform: capitalize; }
 
-.brand-before {
+nav .brand-before {
   margin: 15px 0; }
 
-.brand-name {
+nav .brand-name {
   margin: 0;
   font-size: 4em; }
 
-.box {
+nav .box {
   margin-bottom: 20px;
   padding: 30px 15px;
   background: #fff;
@@ -7984,17 +7984,17 @@ body {
     color: #fff; }
   .navbar {
     border-radius: 0; }
-  .navbar {
+  nav .navbar {
     min-height: 0; }
-  .navbar-default {
+  nav .navbar-default {
     border: none;
     background: #fff;
     background: rgba(255, 255, 255, 0.9); }
   .mainnav.nav > li > a {
     padding: 35px; }
-  .navbar-nav > li > a {
+  nav .navbar-nav > li > a {
     line-height: normal; }
-  .navbar-nav {
+  nav .navbar-nav {
     display: table;
     float: none;
     margin: 0 auto;

@@ -7945,7 +7945,7 @@ body {
 .address-bar {
   display: none; }
 
-.navbar-brand {
+nav .navbar-brand {
   text-transform: uppercase;
   font-weight: 900;
   letter-spacing: 2px;
@@ -7953,33 +7953,33 @@ body {
   display: inline;
   font-size: 14px; }
 
-.navbar-brand > img {
+nav .navbar-brand > img {
   display: inline; }
 
-.navbar-nav {
+nav .navbar-nav {
   text-transform: uppercase;
   font-weight: 400;
   letter-spacing: 3px; }
 
-.brand-before,
-.brand-name {
+nav .brand-before,
+nav .brand-name {
   text-transform: capitalize; }
 
-.brand-before {
+nav .brand-before {
   margin: 15px 0; }
 
-.brand-name {
+nav .brand-name {
   margin: 0;
   font-size: 4em; }
 
-.box {
+nav .box {
   margin-bottom: 20px;
   padding: 30px 15px;
   background: #fff;
   background: rgba(255, 255, 255, 0.9); }
 
 @media screen and (min-width: 768px) {
-  .brand {
+  nav .brand {
     width: 100%;
     margin: 0;
     padding: 30px 0 10px;
@@ -7991,7 +7991,7 @@ body {
     line-height: normal;
     color: #fff;
     display: table; }
-  .brand h1 {
+  nav .brand h1 {
     text-align: center;
     display: table-cell;
     vertical-align: middle; }
@@ -8012,19 +8012,19 @@ body {
     color: #fff; }
   .navbar {
     border-radius: 0; }
-  .navbar-header {
+  nav .navbar-header {
     display: none; }
-  .navbar {
+  nav .navbar {
     min-height: 0; }
-  .navbar-default {
+  nav .navbar-default {
     border: none;
     background: #fff;
     background: rgba(255, 255, 255, 0.9); }
-  .mainnav.nav > li > a {
+  nav .mainnav.nav > li > a {
     padding: 35px; }
-  .navbar-nav > li > a {
+  nav .navbar-nav > li > a {
     line-height: normal; }
-  .navbar-nav {
+  nav .navbar-nav {
     display: table;
     float: none;
     margin: 0 auto;
