@@ -1,4 +1,4 @@
-<p class="navbar-text">Signed in as {{Auth::user()->username}}</p>
+<p class="navbar-text">Signed in as {{Auth::user()->name}}</p>
 <li>
     <a href="join">Join</a>
 </li>
