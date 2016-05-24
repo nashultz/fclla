@@ -29,7 +29,7 @@ Route::get('download/application', 'PagesController@downloadapp')->name('downloa
 
 /* BLOG ROUTES */
 Route::get('news', 'BlogController@index')->name('blogindex');
-Route::get('news/{post}', 'BlogController@view')->name('blogpost');
+Route::get('news/{slug}', 'BlogController@view')->name('blogpost');
 
 /* MEMBER ROUTES */
 Route::auth();
