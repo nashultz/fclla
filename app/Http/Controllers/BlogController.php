@@ -20,7 +20,7 @@ class BlogController extends Controller
     public function index()
     {
         if(Auth::check()) {
-            $posts = $this->posts->members()->latest->get();
+            $posts = $this->posts->members()->latest()->get();
             return view('frontend.blog.index', compact('posts'));
         }
         else {
