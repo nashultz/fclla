@@ -36,4 +36,9 @@ class Post extends Model
     {
         return $this->published_at->toDayDateTimeString();
     }
+
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
 }

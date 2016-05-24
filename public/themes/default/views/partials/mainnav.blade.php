@@ -1,14 +1,14 @@
 <li>
-    <a href="/">Home</a>
+    <a href="{{route('home')}}">Home</a>
 </li>
 <li>
-    <a href="join">Join</a>
+    <a href="{{route('join')}}">Join</a>
 </li>
 <li>
-    <a href="news">News</a>
+    <a href="{{route('blogindex')}}">News</a>
 </li>
 <li>
-    <a href="contact">Contact</a>
+    <a href="{{route('contact')}}">Contact</a>
 </li>
 @if(Auth::check())
     <li>
