@@ -28,13 +28,13 @@
                                     <strong>{{ $errors->first('title') }}</strong>
                                 </span>
                     @endif
-                </div>
+                </div><div class="clearfix"></div>
             </div>
-            <div class="clearfix"></div>
+
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     {!!Form::submit('Submit',['class'=>'btn btn-primary'])!!}
-                </div>
+                </div><div class="clearfix"></div>
             </div>
             {!!Form::close()!!}
 
