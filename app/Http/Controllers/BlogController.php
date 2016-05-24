@@ -35,5 +35,10 @@ class BlogController extends Controller
         return view('frontend.blog.view', compact('post'));
     }
 
+    public function addpost()
+    {
+        return view('frontend.blog.posts.addpost');
+    }
+
 
 }
