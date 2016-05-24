@@ -33,3 +33,7 @@ Route::get('news/{post}', 'BlogController@view')->name('blogpost');
 
 /* MEMBER ROUTES */
 Route::auth();
+
+Route::group(['as'=>'member::', 'prefix' => 'member'], function() {
+    Route::get('addpost', 'BlogController@addpost')->name('addpost');
+});
