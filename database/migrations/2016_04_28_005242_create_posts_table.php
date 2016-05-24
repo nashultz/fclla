@@ -19,6 +19,7 @@ class CreatePostsTable extends Migration
             $table->string('slug');
             $table->text('body');
             $table->text('excerpt');
+            $table->tinyInteger('members_only')->default(0);
             $table->timestamp('published_at')->nullable();
             $table->timestamps();
         });

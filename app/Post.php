@@ -18,6 +18,10 @@ class Post extends Model
         $query->orderBy('published_at','desc');
     }
 
+    public function scopeMembers($query) {
+        $query->where('members_only', 1);
+    }
+
     public function author()
     {
         return $this->belongsTo(User::class);

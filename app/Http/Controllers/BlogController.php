@@ -18,8 +18,14 @@ class BlogController extends Controller
 
     public function index()
     {
-        $posts = $this->posts->latest()->get();
-        return view('frontend.blog.index', compact('posts'));
+        if(Auth::check()) {
+            $posts = $this->posts->members()->latest->get();
+            return view('frontend.blog.index', compact('posts'))
+        }
+        else {
+            $posts = $this->posts->latest()->get();
+            return view('frontend.blog.index', compact('posts'));
+        }
     }
 
     public function view($post)
