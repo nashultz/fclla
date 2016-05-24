@@ -31,7 +31,7 @@ class BlogController extends Controller
 
     public function view($slug)
     {
-        $post = $this->posts->findOrFail($slug);
+        $post = $this->posts->where('slug',$slug)->first();
         return view('frontend.blog.view', compact('post'));
     }
 
