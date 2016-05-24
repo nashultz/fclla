@@ -29,9 +29,9 @@ class BlogController extends Controller
         }
     }
 
-    public function view($post)
+    public function view($slug)
     {
-        $post = $this->posts->findOrFail($post);
+        $post = $this->posts->findOrFail($slug);
         return view('frontend.blog.view', compact('post'));
     }
 
