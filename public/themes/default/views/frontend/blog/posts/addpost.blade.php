@@ -30,6 +30,7 @@
                     @endif
                 </div>
             </div>
+            <div class="clearfix"></div>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     {!!Form::submit('Submit',['class'=>'btn btn-primary'])!!}
