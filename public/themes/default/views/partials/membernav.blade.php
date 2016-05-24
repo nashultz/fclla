@@ -1,4 +1,4 @@
 <p class="navbar-text">Signed in as {{Auth::user()->name}}</p>
 <li>
-    <a href="member/news">News</a>
+    <a href="news">News</a>
 </li>
