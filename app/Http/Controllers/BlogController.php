@@ -2,6 +2,7 @@
 
 namespace FCLLA\Http\Controllers;
 
+use FCLLA\Http\Requests\CreatePostRequest;
 use FCLLA\Post;
 use Illuminate\Http\Request;
 
@@ -38,6 +39,17 @@ class BlogController extends Controller
     public function addpost()
     {
         return view('frontend.blog.posts.addpost');
+    }
+
+    public function submitpost(CreatePostRequest $request)
+    {
+        $data = $request->all();
+        $data['slug'] = str_slug($data['title'], '-');
+        $data->save();
+
+        flash()->success('Post was created successfully!');
+
+        return redirect()->route('blogindex');
     }
 
 

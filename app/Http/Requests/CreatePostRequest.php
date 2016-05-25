@@ -4,7 +4,7 @@ namespace FCLLA\Http\Requests;
 
 use FCLLA\Http\Requests\Request;
 
-class CreateBlogRequest extends Request
+class CreatePostRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -13,7 +13,7 @@ class CreateBlogRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,10 @@ class CreateBlogRequest extends Request
     public function rules()
     {
         return [
-            //
+            'title'=>'required',
+            'excerpt'=>'required|max:150',
+            'body'=>'required',
+            'published_at'=>'required'
         ];
     }
 }
