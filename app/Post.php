@@ -15,7 +15,7 @@ class Post extends Model
 
     public function scopeLatest($query)
     {
-        $query->orderBy('published_at','desc');
+        $query->orderBy('published_at','desc')->where('published_at','<=', Carbon::now());
     }
 
     public function scopeGuests($query) {
