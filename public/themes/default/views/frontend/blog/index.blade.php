@@ -29,7 +29,7 @@
             <img class="img-responsive" src="https://placehold.it/900x300" alt="">
             <hr>
             <p>{{$post->excerpt}}</p>
-            <a class="btn btn-primary" href="#">Read More <span class="fa fa-chevron-right"></span></a>
+            <a class="btn btn-primary" href="{{route('blogpost',$post->slug)}}">Read More <span class="fa fa-chevron-right"></span></a>
 
             <hr>
             @endforeach
