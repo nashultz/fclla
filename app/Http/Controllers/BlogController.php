@@ -45,7 +45,7 @@ class BlogController extends Controller
     {
         $data = $request->all();
         $data['slug'] = str_slug($data['title'], '-');
-        $data->save();
+        $this->posts->create($data);
 
         flash()->success('Post was created successfully!');
 
