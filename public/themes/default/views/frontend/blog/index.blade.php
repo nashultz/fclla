@@ -22,7 +22,7 @@
                 <a href="{{route('blogpost',$post->slug)}}">{{$post->title}}</a>
             </h2>
             <p class="lead">
-                by FCLLA President<!--{$post->author}-->
+                by {{$post->author}}<!--{$post->author}-->
             </p>
             <p><span class="fa fa-clock-o"></span> Posted on {{$post->published}}</p>
             <hr>
