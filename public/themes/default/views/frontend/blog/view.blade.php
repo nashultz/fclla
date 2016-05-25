@@ -30,10 +30,10 @@
 
             <hr>
 
-            <!-- Preview Image -->
+            <!-- Preview Image
             <img class="img-responsive" src="https://placehold.it/900x300" alt="">
 
-            <hr>
+            <hr>-->
 
             <!-- Post Content -->
             {!! $post->body !!}
