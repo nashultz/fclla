@@ -12,7 +12,7 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         DB::table('posts')->insert([
-            'author_id' => 0,
+            'author_id' => 2,
             'title' => 'January FCLLA Meeting',
             'slug' => 'january-fclla-meeting',
             'excerpt' => '<p>The next FCLLA meeting is January 15, 2016.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
