@@ -17,6 +17,9 @@
                 Add Post - News &amp; Announcements
             </h1>
             {!!Form::open()!!}
+
+            {!!Form::hidden('members_only','0')!!}
+
             <div class="form-group{{ $errors->has('title') ? ' has-error' : '' }}">
                 {!!Form::label('title', 'Title', ['class'=>'col-md-4 control-label'])!!}
 
@@ -70,21 +73,21 @@
                                 <strong>{{ $errors->first('members_only') }}</strong>
                             </span>
                     @endif
-                </div>
+                </div><div class="clearfix"></div>
             </div>
 
             <div class="form-group{{ $errors->has('published_at') ? ' has-error' : '' }}">
                 {!!Form::label('published_at', 'Publish On', ['class'=>'col-md-4 control-label'])!!}
 
                 <div class="col-md-6">
-                    {!!Form::date('published_at',null,['class'=>'form-control'])!!}
+                    {!!Form::date('published_at',\Carbon\Carbon::now(),['class'=>'form-control'])!!}
 
                     @if ($errors->has('published_at'))
                         <span class="help-block">
                                 <strong>{{ $errors->first('published_at') }}</strong>
                             </span>
                     @endif
-                </div>
+                </div><div class="clearfix"></div>
             </div>
 
             <div class="form-group">
@@ -92,6 +95,7 @@
                     {!!Form::submit('Submit',['class'=>'btn btn-primary'])!!}
                 </div><div class="clearfix"></div>
             </div>
+
             {!!Form::close()!!}
 
         </div>
