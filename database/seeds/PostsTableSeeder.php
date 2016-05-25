@@ -149,7 +149,7 @@ class PostsTableSeeder extends Seeder
             'title' => 'November 2016 FCLLA Meeting',
             'slug' => 'november-2016-fclla-meeting',
             'excerpt' => '<p>The next FCLLA meeting is November 17, 2016.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is November, 2016.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'body' => '<p>The next FCLLA meeting is November 17, 2016.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
             'published_at' => '2016-10-21 00:00:00',
             'created_at' => Carbon::now(),
@@ -184,10 +184,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'February 2017 FCLLA Meeting',
             'slug' => 'february-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is February 18, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is February 18, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is February 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is February 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-01-16 00:00:00',
+            'published_at' => '2017-01-20 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -196,10 +196,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'March 2017 FCLLA Meeting',
             'slug' => 'march-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is March 17, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is March 17, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is March 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is March 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-02-19 00:00:00',
+            'published_at' => '2017-02-17 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -208,10 +208,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'April 2017 FCLLA Meeting',
             'slug' => 'april-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is April 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is April 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is April 20, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is April 20, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-03-18 00:00:00',
+            'published_at' => '2017-03-17 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -220,10 +220,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'May 2017 FCLLA Meeting',
             'slug' => 'may-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is May 19, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is May 19, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is May 18, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is May 18, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-04-22 00:00:00',
+            'published_at' => '2017-04-21 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -232,10 +232,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'June 2017 FCLLA Meeting',
             'slug' => 'june-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is June 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is June 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is June 15, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is June 15, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-05-20 00:00:00',
+            'published_at' => '2017-05-19 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -244,10 +244,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'July 2017 FCLLA Meeting',
             'slug' => 'july-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is July 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is July 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is July 20, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is July 20, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-06-17 00:00:00',
+            'published_at' => '2017-06-16 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -256,10 +256,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'August 2017 FCLLA Meeting',
             'slug' => 'august-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is August 18, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is August 18, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is August 17, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is August 17, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-07-22 00:00:00',
+            'published_at' => '2017-07-21 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -268,10 +268,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'September 2017 FCLLA Meeting',
             'slug' => 'september-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is September 15, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is September 15, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is September 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is September 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-08-19 00:00:00',
+            'published_at' => '2017-08-18 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -280,10 +280,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'October 2017 FCLLA Meeting',
             'slug' => 'october-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is October 20, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is October 20, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is October 19, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is October 19, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-09-16 00:00:00',
+            'published_at' => '2017-09-22 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -292,10 +292,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'November 2017 FCLLA Meeting',
             'slug' => 'november-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is November 17, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is November, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is November 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is November 16, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-10-21 00:00:00',
+            'published_at' => '2017-10-20 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
@@ -304,10 +304,10 @@ class PostsTableSeeder extends Seeder
             'author_id' => 2,
             'title' => 'December 2017 FCLLA Meeting',
             'slug' => 'december-2017-fclla-meeting',
-            'excerpt' => '<p>The next FCLLA meeting is December 15, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
-            'body' => '<p>The next FCLLA meeting is December 15, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
+            'excerpt' => '<p>The next FCLLA meeting is December 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get &hellip;</p>',
+            'body' => '<p>The next FCLLA meeting is December 21, 2017.</p><p>Monthly meetings are held at the Faulkner County Library. Come join us and get tips on how to successfully manage your investment property.</p><p>The Faulkner County Library is located at 1900 Tyler St. in Conway. Meetings start at 7:00 pm.</p><p>Meetings are the THIRD THURSDAY of every month, this allows us to attend the Conway City Council meetings and protect landlord rights and concerns.</p>',
             'members_only' => 0,
-            'published_at' => '2017-11-18 00:00:00',
+            'published_at' => '2017-11-17 00:00:00',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
