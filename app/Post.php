@@ -29,7 +29,8 @@ class Post extends Model
 
     public function getAuthorAttribute()
     {
-        return 'Nathon Shultz';
+        $author = User::findOrFail($this->author_id);
+        return $author->name;
     }
 
     public function getPublishedAttribute()
