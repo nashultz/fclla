@@ -4,7 +4,7 @@
         <div class="col-lg-6">
             <ul class="list-unstyled">
                 <li>
-                    <a href="{{route('member::addpost')}}">Add Post</a>
+                    <a href="{{route('member::newpost')}}">New Post</a>
                 </li>
             </ul>
         </div>
