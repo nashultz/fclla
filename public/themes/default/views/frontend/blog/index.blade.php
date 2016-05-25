@@ -75,8 +75,5 @@
         </div>
 
     </div>
-    <!-- /.row -->
-
-    <hr>
 </div><div class="clearfix"></div>
 @endsection
