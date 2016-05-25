@@ -44,6 +44,8 @@ class BlogController extends Controller
     public function addpost(CreatePostRequest $request)
     {
         $data = $request->all();
+        $data['author'] = Auth::name();
+        dd($data['author']);
         $data['slug'] = str_slug($data['title'], '-');
         $this->posts->create($data);
 
