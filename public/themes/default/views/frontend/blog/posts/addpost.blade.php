@@ -31,6 +31,62 @@
                 </div><div class="clearfix"></div>
             </div>
 
+            <div class="form-group{{ $errors->has('excerpt') ? ' has-error' : '' }}">
+                {!!Form::label('excerpt', 'Excerpt', ['class'=>'col-md-4 control-label'])!!}
+
+                <div class="col-md-6">
+                    {!!Form::textarea('excerpt',null,['class'=>'form-control'])!!}
+                    <span class="help-block">Short summary of contents of post.</span>
+                    @if ($errors->has('excerpt'))
+                        <span class="help-block">
+                                <strong>{{ $errors->first('excerpt') }}</strong>
+                            </span>
+                    @endif
+                </div><div class="clearfix"></div>
+            </div>
+
+            <div class="form-group{{ $errors->has('body') ? ' has-error' : '' }}">
+                {!!Form::label('body', 'Body', ['class'=>'col-md-4 control-label'])!!}
+
+                <div class="col-md-6">
+                    {!!Form::textarea('body',null,['class'=>'form-control'])!!}
+
+                    @if ($errors->has('body'))
+                        <span class="help-block">
+                                <strong>{{ $errors->first('body') }}</strong>
+                            </span>
+                    @endif
+                </div><div class="clearfix"></div>
+            </div>
+
+            <div class="form-group{{ $errors->has('members_only') ? ' has-error' : '' }}">
+                {!!Form::label('members_only', 'Members Only?', ['class'=>'col-md-4 control-label'])!!}
+
+                <div class="col-md-6">
+                    {!!Form::checkbox('members_only','1')!!}
+
+                    @if ($errors->has('members_only'))
+                        <span class="help-block">
+                                <strong>{{ $errors->first('members_only') }}</strong>
+                            </span>
+                    @endif
+                </div>
+            </div>
+
+            <div class="form-group{{ $errors->has('published_at') ? ' has-error' : '' }}">
+                {!!Form::label('published_at', 'Publish On', ['class'=>'col-md-4 control-label'])!!}
+
+                <div class="col-md-6">
+                    {!!Form::date('published_at',null,['class'=>'form-control'])!!}
+
+                    @if ($errors->has('published_at'))
+                        <span class="help-block">
+                                <strong>{{ $errors->first('published_at') }}</strong>
+                            </span>
+                    @endif
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     {!!Form::submit('Submit',['class'=>'btn btn-primary'])!!}
