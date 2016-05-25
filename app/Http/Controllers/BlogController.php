@@ -36,12 +36,12 @@ class BlogController extends Controller
         return view('frontend.blog.view', compact('post'));
     }
 
-    public function addpost()
+    public function newpost()
     {
         return view('frontend.blog.posts.addpost');
     }
 
-    public function submitpost(CreatePostRequest $request)
+    public function addpost(CreatePostRequest $request)
     {
         $data = $request->all();
         $data['slug'] = str_slug($data['title'], '-');

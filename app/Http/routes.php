@@ -35,6 +35,6 @@ Route::get('news/{slug}', 'BlogController@view')->name('blogpost');
 Route::auth();
 
 Route::group(['as'=>'member::', 'prefix' => 'member', 'middleware' => 'auth'], function() {
-    Route::get('newpost', 'BlogController@addpost')->name('newpost');
-    Route::post('addpost', 'BlogController@submitpost')->name('submitpost');
+    Route::get('newpost', 'BlogController@newpost')->name('newpost');
+    Route::post('addpost', 'BlogController@addpost')->name('addpost');
 });

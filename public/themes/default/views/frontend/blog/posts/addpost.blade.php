@@ -16,7 +16,9 @@
             <h1 class="page-header">
                 Add Post - News &amp; Announcements
             </h1>
-            {!!Form::open()!!}
+            {!!Form::open(
+                ['route'=>'submitpost']
+            )!!}
 
             {!!Form::hidden('members_only','0')!!}
 
