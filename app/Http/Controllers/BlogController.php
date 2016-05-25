@@ -45,7 +45,6 @@ class BlogController extends Controller
     {
         $data = $request->all();
         $data['author'] = Auth::user()->name;
-        dd($data['author']);
         $data['slug'] = str_slug($data['title'], '-');
         $this->posts->create($data);
 
