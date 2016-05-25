@@ -17,7 +17,7 @@
                 Add Post - News &amp; Announcements
             </h1>
             {!!Form::open(
-                ['route'=>'submitpost']
+                ['route'=>'addpost']
             )!!}
 
             {!!Form::hidden('members_only','0')!!}
