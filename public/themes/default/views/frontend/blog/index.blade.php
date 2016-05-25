@@ -25,8 +25,8 @@
                 by {{$post->author}}<!--{$post->author}-->
             </p>
             <p><span class="fa fa-clock-o"></span> Posted on {{$post->published}}</p>
-            <hr>
-            <img class="img-responsive" src="https://placehold.it/900x300" alt="">
+            <!--<hr>
+            <img class="img-responsive" src="https://placehold.it/900x300" alt="">-->
             <hr>
             <p>{!!$post->excerpt!!}</p>
             <a class="btn btn-primary" href="{{route('blogpost',$post->slug)}}">Read More <span class="fa fa-chevron-right"></span></a>
