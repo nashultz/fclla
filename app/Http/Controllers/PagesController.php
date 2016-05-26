@@ -5,11 +5,13 @@ namespace FCLLA\Http\Controllers;
 use Illuminate\Http\Request;
 
 use FCLLA\Http\Requests;
+use Illuminate\Support\Facades\Auth;
 
 class PagesController extends Controller
 {
     public function index()
     {
+        dd(Auth::user()->is_admin);
         return view('frontend.index');
     }
 
