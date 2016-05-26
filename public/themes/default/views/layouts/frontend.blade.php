@@ -50,9 +50,7 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="mainnav nav navbar-nav">
-                @include('partials.mainnav')
-            </ul>
+            @include('partials.mainnav')
         </div>
         <!-- /.navbar-collapse -->
     </div></div>
