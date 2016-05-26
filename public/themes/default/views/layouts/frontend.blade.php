@@ -23,9 +23,7 @@
                     </button>
                 </div>
                 <div class="collapse navbar-collapse" id="membernavbar">
-                    <ul class="nav navbar-nav">
-                        @include('partials.membernav')
-                    </ul>
+                    @include('partials.membernav')
                 </div>
             </div>
         </div>
@@ -50,7 +48,9 @@
         </div>
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            @include('partials.mainnav')
+            <ul class="mainnav nav navbar-nav">
+                @include('partials.mainnav')
+            </ul>
         </div>
         <!-- /.navbar-collapse -->
     </div></div>
