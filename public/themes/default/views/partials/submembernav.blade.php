@@ -3,10 +3,12 @@
     <div class="row">
         <div class="col-lg-6">
             <ul class="list-unstyled">
-                @if(Auth::user()->is_admin)
-                    <li>
-                        <a href="{{route('member::newpost')}}">New Post</a>
-                    </li>
+                @if(Auth::check())
+                    @if(Auth::user()->is_admin)
+                        <li>
+                            <a href="{{route('member::newpost')}}">New Post</a>
+                        </li>
+                    @endif
                 @endif
             </ul>
         </div>
