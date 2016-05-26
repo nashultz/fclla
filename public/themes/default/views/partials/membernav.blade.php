@@ -6,6 +6,6 @@
 </ul>
 <ul class="nav navbar-right">
     <li>
-        <a href="{{action('AuthController@logout')}}"><i class="fa fa-sign-out"></i> Logout</a>
+        <a href="{{action('Auth\AuthController@logout')}}"><i class="fa fa-sign-out"></i> Logout</a>
     </li>
 </ul>
