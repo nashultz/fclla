@@ -25,16 +25,11 @@ class User extends Authenticatable
     ];
 
     protected $casts = [
-        'is_admin' => 'boolean',
+        'admin' => 'boolean',
     ];
 
     public function post()
     {
         return $this->hasMany(Post::class);
-    }
-
-    public function getIsAdminAttribute()
-    {
-        return $this->admin;
     }
 }
