@@ -11,7 +11,7 @@ class PagesController extends Controller
 {
     public function index()
     {
-        dd(Auth::user()->is_admin);
+        dd(Auth::user()->admin);
         return view('frontend.index');
     }
 
