@@ -24,12 +24,6 @@ class PagesController extends Controller
     {
         return view('frontend.legal');
     }
-
-    public function downloadapp()
-    {
-        $pdf = PDF::loadView('frontend.application.print');
-        return $pdf->download('application.pdf');
-    }
 }
 
 

@@ -25,7 +25,9 @@ Route::post('contact', 'ContactController@send')->name('sendContact');
 Route::get('legal', 'PagesController@legal')->name('legal');
 
 /* APPLICATION ROUTES */
-Route::get('download/application', 'PagesController@downloadapp')->name('downloadapp');
+Route::get('application/download', 'ApplicationController@downloadapp')->name('downloadapp');
+Route::get('application', 'ApplicationController@index')->name('application');
+Route::post('application', 'ApplicationController@save')->name('saveapp');
 
 /* BLOG ROUTES */
 Route::get('news', 'BlogController@index')->name('blogindex');
@@ -37,4 +39,9 @@ Route::auth();
 Route::group(['as'=>'member::', 'prefix' => 'member', 'middleware' => 'auth'], function() {
     Route::get('newpost', 'BlogController@newpost')->name('newpost');
     Route::post('addpost', 'BlogController@addpost')->name('addpost');
+});
+
+/* ADMIN ROUTES */
+Route::group(['as'=>'admin::', 'prefix'=>'admin', 'middleware'=>'auth'], function() {
+
 });
