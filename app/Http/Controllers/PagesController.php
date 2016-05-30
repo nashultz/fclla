@@ -28,7 +28,9 @@ class PagesController extends Controller
     {
         $file_path = 'themes/default/assets/files/FCLLAMembershipApplication2015-2016.pdf';
         $filename = 'FCLLAMembershipApplication2015-2016.pdf';
-        return response()->download($file_path, $filename);
+
+        $pdf = PDF::loadView('frontend.application');
+        return $pdf->download('application.pdf');
     }
 }
 
