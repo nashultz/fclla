@@ -20,7 +20,7 @@ class ApplicationController extends Controller
     public function index()
     {
         $date = date('Y');
-        $lydate = date('Y', mktime(0,0,0,0,0,$date-1));
+        $lydate = date('Y', mktime(0,0,0,0,0,$date-0));
         dd($lydate);
         $appdate = $lydate . '-' . $date;
         return view('frontend.application.index', compact('appdate'));
