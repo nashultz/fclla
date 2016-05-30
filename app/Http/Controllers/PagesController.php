@@ -2,11 +2,11 @@
 
 namespace FCLLA\Http\Controllers;
 
+use Barryvdh\Snappy\Facades\SnappyPdf;
 use Illuminate\Http\Request;
 
 use FCLLA\Http\Requests;
 use Illuminate\Support\Facades\Auth;
-use Knp\Snappy\Pdf;
 
 class PagesController extends Controller
 {
@@ -27,10 +27,10 @@ class PagesController extends Controller
 
     public function downloadapp()
     {
-        $file_path = 'themes/default/assets/files/FCLLAMembershipApplication2015-2016.pdf';
-        $filename = 'FCLLAMembershipApplication2015-2016.pdf';
+        //$file_path = 'themes/default/assets/files/FCLLAMembershipApplication2015-2016.pdf';
+       // $filename = 'FCLLAMembershipApplication2015-2016.pdf';
 
-        $pdf = PDF::loadView('frontend.application');
+        $pdf = SnappyPDF::loadView('frontend.application');
         return $pdf->download('application.pdf');
     }
 }
