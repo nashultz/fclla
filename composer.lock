@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "912c3a0f727973873e206c3b81d61152",
-    "content-hash": "d227f50fdc25985ee4a4fd3176146c08",
+    "hash": "ebfeeee691f657cdae9f16445ca9d522",
+    "content-hash": "25cf8faa27807212c69453e0507129b3",
     "packages": [
         {
             "name": "barryvdh/laravel-snappy",
@@ -570,6 +570,46 @@
                 "uri"
             ],
             "time": "2016-04-13 19:56:01"
+        },
+        {
+            "name": "h4cc/wkhtmltoimage-amd64",
+            "version": "0.12.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/h4cc/wkhtmltoimage-amd64.git",
+                "reference": "f5d85706fbb41dbfbe62ace2edf0e380fff084ad"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/h4cc/wkhtmltoimage-amd64/zipball/f5d85706fbb41dbfbe62ace2edf0e380fff084ad",
+                "reference": "f5d85706fbb41dbfbe62ace2edf0e380fff084ad",
+                "shasum": ""
+            },
+            "bin": [
+                "bin/wkhtmltoimage-amd64"
+            ],
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL Version 3"
+            ],
+            "authors": [
+                {
+                    "name": "Julius Beckmann",
+                    "email": "github@h4cc.de"
+                }
+            ],
+            "description": "Convert html to image using webkit (qtwebkit). Static linked linux binary for amd64 systems.",
+            "homepage": "http://wkhtmltopdf.org/",
+            "keywords": [
+                "binary",
+                "convert",
+                "image",
+                "snapshot",
+                "thumbnail",
+                "wkhtmltoimage"
+            ],
+            "time": "2016-02-02 19:39:01"
         },
         {
             "name": "h4cc/wkhtmltopdf-amd64",
