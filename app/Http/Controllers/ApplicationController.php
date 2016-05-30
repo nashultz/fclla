@@ -19,7 +19,10 @@ class ApplicationController extends Controller
     //Online Application Form
     public function index()
     {
-        return view('frontend.application.index');
+        $date = date('Y');
+        $lydate = date('Y', mktime(0,0,0,0,0,$date-1));
+        $appdate = $lydate . '-' . $date;
+        return view('frontend.application.index', compact('appdate'));
     }
 
     public function save(CreateApplicationRequest $request)
