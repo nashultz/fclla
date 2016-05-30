@@ -24,7 +24,19 @@ class CreateApplicationRequest extends Request
     public function rules()
     {
         return [
-            'bname'=>'required'
+            'bname'=>'required',
+            'name'=>'required',
+            'address'=>'required',
+            'city'=>'required',
+            'state'=>'required',
+            'zipcode'=>'required',
+            'bphone'=>'required',
+            'hphone'=>'required',
+            'cphone'=>'required',
+            'email'=>'required',
+            'units'=>'required',
+            'membership'=>'required',
+            'roster'=>'required',
         ];
     }
 }
