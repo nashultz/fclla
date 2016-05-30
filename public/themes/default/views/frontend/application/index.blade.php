@@ -43,7 +43,7 @@
             <div class="form-group{{ $errors->has('address') ? ' has-error' : '' }}">
                 {!!Form::label('address', 'Address:', ['class'=>'col-md-4 control-label'])!!}
 
-                <div class="col-md-5">
+                <div class="col-md-6">
                     {!!Form::text('address',null,['class'=>'form-control'])!!}
 
                     @if ($errors->has('address'))
