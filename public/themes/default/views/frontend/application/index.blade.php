@@ -25,7 +25,7 @@
                                     <strong>{{ $errors->first('bname') }}</strong>
                                 </span>
                     @endif
-                </div>
+                </div><div class="clearfix"></div>
             </div>
             <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
                 {!!Form::label('name', 'Name:', ['class'=>'col-md-4 control-label'])!!}
@@ -38,7 +38,7 @@
                                 <strong>{{ $errors->first('name') }}</strong>
                             </span>
                     @endif
-                </div>
+                </div><div class="clearfix"></div>
             </div>
             <div class="form-group{{ $errors->has('address|city|state|zipcode') ? ' has-error' : '' }}">
                 {!!Form::label('address', 'Address:', ['class'=>'col-md-12 control-label'])!!}
@@ -53,7 +53,7 @@
                     @endif
                 </div>
                 <div class="col-md-3">
-                    {!!Form::text('city',null,['class'=>'form-control'])!!}
+                    {!!Form::text('city',null,['class'=>'form-control','placeholder'=>'City'])!!}
 
                     @if ($errors->has('city'))
                         <span class="help-block">
@@ -62,7 +62,7 @@
                     @endif
                 </div>
                 <div class="col-md-2">
-                    {!!Form::text('state',null,['class'=>'form-control'])!!}
+                    {!!Form::text('state',null,['class'=>'form-control','placeholder'=>'State'])!!}
 
                     @if ($errors->has('state'))
                         <span class="help-block">
@@ -71,14 +71,14 @@
                     @endif
                 </div>
                 <div class="col-md-2">
-                    {!!Form::text('zipcode',null,['class'=>'form-control'])!!}
+                    {!!Form::text('zipcode',null,['class'=>'form-control','placeholder'=>'Zipcode'])!!}
 
                     @if ($errors->has('zipcode'))
                         <span class="help-block">
                                 <strong>{{ $errors->first('zipcode') }}</strong>
                             </span>
                     @endif
-                </div>
+                </div><div class="clearfix"></div>
             </div>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
