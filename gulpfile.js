@@ -21,6 +21,7 @@ elixir.config.css.sass.pluginOptions.includePaths = [
 
 elixir(function(mix) {
     mix.copy('node_modules/font-awesome/fonts', elixir.config.publicPath+'/fonts');
+    mix.copy('node_modules/bootstrap-sass/fonts/bootstrap', elixir.config.publicPath+'/fonts');
 
     mix.copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', elixir.config.resourcesPath+'/js/bootstrap.js');
     mix.copy('node_modules/jquery/dist/jquery.min.js', elixir.config.resourcesPath+'/js/jquery.js');
