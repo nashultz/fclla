@@ -21,6 +21,7 @@ class ApplicationController extends Controller
     {
         $date = date('Y');
         $lydate = date('Y', mktime(0,0,0,0,0,$date-1));
+        dd($lydate);
         $appdate = $lydate . '-' . $date;
         return view('frontend.application.index', compact('appdate'));
     }
