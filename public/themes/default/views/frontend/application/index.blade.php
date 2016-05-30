@@ -8,7 +8,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h2>Membership Application<br><small>{{ appdate }}</small></h2>
+            <h2>Membership Application<br><small>{{ $appdate }}</small></h2>
         </div><div class="clearfix"></div>
     </div>
     <div class="row">
