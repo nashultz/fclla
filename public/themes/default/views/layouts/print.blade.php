@@ -14,7 +14,7 @@
         <div class="col-xs-4">
             <img src="{{theme('img/logo.jpg')}}" alt="Faulkner County Landlord Association">
         </div>
-        <div class="col-xs-8">
+        <div class="col-xs-6">
             <h2>Faulkner County Landlord Association</h2>
             2125 Harkrider Suite 16<br>Conway, Arkansas 72032<br><br>www.FCLLA.org
         </div>
