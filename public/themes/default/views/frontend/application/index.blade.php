@@ -64,8 +64,8 @@
                                 <strong>{{ $errors->first('city') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
                 {!!Form::label('state', 'State:', ['class'=>'col-md-4 control-label'])!!}
 
@@ -77,8 +77,8 @@
                                 <strong>{{ $errors->first('state') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('zipcode') ? ' has-error' : '' }}">
                 {!!Form::label('zipcode', 'Zipcode:', ['class'=>'col-md-4 control-label'])!!}
 
@@ -90,8 +90,8 @@
                                 <strong>{{ $errors->first('zipcode') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('bphone') ? ' has-error' : '' }}">
                 {!!Form::label('bphone', 'Business Phone:', ['class'=>'col-md-4 control-label'])!!}
 
@@ -103,8 +103,8 @@
                                 <strong>{{ $errors->first('bphone') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('hphone') ? ' has-error' : '' }}">
                 {!!Form::label('hphone', 'Home Phone:', ['class'=>'col-md-4 control-label'])!!}
 
@@ -116,8 +116,8 @@
                                 <strong>{{ $errors->first('hphone') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('cphone') ? ' has-error' : '' }}">
                 {!!Form::label('cphone', 'Cell Phone:', ['class'=>'col-md-4 control-label'])!!}
 
@@ -129,8 +129,8 @@
                                 <strong>{{ $errors->first('cphone') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                 {!!Form::label('email', 'Email:', ['class'=>'col-md-4 control-label'])!!}
 
@@ -142,8 +142,8 @@
                                 <strong>{{ $errors->first('email') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('units') ? ' has-error' : '' }}">
                 {!!Form::label('units', 'How many properties (units) you currently own?', ['class'=>'col-md-4 control-label'])!!}
 
@@ -155,8 +155,8 @@
                                 <strong>{{ $errors->first('units') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group {{$errors->has('membership') ? ' has-error' : ''}}">
                 {!! Form::label('membership', 'Is this membership a renewal?', ['class'=>'col-md-4 control-label']) !!}
 
@@ -168,8 +168,8 @@
                             <strong>{{ $errors->first('membership') }}</strong>
                         </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group{{ $errors->has('roster') ? ' has-error' : '' }}">
                 {!!Form::label('roster', 'Would you like to be included on a Membership Roster with your contact information that would be available to other members?', ['class'=>'col-md-4 control-label'])!!}
 
@@ -181,8 +181,8 @@
                                 <strong>{{ $errors->first('roster') }}</strong>
                             </span>
                     @endif
-                </div>
-            </div><div class="clearfix"></div>
+                </div><div class="clearfix"></div>
+            </div>
             <div class="form-group">
                 <div class="col-md-6 col-md-offset-4">
                     {!!Form::submit('Submit Application',['class'=>'btn btn-warning'])!!}
@@ -190,12 +190,12 @@
             </div>
             <div class="col-md-6">
                 <span class="help-block">All fields required.</span>
-            </div>
+            </div><div class="clearfix"></div>
             {!!Form::close()!!}
         </div><div class="clearfix"></div>
         <div class="col-lg-6 col-lg-offset-3">
             <p class="text-center">
-                <h2>Disclaimers</h2>
+                <h4>Disclaimers</h4>
                 <p><small>The Faulkner County Landlord Association ("FCLLA") is a non-profit organization and does not give legal,
                         tax, economic or investment advice. FCLLA does not endorse any person, product, literature, organization,
                         company or advertiser. The information and material received at the meetings or on our website are for
