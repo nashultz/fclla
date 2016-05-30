@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use FCLLA\Http\Requests;
 use Illuminate\Support\Facades\Auth;
+use Knp\Snappy\Pdf;
 
 class PagesController extends Controller
 {
