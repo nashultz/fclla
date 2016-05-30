@@ -29,6 +29,6 @@ class ApplicationController extends Controller
     {
         $data = $request->all();
         
-        return 'Saved Application';
+        return $data;
     }
 }
