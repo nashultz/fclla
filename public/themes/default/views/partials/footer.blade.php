@@ -3,11 +3,11 @@
     <div class="footer-above">
         <div class="container">
             <div class="row">
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-4 hidden-print">
                     <h3>Location</h3>
                     <p>Faulkner County Landlord Association<br>2125 Harkrider Street<br>Suite 16<br>Conway, AR  72032</p>
                 </div>
-                <div class="footer-col col-md-4">
+                <div class="footer-col col-md-4 hidden-print">
                     <h3>Around the Web</h3>
                     <ul class="list-inline">
                         <li>
@@ -24,7 +24,7 @@
                 </div>
                 <div class="clearfix"></div>
             </div>
-            <div class="row">
+            <div class="row hidden-print">
                 <div class="col-lg-12">
                     <div class="text-center">
                         <a href="{{route('legal')}}" title="Mission Statement and Legal Information">Legal</a> |

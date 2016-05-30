@@ -11,7 +11,7 @@
 
 <!-- Member Navigation -->
 @if(Auth::check())
-<div class="navbar navbar-inverse" role="navigation">
+<div class="navbar navbar-inverse hidden-print" role="navigation">
     <div class="container">
         <div class="row">
             <div class="navbar-header">
@@ -31,7 +31,7 @@
 @endif
 
 <!-- Navigation -->
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default hidden-print" role="navigation">
     <div class="container"><div class="row">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
