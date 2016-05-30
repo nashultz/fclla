@@ -2,7 +2,7 @@
 
 namespace FCLLA\Http\Controllers;
 
-use Barryvdh\DomPDF\PDF;
+use Barryvdh\DomPDF\Facade as PDF;
 use Illuminate\Http\Request;
 
 use FCLLA\Http\Requests;
