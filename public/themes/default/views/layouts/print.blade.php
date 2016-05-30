@@ -9,7 +9,8 @@
 </head>
 <body id="page-top">
 
-<a class="navbar-brand" href="index.html"><img class="pull-left" src="{{theme('img/logo.jpg')}}" alt="Faulkner County Landlord Association"> Faulkner County<br>Landlord Association</a>
+<div class="navbar-brand pull-left"><img src="{{theme('img/logo.jpg')}}" alt="Faulkner County Landlord Association"></div>
+<div class="pull-right">Faulkner County Landlord Association</div>
 
 <div class="container">
     @yield('content')

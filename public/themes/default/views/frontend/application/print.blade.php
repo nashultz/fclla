@@ -22,48 +22,34 @@
                     <div class="form-group">
                         <label for="name" class="col-sm-2 control-label">Name*:</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name="name">
+                            <hr>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="member" class="col-sm-2 control-label">Membership*:</label>
                         <div class="col-sm-10">
-                            <select name="member" class="form-control">
-                                <option class="disabled">-Select One-</option>
-                                <option value="Yes">Yes</option>
-                                <option value="No">No</option>
-                            </select>
+                            <hr>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="email" class="col-sm-2 control-label">Email*:</label>
                         <div class="col-sm-10">
-                            <input type="email" class="form-control" name="email">
+                            <hr>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="issuetype" class="col-sm-2 control-label">Issue Type*:</label>
                         <div class="col-sm-10">
-                            <select name="issuetype" class="form-control">
-                                <option class="disabled">-Select One-</option>
-                                <option value="Membership">Membership</option>
-                                <option value="Comment">Comment</option>
-                                <option value="Problem">Problem</option>
-                                <option value="Suggestion">Suggestion</option>
-                                <option value="Question">Question</option>
-                            </select>
+                            <hr>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="messagebody" class="col-sm-2 control-label">Message*:</label>
                         <div class="col-sm-10">
-                            <textarea class="form-control" name="messagebody"></textarea>
+                            <hr><br><hr><br><hr><br><hr><br><hr><br><hr><br><hr><br>
                         </div>
                     </div>
                     <div class="help-block">* denotes required fields.</div>
-                    <div class="form-group">
-                        <input type="submit" class="btn btn-success" value="Send Message">
-                    </div>
                 </form>
             </p>
         </div><div class="clearfix"></div>
