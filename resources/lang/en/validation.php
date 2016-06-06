@@ -93,16 +93,16 @@ return [
 
     'custom' => [
         'bname' => [
-            'required_without_all' => 'The business name field is required when none of :values are present.',
+            'required' => 'The business name field is required.',
         ],
         'bphone' => [
-            'required' => 'The business phone field is required when none of :values are present.',
+            'required_without_all' => 'The business phone field is required when none of :values are present.',
         ],
         'cphone' => [
-            'required' => 'The cell phone field is required when none of :values are present.',
+            'required_without_all' => 'The cell phone field is required when none of :values are present.',
         ],
         'hphone' => [
-            'required' => 'The home phone field is required when none of :values are present.',
+            'required_without_all' => 'The home phone field is required when none of :values are present.',
         ]
     ],
 
