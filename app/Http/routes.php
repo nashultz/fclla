@@ -37,12 +37,15 @@ Route::get('news/{slug}', 'BlogController@view')->name('blogpost');
 /* MEMBER ROUTES */
 Route::auth();
 
-Route::group(['as'=>'member::', 'prefix' => 'member', 'middleware' => 'auth'], function() {
+Route::group(['as'=>'member::', 'prefix' => 'member'], function() {
     Route::get('newpost', 'BlogController@newpost')->name('newpost');
     Route::post('addpost', 'BlogController@addpost')->name('addpost');
-});
+})->middleware('auth');
 
 /* ADMIN ROUTES */
-Route::group(['as'=>'admin::', 'prefix'=>'admin', 'middleware' => 'auth'], function() {
+
+
+
+Route::group(['as'=>'admin::', 'prefix'=>'admin'], function() {
     Route::get('applications', 'ApplicationController@viewAll')->name('viewallapps');
-});
+})->middleware('auth', 'admin');
