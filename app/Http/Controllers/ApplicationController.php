@@ -43,6 +43,13 @@ class ApplicationController extends Controller
         return redirect()->back();
     }
 
+    public function viewAll()
+    {
+        $apps = $this->application->all();
+
+        return view('frontend.application.view', compact('apps'));
+    }
+
     public function printfilledapp($id)
     {
         $app = $this->application->findOrFail($id);

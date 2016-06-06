@@ -44,5 +44,5 @@ Route::group(['as'=>'member::', 'prefix' => 'member', 'middleware' => 'auth'], f
 
 /* ADMIN ROUTES */
 Route::group(['as'=>'admin::', 'prefix'=>'admin', 'middleware'=>'auth'], function() {
-
+    Route::get('applicaitons', 'ApplicationController@viewAll')->name('viewallapps');
 });
