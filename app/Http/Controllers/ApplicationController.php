@@ -20,7 +20,7 @@ class ApplicationController extends Controller
     //Download application
     public function downloadapp()
     {
-        $pdf = PDF::loadView('frontend.application.print.index');
+        $pdf = PDF->loadView('frontend.application.print.index');
         return $pdf->download('application.pdf');
     }
     
@@ -45,7 +45,7 @@ class ApplicationController extends Controller
     public function printfilledapp($id)
     {
         $app = $this->application->findOrFail($id);
-        $pdf = PDF::loadView('frontend.application.print.view', $app);
+        $pdf = PDF->loadView('frontend.application.print.view', $app);
         return $pdf->stream('filledapplication.pdf');
     }
 }
