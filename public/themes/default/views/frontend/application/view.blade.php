@@ -28,7 +28,7 @@
                         Email
                     </td>
                     <td>
-
+                        Units
                     </td>
                     <td>
                         View
@@ -54,11 +54,11 @@
                         {{$app->units}}
                     </td>
                     <td>
-                        <a href="#" class="btn btn-block btn-primary"><i class="fa fa-search"></i></a>
+                        <a href="#" class="btn btn-primary"><i class="fa fa-search"></i></a>
                     </td>
                     <td>
-                        <a href="#" class="btn btn-block btn-success"><i class="fa fa-check fa-fw"></i> Accept</a>
-                        <a href="#" class="btn btn-block btn-danger"><i class="fa fa-close fa-fw"></i> Deny</a>
+                        <a href="#" class="btn btn-success"><i class="fa fa-check fa-fw"></i> Accept</a>
+                        <a href="#" class="btn btn-danger"><i class="fa fa-close fa-fw"></i> Deny</a>
                     </td>
                 </tr>
                 @endforeach
