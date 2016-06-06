@@ -12,15 +12,16 @@ use FCLLA\Http\Requests;
 class ApplicationController extends Controller
 {
 
-    public function __construct(Application $application)
+    public function __construct(Application $application, PDF $pdf)
     {
         $this->application = $application;
+        $this->pdf = $pdf;
     }
 
     //Download application
     public function downloadapp()
     {
-        $pdf = PDF->loadView('frontend.application.print.index');
+        $pdf = $this->pdf->loadView('frontend.application.print.index');
         return $pdf->download('application.pdf');
     }
     
@@ -45,7 +46,7 @@ class ApplicationController extends Controller
     public function printfilledapp($id)
     {
         $app = $this->application->findOrFail($id);
-        $pdf = PDF->loadView('frontend.application.print.view', $app);
+        $pdf = $this->pdf->loadView('frontend.application.print.view', $app);
         return $pdf->stream('filledapplication.pdf');
     }
 }
