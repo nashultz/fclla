@@ -37,7 +37,6 @@ class Kernel extends HttpKernel
 
         'admin' => [
             \FCLLA\Http\Middleware\Authenticate::class,
-            \FCLLA\Http\Middleware\Administration::class,
         ]
     ];
 
@@ -54,6 +53,5 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \FCLLA\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'admin' => \FCLLA\Http\Middleware\Administration::class,
     ];
 }
