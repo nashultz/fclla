@@ -45,7 +45,7 @@ class ApplicationController extends Controller
 
     public function viewAll()
     {
-        $apps = $this->application->all();
+        $apps = $this->application->get();
 
         return view('frontend.application.view', compact('apps'));
     }
