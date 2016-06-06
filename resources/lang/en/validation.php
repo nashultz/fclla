@@ -92,8 +92,8 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'bname' => [
+            'required' => 'The business name field is required.',
         ],
     ],
 
