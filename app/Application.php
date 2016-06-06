@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Application extends Model
 {
-    //
+    protected $fillable = [
+        'bname', 'name', 'email', 'address', 'city', 'state', 'zipcode', 'bphone', 'hphone', 'cphone',
+        'units', 'membership', 'roster'
+    ];
 }
