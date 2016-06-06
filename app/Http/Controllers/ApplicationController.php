@@ -46,7 +46,7 @@ class ApplicationController extends Controller
     public function printfilledapp($id)
     {
         $app = $this->application->findOrFail($id);
-        $pdf = $this->pdf->loadView('frontend.application.print.view', $app);
+        $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
         return $pdf->stream('filledapplication.pdf');
     }
 }
