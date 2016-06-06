@@ -5,7 +5,7 @@ namespace FCLLA\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class AdminMiddleware
+class Administration
 {
     /**
      * Handle an incoming request.
