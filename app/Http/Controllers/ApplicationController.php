@@ -2,6 +2,7 @@
 
 namespace FCLLA\Http\Controllers;
 
+use FCLLA\Application;
 use FCLLA\Http\Requests\CreateApplicationRequest;
 use Illuminate\Http\Request;
 
@@ -9,6 +10,12 @@ use FCLLA\Http\Requests;
 
 class ApplicationController extends Controller
 {
+
+    public function __construct(Application $application)
+    {
+        $this->application = $application;
+    }
+
     //Download application
     public function downloadapp()
     {
@@ -28,7 +35,9 @@ class ApplicationController extends Controller
     public function save(CreateApplicationRequest $request)
     {
         $data = $request->all();
-        
-        return $data;
+        $this->application->create($data);
+
+        flash()->success('Application was successfully sent!');
+        return redirect()->back();
     }
 }

@@ -33,7 +33,7 @@ class CreateApplicationRequest extends Request
             'bphone'=>'required_without_all:hphone,cphone',
             'hphone'=>'required_without_all:bphone,cphone',
             'cphone'=>'required_without_all:bphone,hphone',
-            'email'=>'required',
+            'email'=>'required|unique:users|unique:applications',
             'units'=>'required',
             'membership'=>'required',
             'roster'=>'required',
