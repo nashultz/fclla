@@ -1,7 +1,7 @@
 @extends('layouts.frontendalt')
 
 @section('page_title')
-    Contact
+    Membership Application
 @endsection
 
 @section('content')
