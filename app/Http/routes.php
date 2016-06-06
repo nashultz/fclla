@@ -37,10 +37,10 @@ Route::get('news/{slug}', 'BlogController@view')->name('blogpost');
 /* MEMBER ROUTES */
 Route::auth();
 
-group(['as'=>'member::', 'prefix'=>'member'], function() {
+/*group(['as'=>'member::', 'prefix'=>'member'], function() {
     get('newpost', 'BlogController@newpost')->name('newpost');
     post('addpost', 'BlogController@addpost')->name('addpost');
-})->middleware('auth');
+})->middleware('auth');*/
 
 
 
