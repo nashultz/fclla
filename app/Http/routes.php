@@ -43,6 +43,6 @@ Route::group(['as'=>'member::', 'prefix' => 'member', 'middleware' => 'auth'], f
 });
 
 /* ADMIN ROUTES */
-Route::group(['as'=>'admin::', 'prefix'=>'admin', 'middleware'=>['auth', 'admin']], function() {
+Route::group(['as'=>'admin::', 'prefix'=>'admin'], function() {
     Route::get('applications', 'ApplicationController@viewAll')->name('viewallapps');
-});
+})->middleware(['auth', 'admin']);
