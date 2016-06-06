@@ -28,7 +28,7 @@
                         Email
                     </td>
                     <td>
-                        Units
+
                     </td>
                     <td>
                         View
@@ -61,6 +61,7 @@
                         <a href="#" class="btn btn-block btn-danger"><i class="fa fa-close fa-fw"></i> Deny</a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
