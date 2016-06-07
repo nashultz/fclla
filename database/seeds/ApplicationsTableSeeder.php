@@ -20,6 +20,7 @@ class ApplicationsTableSeeder extends Seeder
             'zipcode' => '72034',
             'cphone' => '5019089587',
             'email' => 'nathon@nathonshultz.com',
+            'units' => 2,
             'membership' => 0,
             'roster' => 0
         ]);
