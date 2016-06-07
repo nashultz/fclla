@@ -87,7 +87,7 @@
                         <strong>Membership Renewal</strong>
                     </td>
                     <td>
-                        {{$app->membership}}
+                        {{$app->is_renewal}}
                     </td>
                 </tr>
                 <tr>

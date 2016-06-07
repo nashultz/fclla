@@ -18,4 +18,12 @@ class Application extends Model
         else
             return 'Yes';
     }
+
+    public function getIsRenewalAttribute()
+    {
+        if($this->membership == 0)
+            return 'No';
+        else
+            return 'Yes';
+    }
 }
