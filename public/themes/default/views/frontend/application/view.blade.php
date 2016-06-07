@@ -8,7 +8,7 @@
 <div class="panel panel-default">
     <div class="panel-heading">
         <div class="pull-left btn-table-align">
-            Applications
+            Application for {{$app->name}}
         </div>
 
         <div class="clearfix"></div>
