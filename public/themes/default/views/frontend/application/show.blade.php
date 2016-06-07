@@ -100,6 +100,7 @@
                 </tr>
             </tbody>
         </table>
+        <a href="" class="btn btn-success"><i class="fa fa-check"></i> Accept</a><a href="" class="btn btn-danger"><i class="fa fa-close"></i> Deny</a>
     </div>
 </div>
 @endsection
