@@ -33,6 +33,11 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:60,1',
+        ],
+
+        'admin' => [
+            \FCLLA\Http\Middleware\Authenticate::class,
+            \FCLLA\Http\Middleware\Administration::class,
         ]
     ];
 
