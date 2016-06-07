@@ -54,7 +54,7 @@
                         {{$app->units}}
                     </td>
                     <td>
-                        <a href="#" class="btn btn-primary"><i class="fa fa-search"></i></a>
+                        <a href="{{route('viewapp', $app->id)}}" class="btn btn-primary"><i class="fa fa-search"></i></a>
                     </td>
                     <td>
                         <a href="#" class="btn btn-success"><i class="fa fa-check fa-fw"></i> Accept</a>
