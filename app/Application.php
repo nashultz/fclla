@@ -11,7 +11,7 @@ class Application extends Model
         'units', 'membership', 'roster'
     ];
 
-    public function getRosterAttribute()
+    public function getOnRosterAttribute()
     {
         if($this->roster == 0)
             return 'No';

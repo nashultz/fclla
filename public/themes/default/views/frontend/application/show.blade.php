@@ -95,7 +95,7 @@
                         <strong>Add to Roster</strong>
                     </td>
                     <td>
-                        {{$app->roster}}
+                        {{$app->on_roster}}
                     </td>
                 </tr>
             </tbody>
