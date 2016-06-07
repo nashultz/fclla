@@ -17,7 +17,7 @@ class Administration
     public function handle($request, Closure $next)
     {
         if(!Auth::user()->admin == 0) {
-            flash()->warning('You are not authorized.');
+            flash()->error('You are not authorized.');
             return redirect()->back();
         }
 
