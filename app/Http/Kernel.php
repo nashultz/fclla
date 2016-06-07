@@ -38,6 +38,11 @@ class Kernel extends HttpKernel
         'admin' => [
             \FCLLA\Http\Middleware\Authenticate::class,
             \FCLLA\Http\Middleware\Administration::class,
+        ],
+
+        'membership' => [
+            \FCLLA\Http\Middleware\Authenticate::class,
+            \FCLLA\Http\Middleware\Membership::class
         ]
     ];
 

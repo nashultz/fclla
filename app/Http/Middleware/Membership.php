@@ -5,7 +5,7 @@ namespace FCLLA\Http\Middleware;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 
-class Administration
+class Membership
 {
     /**
      * Handle an incoming request.
@@ -16,11 +16,10 @@ class Administration
      */
     public function handle($request, Closure $next)
     {
-        if(!Auth::user()->admin == 1) {
+        if(!Auth::check()) {
             flash()->error('You are not authorized.');
             return redirect()->back();
         }
-
         return $next($request);
     }
 }
