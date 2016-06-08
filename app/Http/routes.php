@@ -17,7 +17,6 @@ Route::get('legal', 'PagesController@legal')->name('legal');
 Route::get('application/download', 'ApplicationController@downloadapp')->name('downloadapp');
 Route::get('application', 'ApplicationController@index')->name('application');
 Route::post('application', 'ApplicationController@save')->name('saveapp');
-Route::get('application/{application}/print', 'ApplicationController@printfilledapp')->name('filledapp');
 
 /* BLOG ROUTES*/
 Route::get('news', 'BlogController@index')->name('blogindex');
@@ -35,4 +34,6 @@ Route::group(['as'=>'member::', 'prefix'=>'member', 'middleware'=>'auth'], funct
 
 Route::group(['as'=>'admin::', 'prefix'=>'admin', 'middleware'=>'admin'], function() {
     Route::get('applications', 'ApplicationController@viewAll')->name('viewallapps');
+    Route::get('application/{application}/print', 'ApplicationController@printfilledapp')->name('filledapp');
+    Route::get('application/{application}', 'ApplicationController@view')->name('viewapp');
 });
