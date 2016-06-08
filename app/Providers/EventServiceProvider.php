@@ -13,9 +13,29 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'FCLLA\Events\SomeEvent' => [
-            'FCLLA\Listeners\EventListener',
+        'FCLLA\Events\ApplicationWasSubmitted' => [
+            'FCLLA\Listeners\EmailUserApplication',
+            'FCLLA\Listeners\EmailAdministrationUserApplicationLink',
         ],
+        'FCLLA\Events\UserApplicationWasApproved' => [
+            'FCLLA\Listeners\ConvertApplicationToNewUser',
+            'FCLLA\Listeners\GenerateNewUserPasswordToken',
+            'FCLLA\Listeners\AddNewUserToUnpaidMemberTable',
+            'FCLLA\Listeners\EmailUserApprovalLetter',
+        ],
+        'FCLLA\Events\UserApplicationWasDenied' => [
+            'FCLLA\Listeners\RemoveUserApplication',
+            'FCLLA\Listeners\EmailUserDenialLetter',
+        ],
+        'FCLLA\Events\UserHasPaidDues' => [
+            'FCLLA\Listeners\RemoveUserFromUnpaidMemberTable',
+            'FCLLA\Listeners\EmailUserPaymentReceipt',
+            'FCLLA\Listeners\EmailAdministrationUserPaymentNotice'
+        ],
+        'FCLLA\Events\UserAddedToUnpaidMemberTable' => [
+            'FCLLA\Listeners\CreateBillingInvoiceForUser',
+            'FCLLA\Listeners\EmailUserPaymentReminderWithInvoice'
+        ]
     ];
 
     /**

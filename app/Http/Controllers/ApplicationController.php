@@ -12,6 +12,9 @@ use FCLLA\Http\Requests;
 class ApplicationController extends Controller
 {
 
+    protected $application;
+    protected $pdf;
+
     public function __construct(Application $application, PDF $pdf)
     {
         $this->application = $application;
