@@ -32,15 +32,13 @@ class EmailUserApplication
     public function handle(ApplicationWasSubmitted $event)
     {
         $pdflocation = public_path() . '/files/';
-        $app = $event->application;
-        dd($event->application);
-        /*$filename = $pdflocation . $event->id . '/' . $event->id . 'application.pdf';
+        $filename = $pdflocation . $event->application->id . '/' . $event->application->id . 'application.pdf';
 
         $app = $event;
 
         $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
         $pdf->save($filename);
         $userpdflink = link_to($filename);
-        dd($userpdflink);*/
+        dd($userpdflink);
     }
 }
