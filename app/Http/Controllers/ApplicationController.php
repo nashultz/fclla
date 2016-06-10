@@ -4,6 +4,7 @@ namespace FCLLA\Http\Controllers;
 
 use Barryvdh\DomPDF\PDF as PDF;
 use FCLLA\Application;
+use FCLLA\Events\ApplicationWasSubmitted;
 use FCLLA\Http\Requests\CreateApplicationRequest;
 use Illuminate\Http\Request;
 
@@ -40,10 +41,11 @@ class ApplicationController extends Controller
     public function save(CreateApplicationRequest $request)
     {
         $data = $request->all();
-        $this->application->save($data);
+        $this->application->fill($data);
+        $this->application->save();
 
         flash()->success('Application was successfully sent!');
-        event($this->application);
+        event(new ApplicationWasSubmitted($this->application));
         return redirect()->back();
     }
 
