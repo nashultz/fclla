@@ -40,10 +40,10 @@ class ApplicationController extends Controller
     public function save(CreateApplicationRequest $request)
     {
         $data = $request->all();
-        $this->application->create($data);
+        $this->application->save($data);
 
         flash()->success('Application was successfully sent!');
-        dd($data->id);
+        dd($this->application->id);
         return redirect()->back();
     }
 
