@@ -27,6 +27,6 @@ class EmailUserApplication
      */
     public function handle(ApplicationWasSubmitted $event)
     {
-        flash()->info('EmailUserApplication called.');
+        dd($event);
     }
 }
