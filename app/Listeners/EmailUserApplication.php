@@ -38,7 +38,7 @@ class EmailUserApplication
 
         $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
         $pdf->save($filename);
-        $userpdflink = link_to($filename);
+        $userpdflink = url($filename);
         dd($userpdflink);
     }
 }
