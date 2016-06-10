@@ -43,7 +43,7 @@ class ApplicationController extends Controller
         $this->application->save($data);
 
         flash()->success('Application was successfully sent!');
-        dd($this->application);
+        event($this->application);
         return redirect()->back();
     }
 
