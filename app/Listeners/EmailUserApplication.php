@@ -10,6 +10,9 @@ use Illuminate\Support\Facades\Log;
 
 class EmailUserApplication
 {
+    public $event;
+    public $pdf;
+
     /**
      * Create the event listener.
      *
@@ -29,6 +32,7 @@ class EmailUserApplication
     public function handle(ApplicationWasSubmitted $event)
     {
         $pdflocation = public_path() . '/files/';
+        $app = $event->application;
         dd($event->application);
         /*$filename = $pdflocation . $event->id . '/' . $event->id . 'application.pdf';
 

@@ -13,7 +13,7 @@ use FCLLA\Http\Requests;
 class ApplicationController extends Controller
 {
 
-    protected $application;
+    public $application;
     protected $pdf;
 
     public function __construct(Application $application, PDF $pdf)
@@ -41,11 +41,10 @@ class ApplicationController extends Controller
     public function save(CreateApplicationRequest $request)
     {
         $data = $request->all();
-        $this->application->fill($data);
-        $this->application->save();
+        $app = $this->application->create($data);
 
         flash()->success('Application was successfully sent!');
-        event(new ApplicationWasSubmitted($this->application));
+        event(new ApplicationWasSubmitted($app));
         return redirect()->back();
     }
 

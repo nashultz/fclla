@@ -2,7 +2,6 @@
 
 namespace FCLLA\Events;
 
-use FCLLA\Application;
 use FCLLA\Events\Event;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
@@ -11,14 +10,14 @@ class ApplicationWasSubmitted extends Event
 {
     use SerializesModels;
 
-    protected $application;
+    public $application;
 
     /**
      * Create a new event instance.
      *
-     * @param Application $application
+     * @param 
      */
-    public function __construct(Application $application)
+    public function __construct($application)
     {
         $this->application = $application;
     }
