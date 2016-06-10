@@ -5,6 +5,7 @@ namespace FCLLA\Listeners;
 use FCLLA\Events\ApplicationWasSubmitted;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Log;
 
 class EmailUserApplication
 {
@@ -26,6 +27,6 @@ class EmailUserApplication
      */
     public function handle(ApplicationWasSubmitted $event)
     {
-        dd('Called');
+        flash()->info('EmailUserApplication called '. $event);
     }
 }
