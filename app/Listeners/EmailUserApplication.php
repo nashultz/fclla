@@ -2,6 +2,7 @@
 
 namespace FCLLA\Listeners;
 
+use Barryvdh\DomPDF\PDF;
 use FCLLA\Events\ApplicationWasSubmitted;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -12,11 +13,11 @@ class EmailUserApplication
     /**
      * Create the event listener.
      *
-     * @return void
+     * @param PDF $pdf
      */
-    public function __construct()
+    public function __construct(PDF $pdf)
     {
-        //
+        $this->pdf = $pdf;
     }
 
     /**
@@ -27,6 +28,14 @@ class EmailUserApplication
      */
     public function handle(ApplicationWasSubmitted $event)
     {
-        dd($event);
+        $pdflocation = public_path() . '/files/';
+        $filename = $pdflocation . $event->id . '/' . $event->id . 'application.pdf';
+
+        $app = $event;
+
+        $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
+        $pdf->save($filename);
+        $userpdflink = link_to($filename);
+        dd($userpdflink);
     }
 }
