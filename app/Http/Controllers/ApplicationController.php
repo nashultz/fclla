@@ -43,7 +43,7 @@ class ApplicationController extends Controller
         $this->application->create($data);
 
         flash()->success('Application was successfully sent!');
-        dd($this->application->id);
+        dd($data->id);
         return redirect()->back();
     }
 
