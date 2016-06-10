@@ -26,6 +26,6 @@ class EmailUserApplication
      */
     public function handle(ApplicationWasSubmitted $event)
     {
-        //
+        dd('Called');
     }
 }
