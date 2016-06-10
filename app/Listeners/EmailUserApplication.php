@@ -34,7 +34,7 @@ class EmailUserApplication
         $pdflocation = public_path() . '/files/';
         $filename = $pdflocation . $event->application->id . '/' . $event->application->id . 'application.pdf';
 
-        $app = $event;
+        $app = $event->application;
 
         $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
         $pdf->save($filename);
