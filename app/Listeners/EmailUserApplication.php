@@ -29,6 +29,7 @@ class EmailUserApplication
     public function handle(ApplicationWasSubmitted $event)
     {
         $pdflocation = public_path() . '/files/';
+        dd($event);
         /*$filename = $pdflocation . $event->id . '/' . $event->id . 'application.pdf';
 
         $app = $event;
