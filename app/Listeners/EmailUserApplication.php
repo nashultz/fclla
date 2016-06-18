@@ -37,7 +37,7 @@ class EmailUserApplication
         $app = $event->application;
 
         $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
-        $pdf->save($filepath);
+        $pdf->save($filename);
         $userpdflink = url($filename);
         $data = array('userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name);
         Mail::send('emails.submituserapplication', $data, function($m) use ($data) {
