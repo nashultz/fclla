@@ -32,12 +32,12 @@ class EmailUserApplication
     public function handle(ApplicationWasSubmitted $event)
     {
         $pdflocation = public_path() . '/files/';
-        $filename = $event->application->id . '/' . $event->application->id . camel_case($event->application->name) . 'application.pdf';
+        $filename = $event->application->id . camel_case($event->application->name) . 'application.pdf';
         $filepath = $pdflocation . $filename;
         $app = $event->application;
 
         $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'));
-        $pdf->save($filename);
+        $pdf->save($filepath);
         $userpdflink = url($filename);
         $data = array('userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name);
         Mail::send('emails.submituserapplication', $data, function($m) use ($data) {
