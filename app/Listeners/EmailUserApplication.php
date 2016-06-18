@@ -43,7 +43,7 @@ class EmailUserApplication
         Mail::send('emails.submituserapplication', $data, function($m) use ($data) {
             $m->from('info@fclla.org', 'Faulkner County Landlord Association');
             $m->to($data['useremail'], $data['username'])->subject('FCLLA Membership Application');
-            $m->bcc('nathon@nathonshultz.com', 'Nathon Shultz');
+            $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
         });
     }
 }
