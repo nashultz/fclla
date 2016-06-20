@@ -38,7 +38,7 @@ class EmailUserApplication
 
         $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'))->save($filepath);
         $userpdflink = url($filename);
-        $data = array('userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name);
+        $data = array('userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name, 'user'=>$event->application);
         Mail::send('emails.submituserapplication', $data, function($m) use ($data) {
             $m->from('info@fclla.org', 'Faulkner County Landlord Association');
             $m->to($data['useremail'], $data['username'])->subject('FCLLA Membership Application');
