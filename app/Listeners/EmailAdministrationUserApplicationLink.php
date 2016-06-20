@@ -30,7 +30,7 @@ class EmailAdministrationUserApplicationLink
         $filename = $event->application->id . snake_case($event->application->name) . 'application.pdf';
         $filepath = $pdflocation . $filename;
         $user = $event->application;
-        $userpdflink = route('viewapp',$user->id);
+        $userpdflink = route('admin::viewapp', ['id' => $user->id]);
         $data = array('filepath'=>$filepath,'userpdflink'=>$userpdflink, 'user'=>$event->application);
         Mail::send('emails.usersubmittedapplication', $data, function($m) use ($data) {
             $m->from('info@fclla.org', 'Faulkner County Landlord Association');
