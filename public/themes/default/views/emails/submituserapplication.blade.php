@@ -187,14 +187,16 @@
 
             <!-- content -->
             <div class="content">
-                <h2>Application for {{$user->name}}</h2>
+                <h2>Your application was submitted!</h2>
                 <table>
                     <tr>
                         <td>
-                            <p>Business Name: {{$user->bname}}</p>
-                            <p>Name: {{$user->name}}</p>
-                            <p>Email: {{$user->email}}</p>
-                            <p>Address: {{$user->address}}, {{$user->city}}, {{$user->state}}  {{$user->zipcode}}</p>
+                            <p>Thank you, {{$user->name}}!</p>
+                            <p>Your application to join the Faulkner County Landlords Association was submitted successfully.</p>
+                            <p>Attached you will find a copy of your application for your records. Please allow us some time to process your application.</p>
+                            <p>You will recieve an update on the status of your application when a decision has been made.</p>
+                            <p>Thank you,</p>
+                            <p>Faulkner County Landlords Association</p>
                         </td>
                     </tr>
                 </table>
@@ -218,7 +220,7 @@
                 <table>
                     <tr>
                         <td align="center">
-                            <p>This is a generated message from the contact form from the Faulkner County Landlord Association website.</p>
+                            <p>This is a generated message from the Faulkner County Landlord Association website, please do not reply to this message.</p>
                         </td>
                     </tr>
                 </table>
