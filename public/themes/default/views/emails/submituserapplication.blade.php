@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>{{$issuetype}} from {{$name}}</title>
+    <title>Application for {{$user->name}}</title>
     <style>
         /* -------------------------------------
             GLOBAL
@@ -187,16 +187,14 @@
 
             <!-- content -->
             <div class="content">
+                <h2>Application for {{$user->name}}</h2>
                 <table>
                     <tr>
                         <td>
-                            <h2>Info</h2>
-                            <p>Name: {{$name}}</p>
-                            <p>Email: {{$email}}</p>
-                            <p>Is a member: {{$member}}</p>
-                            <h2>Message</h2>
-                            <p>Issue Type: {{$issuetype}}</p>
-                            <p>{{$messagebody}}</p>
+                            <p>Business Name: {{$user->bname}}</p>
+                            <p>Name: {{$user->name}}</p>
+                            <p>Email: {{$user->email}}</p>
+                            <p>Address: {{$user->address}}, {{$user->city}}, {{$user->state}}  {{$user->zipcode}}</p>
                         </td>
                     </tr>
                 </table>
