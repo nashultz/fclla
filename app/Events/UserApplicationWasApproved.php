@@ -9,15 +9,20 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 class UserApplicationWasApproved extends Event
 {
     use SerializesModels;
+    /**
+     * @var
+     */
+    public $app;
 
     /**
      * Create a new event instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($app)
     {
         //
+        $this->app = $app;
     }
 
     /**

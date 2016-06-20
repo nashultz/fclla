@@ -27,5 +27,7 @@ class ConvertApplicationToNewUser
     public function handle(UserApplicationWasApproved $event)
     {
         //
+        User::create($event->app);
+        Application::where('id',$event->app->id)->delete();
     }
 }
