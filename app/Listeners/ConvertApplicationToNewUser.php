@@ -2,7 +2,9 @@
 
 namespace FCLLA\Listeners;
 
+use FCLLA\Application;
 use FCLLA\Events\UserApplicationWasApproved;
+use FCLLA\User;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
