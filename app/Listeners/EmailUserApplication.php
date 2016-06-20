@@ -32,17 +32,19 @@ class EmailUserApplication
     public function handle(ApplicationWasSubmitted $event)
     {
         $pdflocation = public_path() . '/files/';
-        $filename = $event->application->id . camel_case($event->application->name) . 'application.pdf';
+        $filename = $event->application->id . snake_case($event->application->name) . 'application.pdf';
         $filepath = $pdflocation . $filename;
         $app = $event->application;
 
-        $pdf = $this->pdf->loadView('frontend.application.print.view', compact('app'))->save($filepath);
+        $pdf = $this->pdf->loadView('frontend.application.print.userapplication', compact('app'))->save($filepath);
         $userpdflink = url($filename);
-        $data = array('userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name, 'user'=>$event->application);
+        $data = array('filepath'=>$filepath,'userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name, 'user'=>$event->application);
+        dd($data['filepath']);
         Mail::send('emails.submituserapplication', $data, function($m) use ($data) {
             $m->from('info@fclla.org', 'Faulkner County Landlord Association');
             $m->to($data['useremail'], $data['username'])->subject('FCLLA Membership Application');
             $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
+            $m->attach($data['filepath']);
         });
     }
 }
