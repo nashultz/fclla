@@ -2,6 +2,7 @@
 
 namespace FCLLA\Listeners;
 
+use FCLLA\Application;
 use FCLLA\Events\UserApplicationWasDenied;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -21,11 +22,12 @@ class RemoveUserApplication
     /**
      * Handle the event.
      *
-     * @param  UserApplicationWasDenied  $event
-     * @return void
+     * @param Application $app
+     * @param  UserApplicationWasDenied $event
+     * @throws \Exception
      */
-    public function handle(UserApplicationWasDenied $event)
+    public function handle(Application $app, UserApplicationWasDenied $event)
     {
-        dd($event);
+        $app->where('id',$event->app->id)->delete();
     }
 }
