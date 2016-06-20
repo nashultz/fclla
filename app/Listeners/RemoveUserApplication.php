@@ -9,20 +9,15 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 
 class RemoveUserApplication
 {
-    /**
-     * @var Application
-     */
-    public $app;
 
     /**
      * Create the event listener.
      *
-     * @param Application $app
+     * @internal param Application $app
      */
-    public function __construct(Application $app)
+    public function __construct()
     {
         //
-        $this->app = $app;
     }
 
     /**
@@ -33,6 +28,6 @@ class RemoveUserApplication
      */
     public function handle(UserApplicationWasDenied $event)
     {
-        $app->where('id',$event->app->id)->delete();
+        Application::where('id',$event->app->id)->delete();
     }
 }
