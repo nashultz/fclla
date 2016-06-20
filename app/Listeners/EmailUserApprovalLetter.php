@@ -5,6 +5,7 @@ namespace FCLLA\Listeners;
 use FCLLA\Events\UserApplicationWasApproved;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
+use Illuminate\Support\Facades\Mail;
 
 class EmailUserApprovalLetter
 {
