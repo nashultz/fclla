@@ -9,15 +9,16 @@ use Illuminate\Contracts\Broadcasting\ShouldBroadcast;
 class UserApplicationWasDenied extends Event
 {
     use SerializesModels;
+    public $app;
 
     /**
      * Create a new event instance.
      *
-     * @return void
+     * @param $app
      */
-    public function __construct()
+    public function __construct($app)
     {
-        //
+        $this->app = $app;
     }
 
     /**
