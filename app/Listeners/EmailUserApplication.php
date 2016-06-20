@@ -34,9 +34,9 @@ class EmailUserApplication
         $pdflocation = public_path() . '/files/';
         $filename = $event->application->id . snake_case($event->application->name) . 'application.pdf';
         $filepath = $pdflocation . $filename;
-        $app = $event->application;
+        $user = $event->application;
 
-        $pdf = $this->pdf->loadView('frontend.application.print.userapplication', compact('app'))->save($filepath);
+        $pdf = $this->pdf->loadView('frontend.application.print.userapplication', compact('user'))->save($filepath);
         $userpdflink = url($filename);
         $data = array('filepath'=>$filepath,'userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name, 'user'=>$event->application);
         dd($data['filepath']);
