@@ -57,8 +57,8 @@
                         <a href="{{route('admin::viewapp', $app->id)}}" class="btn btn-primary"><i class="fa fa-search"></i></a>
                     </td>
                     <td>
-                        <a href="{{route('admin::approveapp')}}" class="btn btn-success"><i class="fa fa-check fa-fw"></i> Accept</a>
-                        <a href="{{route('admin::denyapp')}}" class="btn btn-danger"><i class="fa fa-close fa-fw"></i> Deny</a>
+                        <a href="{{route('admin::approveapp', $app->id)}}" class="btn btn-success"><i class="fa fa-check fa-fw"></i> Accept</a>
+                        <a href="{{route('admin::denyapp', $app->id)}}" class="btn btn-danger"><i class="fa fa-close fa-fw"></i> Deny</a>
                     </td>
                 </tr>
                 @endforeach
