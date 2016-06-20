@@ -26,6 +26,6 @@ class RemoveUserApplication
      */
     public function handle(UserApplicationWasDenied $event)
     {
-        //
+        dd($event);
     }
 }

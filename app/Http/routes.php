@@ -35,5 +35,7 @@ Route::group(['as'=>'member::', 'prefix'=>'member', 'middleware'=>'auth'], funct
 Route::group(['as'=>'admin::', 'prefix'=>'admin', 'middleware'=>'admin'], function() {
     Route::get('applications', 'ApplicationController@viewAll')->name('viewallapps');
     Route::get('application/{application}/print', 'ApplicationController@printfilledapp')->name('filledapp');
+    Route::get('application/{application}/approve', 'ApplicationController@approve')->name('approveapp');
+    Route::get('application/[application}/deny', 'ApplicationController@deny')->name('denyapp');
     Route::get('application/{application}', 'ApplicationController@view')->name('viewapp');
 });

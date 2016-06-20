@@ -5,6 +5,8 @@ namespace FCLLA\Http\Controllers;
 use Barryvdh\DomPDF\PDF as PDF;
 use FCLLA\Application;
 use FCLLA\Events\ApplicationWasSubmitted;
+use FCLLA\Events\UserApplicationWasApproved;
+use FCLLA\Events\UserApplicationWasDenied;
 use FCLLA\Http\Requests\CreateApplicationRequest;
 use Illuminate\Http\Request;
 
@@ -66,5 +68,21 @@ class ApplicationController extends Controller
     {
         $app = $this->application->findOrFail($id);
         return view('frontend.application.show', compact('app'));
+    }
+
+    public function approve($id)
+    {
+        $app = $this->application->findOrFail($id);
+        flash()->success('Application was approved.');
+        event(new UserApplicationWasApproved($app));
+        return redirect()->back();
+    }
+
+    public function deny($id)
+    {
+        $app = $this->application->findOrFail($id);
+        flash()->warning('Application was denied.');
+        event(new UserApplicationWasDenied($app));
+        return redirect()->back();
     }
 }
