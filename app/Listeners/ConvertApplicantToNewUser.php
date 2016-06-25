@@ -31,7 +31,6 @@ class ConvertApplicantToNewUser
     {
         //
         $user = array($event->app);
-        $user->password = bcrypt(str_random(40));
         event(new NewUserAccountCreated($user));
         Application::where('id',$event->app->id)->delete();
     }
