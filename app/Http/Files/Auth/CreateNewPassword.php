@@ -15,7 +15,7 @@ class CreateNewPassword
     {
         $this->middleware('guest');
         
-        $this->user = $user;
+        dd($user);
     }
 
     public function create()
