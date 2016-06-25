@@ -30,6 +30,6 @@ class GenerateNewUserPasswordToken
     {
         $user = $event->user;
         User::create($user);
-        new CreateNewPassword($user);
+        new CreateNewPassword($user->id);
     }
 }
