@@ -11,7 +11,7 @@ class CreateNewPassword
      * CreateNewPassword constructor.
      * @param User $user
      */
-    public function __construct(User $user)
+    public function __construct($user)
     {
         $this->middleware('guest');
         
