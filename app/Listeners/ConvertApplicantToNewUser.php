@@ -3,12 +3,13 @@
 namespace FCLLA\Listeners;
 
 use FCLLA\Application;
+use FCLLA\Events\NewUserAccountCreated;
 use FCLLA\Events\UserApplicationWasApproved;
 use FCLLA\User;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
-class ConvertApplicationToNewUser
+class ConvertApplicantToNewUser
 {
     /**
      * Create the event listener.
@@ -30,7 +31,8 @@ class ConvertApplicationToNewUser
     {
         //
         $user = array($event->app);
-        User::create($user);
+        $user['password'] = bcrypt(str_random(40));
+        event(new NewUserAccountCreated($user));
         Application::where('id',$event->app->id)->delete();
     }
 }

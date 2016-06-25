@@ -2,7 +2,9 @@
 
 namespace FCLLA\Listeners;
 
-use FCLLA\Events\UserApplicationWasApproved;
+use FCLLA\Events\NewUserAccountCreated;
+use FCLLA\Http\Files\Auth\CreateNewPassword;
+use FCLLA\User;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 
@@ -24,8 +26,10 @@ class GenerateNewUserPasswordToken
      * @param  UserApplicationWasApproved  $event
      * @return void
      */
-    public function handle(UserApplicationWasApproved $event)
+    public function handle(NewUserAccountCreated $event)
     {
-        //
+        $user = $event->user;
+        User::create($user);
+        new CreateNewPassword($user);
     }
 }

@@ -12,6 +12,6 @@
 </li>
 @if(Auth::check())
     <li>
-        <a href="#">Forum</a>
+        <a href="#" title="Coming Soon!">Forum</a>
     </li>
 @endif

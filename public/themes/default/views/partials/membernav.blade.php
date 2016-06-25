@@ -3,6 +3,11 @@
     <li>
         <a href="{{route('blogindex')}}">News</a>
     </li>
+    @if(Auth::user()->admin == 1)
+        <li>
+            <a href="{{route('admin::applications')}}">Applications</a>
+        </li>
+    @endif
 </ul>
 <ul class="nav navbar-nav navbar-right">
     <li>
