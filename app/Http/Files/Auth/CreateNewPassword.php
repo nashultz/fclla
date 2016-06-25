@@ -13,8 +13,6 @@ class CreateNewPassword
      */
     public function __construct($user)
     {
-        $this->middleware('guest');
-        
         dd($user);
     }
 
