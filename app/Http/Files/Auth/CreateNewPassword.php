@@ -13,7 +13,8 @@ class CreateNewPassword
      */
     public function __construct(User $user)
     {
-        dd($user);
+        $this->user = User::findOrFail($user->id);
+        dd($this->user);
     }
 
     public function create()
