@@ -5,7 +5,7 @@
     </li>
     @if(Auth::user()->admin == 1)
         <li>
-            <a href="{{route('admin::applications')}}">Applications</a>
+            <a href="{{route('admin::viewallapps')}}">Applications</a>
         </li>
     @endif
 </ul>
