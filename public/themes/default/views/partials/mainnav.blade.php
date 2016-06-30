@@ -12,6 +12,6 @@
 </li>
 @if(Auth::check())
     <li>
-        <a href="{{route('forum')}}" title="Forum">Forum</a>
+        <a href="{{route('forum.index')}}" title="Forum">Forum</a>
     </li>
 @endif
