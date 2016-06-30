@@ -26,7 +26,7 @@ class CreateNewPassword
 
     public function sendPassEmail($newPass)
     {
-        $u = array('newPass'=>$newPass, $this->user->toArray);
+        $u = array('newPass'=>$newPass, $this->user);
         dd($u);
         Mail::send('emails.tempuserpass', $this->user,  function($m) use ($u) {
             $m->from('info@fclla.org', 'Faulkner County Landlord Association');
