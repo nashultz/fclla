@@ -3,6 +3,7 @@
 namespace FCLLA\Http\Files\Auth;
 
 use FCLLA\User;
+use Illuminate\Support\Facades\Mail;
 
 class CreateNewPassword
 {
