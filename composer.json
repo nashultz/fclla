@@ -1,7 +1,7 @@
 {
-    "name": "laravel/laravel",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "name": "nashultz/fclla",
+    "description": "The Faulkner County Landlords Association.",
+    "keywords": ["landlords", "association", "faulkner county"],
     "license": "MIT",
     "type": "project",
     "require": {
