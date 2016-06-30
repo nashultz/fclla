@@ -2,7 +2,7 @@
 
 namespace FCLLA\Policies;
 
-class Forum {
+class ForumPolicy {
 
     /**
      * Permission: Create categories.

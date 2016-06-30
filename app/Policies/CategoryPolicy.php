@@ -2,7 +2,9 @@
 
 namespace FCLLA\Policies;
 
-class Category {
+use Riari\Forum\Models\Category;
+
+class CategoryPolicy {
 
     /**
      * Permission: Create threads in category.
