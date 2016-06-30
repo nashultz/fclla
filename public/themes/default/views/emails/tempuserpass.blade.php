@@ -200,6 +200,7 @@
                                     <li>Temp Password: {{$newPass}}</li>
                                 </ul>
                             </p>
+                            <p>Click <a href="https://fclla.org/login">here</a> to login to your account.</p>
                             <p>Thank you,</p>
                             <p>Faulkner County Landlords Association</p>
                         </td>

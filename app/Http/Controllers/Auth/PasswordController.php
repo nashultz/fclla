@@ -27,6 +27,8 @@ class PasswordController extends Controller
      */
     public function __construct()
     {
+        if(Auth::check())
+            Auth::logout();
         $this->middleware('guest');
     }
 }
