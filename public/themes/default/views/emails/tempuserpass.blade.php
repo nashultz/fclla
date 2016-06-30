@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>User Credentials for {{$name}}</title>
+    <title>User Credentials for {{$user->name}}</title>
     <style>
         /* -------------------------------------
             GLOBAL
@@ -191,13 +191,13 @@
                 <table>
                     <tr>
                         <td>
-                            <p>{{$u->name}},</p>
+                            <p>{{$user->name}},</p>
                             <p>Thank you for becoming a member of the Faulkner County Landlords Association.</p>
                             <p>Here are your credentials:</p>
                             <p>
                                 <ul>
-                                    <li>Email: {{$u->email}}</li>
-                                    <li>Temp Password: {{$u->newPass}}</li>
+                                    <li>Email: {{$user->email}}</li>
+                                    <li>Temp Password: {{$newPass}}</li>
                                 </ul>
                             </p>
                             <p>Thank you,</p>

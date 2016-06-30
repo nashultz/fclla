@@ -27,10 +27,10 @@ class CreateNewPassword
 
     public function sendPassEmail($newPass)
     {
-        $u = array('newPass'=>$newPass, $this->user->toArray());
-        Mail::send('emails.tempuserpass', $u,  function($m) use ($u) {
+        $data = array('newPass'=>$newPass, 'user'=>$this->user);
+        Mail::send('emails.tempuserpass', $data,  function($m) use ($data) {
             $m->from('info@fclla.org', 'Faulkner County Landlord Association');
-            $m->to($u['email'], $u['username'])->subject('FCLLA User Credentials');
+            $m->to($data['user']->email, $data['user']->name)->subject('FCLLA User Credentials');
             $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
         });
     }
