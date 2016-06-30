@@ -20,7 +20,8 @@ class CreateNewPassword
     public function create()
     {
         $temppass = str_random(10);
-        $this->user->update(['password' => $temppass]);
+        $newPass = bcrypt($temppass);
+        $this->user->update(['password' => $newPass]);
         $this->user->save();
         return $this->sendPassEmail($temppass);
     }
