@@ -4,6 +4,7 @@ namespace FCLLA\Http\Controllers\Auth;
 
 use FCLLA\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ResetsPasswords;
+use Illuminate\Support\Facades\Auth;
 
 class PasswordController extends Controller
 {
