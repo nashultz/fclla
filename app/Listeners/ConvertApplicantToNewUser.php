@@ -31,7 +31,6 @@ class ConvertApplicantToNewUser
     {
         //
         $user = $event->app;
-        dd($user);
         event(new NewUserAccountCreated($user));
         Application::where('id',$event->app->id)->delete();
     }
