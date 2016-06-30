@@ -11,6 +11,18 @@ class ApplicationsTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        DB::table('applications')->insert([
+            'bname' => 'FCLLA Team',
+            'name' => 'Jessica Burrier',
+            'address' => '2115 Washington Ave',
+            'city' => 'Conway',
+            'state' => 'AR',
+            'zipcode' => '72032',
+            'cphone' => '5012697353',
+            'email' => 'jessica@fclla.org',
+            'units' => 2,
+            'membership' => 0,
+            'roster' => 0
+        ]);
     }
 }
