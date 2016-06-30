@@ -29,7 +29,6 @@ class GenerateNewUserPasswordToken
     public function handle(NewUserAccountCreated $event)
     {
         $user = $event->user;
-        dd($user);
         $newUser = User::create($user);
         new CreateNewPassword($newUser);
     }
