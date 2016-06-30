@@ -75,7 +75,7 @@ class ApplicationController extends Controller
         $app = $this->application->findOrFail($id);
         flash()->success('Application was approved.');
         event(new UserApplicationWasApproved($app));
-        return redirect()->back();
+        return redirect()->route('admin::viewallapps');
     }
 
     public function deny($id)
@@ -83,6 +83,6 @@ class ApplicationController extends Controller
         $app = $this->application->findOrFail($id);
         flash()->warning('Application was denied.');
         event(new UserApplicationWasDenied($app));
-        return redirect()->back();
+        return redirect()->route('admin::viewallapps');
     }
 }
