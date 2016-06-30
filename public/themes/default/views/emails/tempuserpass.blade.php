@@ -3,7 +3,7 @@
 <head>
     <meta name="viewport" content="width=device-width">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>User Credentials for {{$user->name}}</title>
+    <title>User Credentials for {{$u->name}}</title>
     <style>
         /* -------------------------------------
             GLOBAL
