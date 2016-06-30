@@ -2,9 +2,7 @@
 
 namespace FCLLA\Policies;
 
-use Riari\Forum\Policies\ForumPolicy;
-
-class Forum extends ForumPolicy {
+class Forum {
 
     /**
      * Permission: Create categories.
