@@ -6,7 +6,7 @@
         @include ('forum::category.partials.form-create')
     @endcan
 
-    <h2>{{ trans('forum::general.index') }}</h2>
+    <h2>Forum {{ trans('forum::general.index') }}</h2>
 
     @foreach ($categories as $category)
         <table class="table table-index">
