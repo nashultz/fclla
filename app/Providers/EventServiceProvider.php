@@ -18,9 +18,9 @@ class EventServiceProvider extends ServiceProvider
             'FCLLA\Listeners\EmailAdministrationUserApplicationLink',
         ],
         'FCLLA\Events\UserApplicationWasApproved' => [
+            'FCLLA\Listeners\EmailUserApprovalLetter',
             'FCLLA\Listeners\ConvertApplicantToNewUser',
             'FCLLA\Listeners\AddNewUserToUnpaidMemberTable',
-            'FCLLA\Listeners\EmailUserApprovalLetter',
         ],
         'FCLLA\Events\NewUserAccountCreated' => [
             'FCLLA\Listeners\GenerateNewUserPasswordToken',
