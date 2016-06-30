@@ -2,8 +2,7 @@ language: php
 php:
   - 5.5
   - 5.4
-  - hhvm
 services:
   - mysql
-before-install:
-  - composer update
+before_install:
+  - composer install
