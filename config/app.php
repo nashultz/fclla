@@ -158,8 +158,8 @@ return [
         Laracasts\Flash\FlashServiceProvider::class,
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\DomPDF\ServiceProvider::class,
-        Riari\Forum\ForumServiceProvider::class,
-        Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
+        //Riari\Forum\ForumServiceProvider::class,
+        //Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
 
     ],
 
