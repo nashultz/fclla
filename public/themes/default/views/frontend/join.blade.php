@@ -41,7 +41,7 @@
                 </ul>
             </p>
             <p><a href="{{route('application')}}" title="Online Application" class="btn btn-primary">Launch Online Application</a></p>
-            
+
         </div>
     </div>
 </div><div class="clearfix"></div>

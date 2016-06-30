@@ -29,7 +29,7 @@ class EventServiceProvider extends ServiceProvider
             'FCLLA\Listeners\RemoveUserApplication',
             'FCLLA\Listeners\EmailUserDenialLetter',
         ],
-        'FCLLA\Events\UserHasPaidDues' => [
+        /*'FCLLA\Events\UserHasPaidDues' => [
             'FCLLA\Listeners\RemoveUserFromUnpaidMemberTable',
             'FCLLA\Listeners\EmailUserPaymentReceipt',
             'FCLLA\Listeners\EmailAdministrationUserPaymentNotice'
@@ -37,7 +37,7 @@ class EventServiceProvider extends ServiceProvider
         'FCLLA\Events\UserAddedToUnpaidMemberTable' => [
             'FCLLA\Listeners\CreateBillingInvoiceForUser',
             'FCLLA\Listeners\EmailUserPaymentReminderWithInvoice'
-        ]
+        ]*/
     ];
 
     /**
