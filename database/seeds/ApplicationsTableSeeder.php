@@ -20,7 +20,7 @@ class ApplicationsTableSeeder extends Seeder
             'zipcode' => '72032',
             'cphone' => '5012697353',
             'email' => 'jessica@fclla.org',
-            'units' => 2,
+            'units' => 0,
             'membership' => 0,
             'roster' => 0
         ]);
