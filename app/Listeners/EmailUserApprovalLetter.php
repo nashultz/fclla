@@ -30,9 +30,8 @@ class EmailUserApprovalLetter
         $user = $event->app;
         $data = array('user'=>$user);
         Mail::send('emails.approveuserapplication', $data,  function($m) use ($user) {
-            $m->from('info@fclla.org', 'Faulkner County Landlord Association');
+            $m->from('noreply@fclla.org', 'Faulkner County Landlord Association');
             $m->to($user['email'], $user['username'])->subject('FCLLA Membership Application Status');
-            $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
         });
     }
 }

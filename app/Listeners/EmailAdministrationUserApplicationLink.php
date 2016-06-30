@@ -34,9 +34,8 @@ class EmailAdministrationUserApplicationLink
         $userpdflink = route('admin::viewapp', ['id' => $user->id]);
         $data = array('filepath'=>$filepath,'userpdflink'=>$userpdflink, 'user'=>$event->application);
         Mail::send('emails.usersubmittedapplication', $data, function($m) use ($data) {
-            $m->from('info@fclla.org', 'Faulkner County Landlord Association');
-            $m->to('info@fclla.org', 'Faulkner County Landlord Association')->subject('FCLLA Membership Application Submission');
-            $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
+            $m->from('noreply@fclla.org', 'Faulkner County Landlord Association');
+            $m->to('applications@fclla.org', 'Faulkner County Landlord Association')->subject('FCLLA Membership Application Submission');
             $m->attach($data['filepath']);
         });
     }

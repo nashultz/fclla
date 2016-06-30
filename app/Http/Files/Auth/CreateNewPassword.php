@@ -30,9 +30,8 @@ class CreateNewPassword
     {
         $data = array('newPass'=>$newPass, 'user'=>$this->user);
         Mail::send('emails.tempuserpass', $data,  function($m) use ($data) {
-            $m->from('info@fclla.org', 'Faulkner County Landlord Association');
+            $m->from('noreply@fclla.org', 'Faulkner County Landlord Association');
             $m->to($data['user']->email, $data['user']->name)->subject('FCLLA User Credentials');
-            $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
         });
     }
 }

@@ -40,9 +40,8 @@ class EmailUserApplication
         $userpdflink = url($filename);
         $data = array('filepath'=>$filepath,'userpdflink'=>$userpdflink, 'useremail'=>$event->application->email, 'username'=>$event->application->name, 'user'=>$event->application);
         Mail::send('emails.submituserapplication', $data, function($m) use ($data) {
-            $m->from('info@fclla.org', 'Faulkner County Landlord Association');
+            $m->from('noreply@fclla.org', 'Faulkner County Landlord Association');
             $m->to($data['useremail'], $data['username'])->subject('FCLLA Membership Application');
-            $m->bcc('nashultz07@gmail.com', 'Nathon Shultz');
             $m->attach($data['filepath']);
         });
     }
