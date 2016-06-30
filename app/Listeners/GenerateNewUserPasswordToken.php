@@ -30,6 +30,7 @@ class GenerateNewUserPasswordToken
     {
         $user = $event->user->toArray();
         $newUser = User::create($user);
-        new CreateNewPassword($newUser);
+        $setpass = new CreateNewPassword($newUser);
+        $setpass->create();
     }
 }
