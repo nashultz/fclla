@@ -17,5 +17,12 @@ class UsersTableSeeder extends Seeder
             'password' => bcrypt('secret'),
             'admin' => 1
         ]);
+
+        DB::table('users')->insert([
+            'name' => 'FCLLA Team',
+            'email' => 'info@fclla.org',
+            'password' => bcrypt('secret'),
+            'admin' => 1
+        ]);
     }
 }
