@@ -30,7 +30,7 @@ class ConvertApplicantToNewUser
     public function handle(UserApplicationWasApproved $event)
     {
         //
-        $user = array($event->app);
+        $user = $event->app;
         dd($user);
         event(new NewUserAccountCreated($user));
         Application::where('id',$event->app->id)->delete();
