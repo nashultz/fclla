@@ -5,3 +5,5 @@ php:
   - hhvm
 services:
   - mysql
+before-install:
+  - composer update
