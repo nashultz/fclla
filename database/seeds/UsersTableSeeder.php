@@ -26,8 +26,8 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
-            'name' => 'Test Admin',
-            'email' => 'admin@fclla.org',
+            'name' => 'Jessica Burrier',
+            'email' => 'jessica@fclla.org',
             'password' => bcrypt('secret'),
             'admin' => 1
         ]);
