@@ -8,7 +8,7 @@
         @endcan
 
         <h2>
-            {{ $category->title }}
+            {{ $category->title }}<br>
             @if ($category->description)
                 <small>{{ $category->description }}</small>
             @endif
