@@ -3,6 +3,10 @@
 /* HOME ROUTE */
 Route::get('/', 'PagesController@index')->name('home');
 
+Route::get('home', function() {
+    return redirect('/');
+});
+
 
 /* JOIN ROUTE */
 Route::get('join', 'PagesController@join')->name('join');
