@@ -3,7 +3,7 @@
 namespace FCLLA;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Cashier\Billable;
+use FCLLA\Billing\Billable;
 
 class User extends Authenticatable
 {
