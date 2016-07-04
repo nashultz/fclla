@@ -160,6 +160,7 @@ return [
         Barryvdh\DomPDF\ServiceProvider::class,
         Riari\Forum\ForumServiceProvider::class,
         Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
+        Laravel\Cashier\CashierServiceProvider::class,
 
     ],
 
