@@ -1,20 +1,20 @@
-<spark-security :user="user" inline-template>
+<flare-security :user="user" inline-template>
 	<div>
 	    <!-- Update Password -->
-	    @include('spark::settings.security.update-password')
+	    @include('flare::settings.security.update-password')
 
 	    <!-- Two-Factor Authentication -->
-	    @if (Spark::usesTwoFactorAuth())
+	    @if (Flare::usesTwoFactorAuth())
 	    	<div v-if="user && ! user.uses_two_factor_auth">
-	    		@include('spark::settings.security.enable-two-factor-auth')
+	    		@include('flare::settings.security.enable-two-factor-auth')
 	    	</div>
 
 	    	<div v-if="user && user.uses_two_factor_auth">
-	    		@include('spark::settings.security.disable-two-factor-auth')
+	    		@include('flare::settings.security.disable-two-factor-auth')
 	    	</div>
 
 			<!-- Two-Factor Reset Code Modal -->
-	    	@include('spark::settings.security.modals.two-factor-reset-code')
+	    	@include('flare::settings.security.modals.two-factor-reset-code')
 	    @endif
     </div>
-</spark-security>
+</flare-security>

@@ -1,4 +1,4 @@
-<spark-mailed-invitations :invitations="invitations" inline-template>
+<flare-mailed-invitations :invitations="invitations" inline-template>
     <div>
         <div class="panel panel-default" v-if="invitations.length > 0">
             <div class="panel-heading">Mailed Invitations</div>
@@ -31,4 +31,4 @@
             </div>
         </div>
     </div>
-</spark-mailed-invitations>
+</flare-mailed-invitations>

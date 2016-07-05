@@ -1,4 +1,4 @@
-<spark-enable-two-factor-auth :user="user" inline-template>
+<flare-enable-two-factor-auth :user="user" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Two-Factor Authentication</div>
 
@@ -57,4 +57,4 @@
             </form>
         </div>
     </div>
-</spark-enable-two-factor-auth>
+</flare-enable-two-factor-auth>

@@ -71,14 +71,14 @@
                 <div class="clearfix"></div>
             </div>
 
-            <div class="panel-body spark-row-list">
+            <div class="panel-body flare-row-list">
                 <!-- Plan Error Message - In General Will Never Be Shown -->
                 <div class="alert alert-danger" v-if="registerForm.errors.has('plan')">
                     @{{ registerForm.errors.get('plan') }}
                 </div>
 
                 <!-- European VAT Notice -->
-                @if (Spark::collectsEuropeanVat())
+                @if (Flare::collectsEuropeanVat())
                     <p class="p-b-md">
                         All subscription plan prices are excluding applicable VAT.
                     </p>
@@ -112,7 +112,7 @@
                                     </span>
 
                                     <span v-else>
-                                        @{{ plan.price | currency spark.currencySymbol }} / @{{ plan.interval | capitalize }}
+                                        @{{ plan.price | currency flare.currencySymbol }} / @{{ plan.interval | capitalize }}
                                     </span>
                                 </div>
                             </td>
@@ -168,7 +168,7 @@
                 </div>
 
                 <!-- Registration Form -->
-                @include('spark::auth.register-common-form')
+                @include('flare::auth.register-common-form')
             </div>
         </div>
     </div>

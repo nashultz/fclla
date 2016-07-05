@@ -1,4 +1,4 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 <!-- Main Content -->
 @section('content')

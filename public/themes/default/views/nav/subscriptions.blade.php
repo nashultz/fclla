@@ -11,7 +11,7 @@
     <li class="divider"></li>
 @endif
 
-@if (Spark::usesTeams() && Auth::user()->currentTeamOnTrial())
+@if (Flare::usesTeams() && Auth::user()->currentTeamOnTrial())
     <!-- Team Trial Reminder -->
     <li class="dropdown-header">Team Trial</li>
 

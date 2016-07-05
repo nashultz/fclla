@@ -1,4 +1,4 @@
-<spark-update-vat-id :user="user" :team="team" :billable-type="billableType" inline-template>
+<flare-update-vat-id :user="user" :team="team" :billable-type="billableType" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Update VAT ID</div>
 
@@ -42,4 +42,4 @@
             </form>
         </div>
     </div>
-</spark-update-vat-id>
+</flare-update-vat-id>

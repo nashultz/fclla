@@ -1,7 +1,7 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('scripts')
-    @if (Spark::billsUsingStripe())
+    @if (Flare::billsUsingStripe())
         <script src="https://js.stripe.com/v2/"></script>
     @else
         <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
@@ -9,8 +9,8 @@
 @endsection
 
 @section('content')
-<spark-settings :user="user" :teams="teams" inline-template>
-    <div class="spark-screen container">
+<flare-settings :user="user" :teams="teams" inline-template>
+    <div class="flare-screen container">
         <div class="row">
             <!-- Tabs -->
             <div class="col-md-4">
@@ -20,8 +20,8 @@
                     </div>
 
                     <div class="panel-body">
-                        <div class="spark-settings-tabs">
-                            <ul class="nav spark-settings-stacked-tabs" role="tablist">
+                        <div class="flare-settings-tabs">
+                            <ul class="nav flare-settings-stacked-tabs" role="tablist">
                                 <!-- Profile Link -->
                                 <li role="presentation">
                                     <a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">
@@ -30,7 +30,7 @@
                                 </li>
 
                                 <!-- Teams Link -->
-                                @if (Spark::usesTeams())
+                                @if (Flare::usesTeams())
                                     <li role="presentation">
                                         <a href="#teams" aria-controls="teams" role="tab" data-toggle="tab">
                                             <i class="fa fa-fw fa-btn fa-users"></i>Teams
@@ -46,7 +46,7 @@
                                 </li>
 
                                 <!-- API Link -->
-                                @if (Spark::usesApi())
+                                @if (Flare::usesApi())
                                     <li role="presentation">
                                         <a href="#api" aria-controls="api" role="tab" data-toggle="tab">
                                             <i class="fa fa-fw fa-btn fa-cubes"></i>API
@@ -59,16 +59,16 @@
                 </div>
 
                 <!-- Billing Tabs -->
-                @if (Spark::canBillCustomers())
+                @if (Flare::canBillCustomers())
                     <div class="panel panel-default panel-flush">
                         <div class="panel-heading">
                             Billing
                         </div>
 
                         <div class="panel-body">
-                            <div class="spark-settings-tabs">
-                                <ul class="nav spark-settings-stacked-tabs" role="tablist">
-                                    @if (Spark::hasPaidPlans())
+                            <div class="flare-settings-tabs">
+                                <ul class="nav flare-settings-stacked-tabs" role="tablist">
+                                    @if (Flare::hasPaidPlans())
                                         <!-- Subscription Link -->
                                         <li role="presentation">
                                             <a href="#subscription" aria-controls="subscription" role="tab" data-toggle="tab">
@@ -102,35 +102,35 @@
                 <div class="tab-content">
                     <!-- Profile -->
                     <div role="tabpanel" class="tab-pane active" id="profile">
-                        @include('spark::settings.profile')
+                        @include('flare::settings.profile')
                     </div>
 
                     <!-- Teams -->
-                    @if (Spark::usesTeams())
+                    @if (Flare::usesTeams())
                         <div role="tabpanel" class="tab-pane" id="teams">
-                            @include('spark::settings.teams')
+                            @include('flare::settings.teams')
                         </div>
                     @endif
 
                     <!-- Security -->
                     <div role="tabpanel" class="tab-pane" id="security">
-                        @include('spark::settings.security')
+                        @include('flare::settings.security')
                     </div>
 
                     <!-- API -->
-                    @if (Spark::usesApi())
+                    @if (Flare::usesApi())
                         <div role="tabpanel" class="tab-pane" id="api">
-                            @include('spark::settings.api')
+                            @include('flare::settings.api')
                         </div>
                     @endif
 
                     <!-- Billing Tab Panes -->
-                    @if (Spark::canBillCustomers())
-                        @if (Spark::hasPaidPlans())
+                    @if (Flare::canBillCustomers())
+                        @if (Flare::hasPaidPlans())
                             <!-- Subscription -->
                             <div role="tabpanel" class="tab-pane" id="subscription">
                                 <div v-if="user">
-                                    @include('spark::settings.subscription')
+                                    @include('flare::settings.subscription')
                                 </div>
                             </div>
                         @endif
@@ -138,18 +138,18 @@
                         <!-- Payment Method -->
                         <div role="tabpanel" class="tab-pane" id="payment-method">
                             <div v-if="user">
-                                @include('spark::settings.payment-method')
+                                @include('flare::settings.payment-method')
                             </div>
                         </div>
 
                         <!-- Invoices -->
                         <div role="tabpanel" class="tab-pane" id="invoices">
-                            @include('spark::settings.invoices')
+                            @include('flare::settings.invoices')
                         </div>
                     @endif
                 </div>
             </div>
         </div>
     </div>
-</spark-settings>
+</flare-settings>
 @endsection

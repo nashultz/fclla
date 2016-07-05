@@ -1,4 +1,4 @@
-<spark-create-team inline-template>
+<flare-create-team inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Create Team</div>
 
@@ -31,4 +31,4 @@
             </form>
         </div>
     </div>
-</spark-create-team>
+</flare-create-team>

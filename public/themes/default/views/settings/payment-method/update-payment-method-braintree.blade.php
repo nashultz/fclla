@@ -1,4 +1,4 @@
-<spark-update-payment-method-braintree :user="user" :team="team" :billable-type="billableType" inline-template>
+<flare-update-payment-method-braintree :user="user" :team="team" :billable-type="billableType" inline-template>
     <div class="panel panel-default">
         <!-- Update Payment Method Heading -->
         <div class="panel-heading">
@@ -56,4 +56,4 @@
             </form>
         </div>
     </div>
-</spark-update-payment-method-braintree>
+</flare-update-payment-method-braintree>

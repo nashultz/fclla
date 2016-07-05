@@ -1,4 +1,4 @@
-<spark-update-contact-information :user="user" inline-template>
+<flare-update-contact-information :user="user" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Contact Information</div>
 
@@ -49,4 +49,4 @@
             </form>
         </div>
     </div>
-</spark-update-contact-information>
+</flare-update-contact-information>

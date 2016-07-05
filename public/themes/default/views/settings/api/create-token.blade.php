@@ -1,4 +1,4 @@
-<spark-create-token :available-abilities="availableAbilities" inline-template>
+<flare-create-token :available-abilities="availableAbilities" inline-template>
     <div>
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -103,4 +103,4 @@
             </div>
         </div>
     </div>
-</spark-create-token>
+</flare-create-token>

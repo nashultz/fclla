@@ -1,5 +1,5 @@
 <!-- NavBar For Authenticated Users -->
-<spark-navbar
+<flare-navbar
     :user="user"
     :teams="teams"
     :current-team="currentTeam"
@@ -12,7 +12,7 @@
             <div class="navbar-header">
                 <!-- Collapsed Hamburger -->
                 <div class="hamburger">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#spark-navbar-collapse">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#flare-navbar-collapse">
                         <span class="sr-only">Toggle Navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -21,18 +21,18 @@
                 </div>
 
                 <!-- Branding Image -->
-                @include('spark::nav.brand')
+                @include('flare::nav.brand')
             </div>
 
-            <div class="collapse navbar-collapse" id="spark-navbar-collapse">
+            <div class="collapse navbar-collapse" id="flare-navbar-collapse">
                 <!-- Left Side Of Navbar -->
                 <ul class="nav navbar-nav">
-                    @includeIf('spark::nav.user-left')
+                    @includeIf('flare::nav.user-left')
                 </ul>
 
                 <!-- Right Side Of Navbar -->
                 <ul class="nav navbar-nav navbar-right">
-                    @includeIf('spark::nav.user-right')
+                    @includeIf('flare::nav.user-right')
 
                     <!-- Notifications -->
                     <li>
@@ -47,18 +47,18 @@
                     <li class="dropdown">
                         <!-- User Photo / Name -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <img :src="user.photo_url" class="spark-nav-profile-photo m-r-xs">
+                            <img :src="user.photo_url" class="flare-nav-profile-photo m-r-xs">
                             <span class="caret"></span>
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
                             <!-- Impersonation -->
-                            @if (session('spark:impersonator'))
+                            @if (session('flare:impersonator'))
                                 <li class="dropdown-header">Impersonation</li>
 
                                 <!-- Stop Impersonating -->
                                 <li>
-                                    <a href="/spark/kiosk/users/stop-impersonating">
+                                    <a href="/flare/kiosk/users/stop-impersonating">
                                         <i class="fa fa-fw fa-btn fa-user-secret"></i>Back To My Account
                                     </a>
                                 </li>
@@ -67,12 +67,12 @@
                             @endif
 
                             <!-- Developer -->
-                            @if (Spark::developer(Auth::user()->email))
-                                @include('spark::nav.developer')
+                            @if (Flare::developer(Auth::user()->email))
+                                @include('flare::nav.developer')
                             @endif
 
                             <!-- Subscription Reminders -->
-                            @include('spark::nav.subscriptions')
+                            @include('flare::nav.subscriptions')
 
                             <!-- Settings -->
                             <li class="dropdown-header">Settings</li>
@@ -84,9 +84,9 @@
                                 </a>
                             </li>
 
-                            @if (Spark::usesTeams())
+                            @if (Flare::usesTeams())
                                 <!-- Team Settings -->
-                                @include('spark::nav.teams')
+                                @include('flare::nav.teams')
                             @endif
 
                             <li class="divider"></li>
@@ -114,4 +114,4 @@
             </div>
         </div>
     </nav>
-</spark-navbar>
+</flare-navbar>

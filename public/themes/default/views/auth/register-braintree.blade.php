@@ -1,15 +1,15 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('scripts')
     <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
 @endsection
 
 @section('content')
-<spark-register-braintree inline-template>
+<flare-register-braintree inline-template>
     <div>
-        <div class="spark-screen container">
+        <div class="flare-screen container">
             <!-- Common Register Form Contents -->
-            @include('spark::auth.register-common')
+            @include('flare::auth.register-common')
 
             <!-- Billing Information -->
             <div class="row" v-show="selectedPlan && selectedPlan.price > 0">
@@ -79,7 +79,7 @@
         </div>
 
         <!-- Plan Features Modal -->
-        @include('spark::modals.plan-details')
+        @include('flare::modals.plan-details')
     </div>
-</spark-register-braintree>
+</flare-register-braintree>
 @endsection

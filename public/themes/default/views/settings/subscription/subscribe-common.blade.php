@@ -35,7 +35,7 @@
         </div>
 
         <!-- European VAT Notice -->
-        @if (Spark::collectsEuropeanVat())
+        @if (Flare::collectsEuropeanVat())
             <p class="p-b-lg">
                 All subscription plan prices are excluding applicable VAT.
             </p>
@@ -69,7 +69,7 @@
                     <!-- Plan Price -->
                     <td>
                         <div class="btn-table-align">
-                            @{{ plan.price | currency spark.currencySymbol }} / @{{ plan.interval | capitalize }}
+                            @{{ plan.price | currency flare.currencySymbol }} / @{{ plan.interval | capitalize }}
                         </div>
                     </td>
 

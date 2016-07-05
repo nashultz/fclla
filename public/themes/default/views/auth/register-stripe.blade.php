@@ -1,15 +1,15 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('scripts')
     <script src="https://js.stripe.com/v2/"></script>
 @endsection
 
 @section('content')
-<spark-register-stripe inline-template>
+<flare-register-stripe inline-template>
     <div>
-        <div class="spark-screen container">
+        <div class="flare-screen container">
             <!-- Common Register Form Contents -->
-            @include('spark::auth.register-common')
+            @include('flare::auth.register-common')
 
             <!-- Billing Information -->
             <div class="row" v-if="selectedPlan && selectedPlan.price > 0">
@@ -26,10 +26,10 @@
 
                             <form class="form-horizontal" role="form">
                                 <!-- Billing Address Fields -->
-                                @if (Spark::collectsBillingAddress())
+                                @if (Flare::collectsBillingAddress())
                                     <h2><i class="fa fa-btn fa-map-marker"></i>Billing Address</h2>
 
-                                    @include('spark::auth.register-address')
+                                    @include('flare::auth.register-address')
 
                                     <h2><i class="fa fa-btn fa-credit-card"></i>Credit Card</h2>
                                 @endif
@@ -83,7 +83,7 @@
                                 </div>
 
                                 <!-- ZIP Code -->
-                                <div class="form-group" :class="{'has-error': registerForm.errors.has('zip')}" v-if=" ! spark.collectsBillingAddress">
+                                <div class="form-group" :class="{'has-error': registerForm.errors.has('zip')}" v-if=" ! flare.collectsBillingAddress">
                                     <label class="col-md-4 control-label">ZIP / Postal Code</label>
 
                                     <div class="col-md-6">
@@ -125,15 +125,15 @@
                                 </div>
 
                                 <!-- Tax / Price Information -->
-                                <div class="form-group" v-if="spark.collectsEuropeanVat && countryCollectsVat && selectedPlan">
+                                <div class="form-group" v-if="flare.collectsEuropeanVat && countryCollectsVat && selectedPlan">
                                     <label class="col-md-4 control-label">&nbsp;</label>
 
                                     <div class="col-md-6">
                                         <div class="alert alert-info" style="margin: 0;">
-                                            <strong>Tax:</strong> @{{ taxAmount(selectedPlan) | currency spark.currencySymbol }}
+                                            <strong>Tax:</strong> @{{ taxAmount(selectedPlan) | currency flare.currencySymbol }}
                                             <br><br>
                                             <strong>Total Price Including Tax:</strong>
-                                            @{{ priceWithTax(selectedPlan) | currency spark.currencySymbol }} / @{{ selectedPlan.interval | capitalize }}
+                                            @{{ priceWithTax(selectedPlan) | currency flare.currencySymbol }} / @{{ selectedPlan.interval | capitalize }}
                                         </div>
                                     </div>
                                 </div>
@@ -160,7 +160,7 @@
         </div>
 
         <!-- Plan Features Modal -->
-        @include('spark::modals.plan-details')
+        @include('flare::modals.plan-details')
     </div>
-</spark-register-stripe>
+</flare-register-stripe>
 @endsection

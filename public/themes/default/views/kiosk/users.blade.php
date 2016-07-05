@@ -1,4 +1,4 @@
-<spark-kiosk-users :user="user" inline-template>
+<flare-kiosk-users :user="user" inline-template>
     <div>
         <div v-show=" ! showingUserProfile">
             <!-- Search Field Panel -->
@@ -54,7 +54,7 @@
                             <tr v-for="searchUser in searchResults">
                                 <!-- Profile Photo -->
                                 <td>
-                                    <img :src="searchUser.photo_url" class="spark-profile-photo">
+                                    <img :src="searchUser.photo_url" class="flare-profile-photo">
                                 </td>
 
                                 <!-- Name -->
@@ -88,7 +88,7 @@
     <div>
         <!-- User Profile Detail -->
         <div v-show="showingUserProfile">
-            @include('spark::kiosk.profile')
+            @include('flare::kiosk.profile')
         </div>
     </div>
-</spark-kiosk-users>
+</flare-kiosk-users>

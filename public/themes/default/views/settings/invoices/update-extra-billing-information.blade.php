@@ -1,4 +1,4 @@
-<spark-update-extra-billing-information :user="user" :team="team" :billable-type="billableType" inline-template>
+<flare-update-extra-billing-information :user="user" :team="team" :billable-type="billableType" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Extra Billing Information</div>
 
@@ -38,4 +38,4 @@
             </form>
         </div>
     </div>
-</spark-update-extra-billing-information>
+</flare-update-extra-billing-information>

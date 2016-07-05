@@ -1,4 +1,4 @@
-<spark-current-teams :user="user" :teams="teams" inline-template>
+<flare-current-teams :user="user" :teams="teams" inline-template>
     <div>
         <div class="panel panel-default">
             <div class="panel-heading">Current Teams</div>
@@ -17,7 +17,7 @@
                         <tr v-for="team in teams">
                             <!-- Photo -->
                             <td>
-                                <img :src="team.photo_url" class="spark-team-photo">
+                                <img :src="team.photo_url" class="flare-team-photo">
                             </td>
 
                             <!-- Team Name -->
@@ -133,4 +133,4 @@
             </div>
         </div>
     </div>
-</spark-current-teams>
+</flare-current-teams>

@@ -1,6 +1,6 @@
 <form class="form-horizontal" role="form">
     <!-- Team Name -->
-    @if (Spark::usesTeams())
+    @if (Flare::usesTeams())
         <div class="form-group" :class="{'has-error': registerForm.errors.has('team')}" v-if=" ! invitation">
             <label class="col-md-4 control-label">Team Name</label>
 

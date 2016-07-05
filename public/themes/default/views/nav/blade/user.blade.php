@@ -4,7 +4,7 @@
         <div class="navbar-header">
             <!-- Collapsed Hamburger -->
             <div class="hamburger">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#spark-navbar-collapse">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#flare-navbar-collapse">
                     <span class="sr-only">Toggle Navigation</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -14,36 +14,36 @@
 
             <!-- Branding Image -->
             <a class="navbar-brand" href="/home">
-                <!-- Spark -->
+                <!-- Flare -->
                 <img src="/img/mono-logo.png" style="height: 32px;">
             </a>
         </div>
 
-        <div class="collapse navbar-collapse" id="spark-navbar-collapse">
+        <div class="collapse navbar-collapse" id="flare-navbar-collapse">
             <!-- Left Side Of Navbar -->
             <ul class="nav navbar-nav">
-                @includeIf('spark::nav.user-left')
+                @includeIf('flare::nav.user-left')
             </ul>
 
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
-                @includeIf('spark::nav.user-right')
+                @includeIf('flare::nav.user-right')
 
                 <li class="dropdown">
                     <!-- User Photo / Name -->
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <img src="{{ Auth::user()->photo_url }}" class="spark-nav-profile-photo m-r-xs">
+                        <img src="{{ Auth::user()->photo_url }}" class="flare-nav-profile-photo m-r-xs">
                         <span class="caret"></span>
                     </a>
 
                     <ul class="dropdown-menu" role="menu">
                         <!-- Impersonation -->
-                        @if (session('spark:impersonator'))
+                        @if (session('flare:impersonator'))
                             <li class="dropdown-header">Impersonation</li>
 
                             <!-- Stop Impersonating -->
                             <li>
-                                <a href="/spark/kiosk/users/stop-impersonating">
+                                <a href="/flare/kiosk/users/stop-impersonating">
                                     <i class="fa fa-fw fa-btn fa-user-secret"></i>Back To My Account
                                 </a>
                             </li>
@@ -52,12 +52,12 @@
                         @endif
 
                         <!-- Developer -->
-                        @if (Spark::developer(Auth::user()->email))
-                            @include('spark::nav.developer')
+                        @if (Flare::developer(Auth::user()->email))
+                            @include('flare::nav.developer')
                         @endif
 
                         <!-- Subscription Reminders -->
-                        @include('spark::nav.subscriptions')
+                        @include('flare::nav.subscriptions')
 
                         <!-- Settings -->
                         <li class="dropdown-header">Settings</li>
@@ -69,9 +69,9 @@
                             </a>
                         </li>
 
-                        @if (Spark::usesTeams())
+                        @if (Flare::usesTeams())
                             <!-- Team Settings -->
-                            @include('spark::nav.blade.teams')
+                            @include('flare::nav.blade.teams')
                         @endif
 
                         <li class="divider"></li>

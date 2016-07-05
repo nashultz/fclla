@@ -1,4 +1,4 @@
-<spark-update-subscription :user="user" :team="team"
+<flare-update-subscription :user="user" :team="team"
                 :plans="plans" :billable-type="billableType" inline-template>
 
     <div class="panel panel-default">
@@ -53,7 +53,7 @@
             </div>
 
             <!-- European VAT Notice -->
-            @if (Spark::collectsEuropeanVat())
+            @if (Flare::collectsEuropeanVat())
                 <p class="p-b-lg">
                     All subscription plan prices include applicable VAT.
                 </p>
@@ -87,7 +87,7 @@
                                 </span>
 
                                 <span v-else>
-                                    @{{ priceWithTax(plan) | currency spark.currencySymbol }} / @{{ plan.interval | capitalize }}
+                                    @{{ priceWithTax(plan) | currency flare.currencySymbol }} / @{{ plan.interval | capitalize }}
                                 </span>
                             </div>
                         </td>
@@ -147,4 +147,4 @@
             </div>
         </div>
     </div>
-</spark-update-subscription>
+</flare-update-subscription>

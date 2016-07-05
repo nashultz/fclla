@@ -1,4 +1,4 @@
-<spark-team-members :user="user" :team="team" inline-template>
+<flare-team-members :user="user" :team="team" inline-template>
     <div>
         <div class="panel panel-default">
             <div class="panel-heading">Team Members (@{{ team.users.length }})</div>
@@ -17,7 +17,7 @@
                         <tr v-for="member in team.users">
                             <!-- Photo -->
                             <td>
-                                <img :src="member.photo_url" class="spark-profile-photo">
+                                <img :src="member.photo_url" class="flare-profile-photo">
                             </td>
 
                             <!-- Name -->
@@ -138,4 +138,4 @@
             </div>
         </div>
     </div>
-</spark-team-members>
+</flare-team-members>

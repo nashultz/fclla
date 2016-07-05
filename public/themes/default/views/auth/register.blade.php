@@ -1,5 +1,5 @@
-@if (Spark::billsUsingStripe())
-    @include('spark::auth.register-stripe')
+@if (Flare::billsUsingStripe())
+    @include('flare::auth.register-stripe')
 @else
-    @include('spark::auth.register-braintree')
+    @include('flare::auth.register-braintree')
 @endif

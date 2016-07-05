@@ -1,4 +1,4 @@
-<spark-kiosk-profile :user="user" :plans="plans" inline-template>
+<flare-kiosk-profile :user="user" :plans="plans" inline-template>
     <div>
         <!-- Loading Indicator -->
         <div class="row" v-if="loading">
@@ -29,7 +29,7 @@
                             <div class="pull-right" style="padding-top: 2px;">
                                 <div class="btn-group" role="group">
                                     <!-- Apply Discount -->
-                                    <button class="btn btn-default" v-if="spark.usesStripe && profile.stripe_id" @click="addDiscount(profile)">
+                                    <button class="btn btn-default" v-if="flare.usesStripe && profile.stripe_id" @click="addDiscount(profile)">
                                         <i class="fa fa-gift"></i>
                                     </button>
 
@@ -47,7 +47,7 @@
                             <div class="row">
                                 <!-- Profile Photo -->
                                 <div class="col-md-3 text-center">
-                                    <img :src="profile.photo_url" class="spark-profile-photo-xl">
+                                    <img :src="profile.photo_url" class="flare-profile-photo-xl">
                                 </div>
 
                                 <div class="col-md-9">
@@ -78,7 +78,7 @@
 
                                     <!-- Total Revenue -->
                                     <p>
-                                        <strong>Total Revenue:</strong> @{{ revenue | currency spark.currencySymbol }}
+                                        <strong>Total Revenue:</strong> @{{ revenue | currency flare.currencySymbol }}
                                     </p>
                                 </div>
                             </div>
@@ -88,7 +88,7 @@
             </div>
 
             <!-- Teams -->
-            <div class="row" v-if="spark.usesTeams && profile.owned_teams.length > 0">
+            <div class="row" v-if="flare.usesTeams && profile.owned_teams.length > 0">
                 <div class="col-md-12">
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -107,7 +107,7 @@
                                     <tr v-for="team in profile.owned_teams">
                                         <!-- Photo -->
                                         <td>
-                                            <img :src="team.photo_url" class="spark-team-photo">
+                                            <img :src="team.photo_url" class="flare-team-photo">
                                         </td>
 
                                         <!-- Team Name -->
@@ -142,7 +142,7 @@
 
         <!-- Apply Discount Modal -->
         <div>
-            @include('spark::kiosk.modals.add-discount')
+            @include('flare::kiosk.modals.add-discount')
         </div>
     </div>
-</spark-kiosk-profile>
+</flare-kiosk-profile>

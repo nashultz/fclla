@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>@yield('title', 'Spark')</title>
+    <title>@yield('title', 'Flare')</title>
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
@@ -19,20 +19,20 @@
     <!-- Scripts -->
     @yield('scripts', '')
 
-    <!-- Global Spark Object -->
+    <!-- Global Flare Object -->
     <script>
-        window.Spark = <?php echo json_encode(array_merge(
-            Spark::scriptVariables(), []
+        window.Flare = <?php echo json_encode(array_merge(
+            Flare::scriptVariables(), []
         )); ?>
     </script>
 </head>
 <body class="with-navbar" v-cloak>
-    <div id="spark-app">
+    <div id="flare-app">
         <!-- Navigation -->
         @if (Auth::check())
-            @include('spark::nav.user')
+            @include('flare::nav.user')
         @else
-            @include('spark::nav.guest')
+            @include('flare::nav.guest')
         @endif
 
         <!-- Main Content -->
@@ -40,9 +40,9 @@
 
         <!-- Application Level Modals -->
         @if (Auth::check())
-            @include('spark::modals.notifications')
-            @include('spark::modals.support')
-            @include('spark::modals.session-expired')
+            @include('flare::modals.notifications')
+            @include('flare::modals.support')
+            @include('flare::modals.session-expired')
         @endif
 
         <!-- JavaScript -->

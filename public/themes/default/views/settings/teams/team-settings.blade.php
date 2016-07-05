@@ -1,7 +1,7 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('scripts')
-    @if (Spark::billsUsingStripe())
+    @if (Flare::billsUsingStripe())
         <script src="https://js.stripe.com/v2/"></script>
     @else
         <script src="https://js.braintreegateway.com/v2/braintree.js"></script>
@@ -9,8 +9,8 @@
 @endsection
 
 @section('content')
-<spark-team-settings :user="user" :team-id="{{ $team->id }}" inline-template>
-    <div class="spark-screen container">
+<flare-team-settings :user="user" :team-id="{{ $team->id }}" inline-template>
+    <div class="flare-screen container">
         <div class="row">
             <!-- Tabs -->
             <div class="col-md-4">
@@ -22,8 +22,8 @@
                     </div>
 
                     <div class="panel-body">
-                        <div class="spark-settings-tabs">
-                            <ul class="nav spark-settings-stacked-tabs" role="tablist">
+                        <div class="flare-settings-tabs">
+                            <ul class="nav flare-settings-stacked-tabs" role="tablist">
                                 <!-- Owner Settings -->
                                 @if (Auth::user()->ownsTeam($team))
                                     <li role="presentation" class="active">
@@ -56,16 +56,16 @@
                 </div>
 
                 <!-- Billing Tabs -->
-                @if (Spark::canBillTeams() && Auth::user()->ownsTeam($team))
+                @if (Flare::canBillTeams() && Auth::user()->ownsTeam($team))
                     <div class="panel panel-default panel-flush">
                         <div class="panel-heading">
                             Team Billing
                         </div>
 
                         <div class="panel-body">
-                            <div class="spark-settings-tabs">
-                                <ul class="nav spark-settings-stacked-tabs" role="tablist">
-                                    @if (Spark::hasPaidTeamPlans())
+                            <div class="flare-settings-tabs">
+                                <ul class="nav flare-settings-stacked-tabs" role="tablist">
+                                    @if (Flare::hasPaidTeamPlans())
                                         <!-- Subscription Link -->
                                         <li role="presentation">
                                             <a href="#subscription" aria-controls="subscription" role="tab" data-toggle="tab">
@@ -100,7 +100,7 @@
                     <!-- Owner Information -->
                     @if (Auth::user()->ownsTeam($team))
                         <div role="tabpanel" class="tab-pane active" id="owner">
-                            @include('spark::settings.teams.team-profile')
+                            @include('flare::settings.teams.team-profile')
                         </div>
                     @endif
 
@@ -111,17 +111,17 @@
                     <div role="tabpanel" class="tab-pane active" id="membership">
                     @endif
                         <div v-if="team">
-                            @include('spark::settings.teams.team-membership')
+                            @include('flare::settings.teams.team-membership')
                         </div>
                     </div>
 
                     <!-- Billing Tab Panes -->
-                    @if (Spark::canBillTeams() && Auth::user()->ownsTeam($team))
-                        @if (Spark::hasPaidTeamPlans())
+                    @if (Flare::canBillTeams() && Auth::user()->ownsTeam($team))
+                        @if (Flare::hasPaidTeamPlans())
                             <!-- Subscription -->
                             <div role="tabpanel" class="tab-pane" id="subscription">
                                 <div v-if="user && team">
-                                    @include('spark::settings.subscription')
+                                    @include('flare::settings.subscription')
                                 </div>
                             </div>
                         @endif
@@ -129,14 +129,14 @@
                         <!-- Payment Method -->
                         <div role="tabpanel" class="tab-pane" id="payment-method">
                             <div v-if="user && team">
-                                @include('spark::settings.payment-method')
+                                @include('flare::settings.payment-method')
                             </div>
                         </div>
 
                         <!-- Invoices -->
                         <div role="tabpanel" class="tab-pane" id="invoices">
                             <div v-if="user && team">
-                                @include('spark::settings.invoices')
+                                @include('flare::settings.invoices')
                             </div>
                         </div>
                     @endif
@@ -144,5 +144,5 @@
             </div>
         </div>
     </div>
-</spark-team-settings>
+</flare-team-settings>
 @endsection

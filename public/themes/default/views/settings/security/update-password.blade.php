@@ -1,4 +1,4 @@
-<spark-update-password inline-template>
+<flare-update-password inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Update Password</div>
 
@@ -62,4 +62,4 @@
             </form>
         </div>
     </div>
-</spark-update-password>
+</flare-update-password>

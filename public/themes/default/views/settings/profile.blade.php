@@ -1,9 +1,9 @@
-<spark-profile :user="user" inline-template>
+<flare-profile :user="user" inline-template>
     <div>
         <!-- Update Profile Photo -->
-        @include('spark::settings.profile.update-profile-photo')
+        @include('flare::settings.profile.update-profile-photo')
 
         <!-- Update Contact Information -->
-        @include('spark::settings.profile.update-contact-information')
+        @include('flare::settings.profile.update-contact-information')
     </div>
-</spark-profile>
+</flare-profile>

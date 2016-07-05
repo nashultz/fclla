@@ -1,8 +1,8 @@
-<spark-subscribe-braintree :user="user" :team="team"
+<flare-subscribe-braintree :user="user" :team="team"
                 :plans="plans" :billable-type="billableType" inline-template>
 
     <!-- Common Subscribe Form Contents -->
-    @include('spark::settings.subscription.subscribe-common')
+    @include('flare::settings.subscription.subscribe-common')
 
     <!-- Billing Information -->
     <div class="panel panel-default">
@@ -36,4 +36,4 @@
             </form>
         </div>
     </div>
-</spark-subscribe-braintree>
+</flare-subscribe-braintree>

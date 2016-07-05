@@ -1,4 +1,4 @@
-<spark-resume-subscription :user="user" :team="team"
+<flare-resume-subscription :user="user" :team="team"
                 :plans="plans" :billable-type="billableType" inline-template>
 
     <div class="panel panel-default">
@@ -50,7 +50,7 @@
             </div>
 
             <!-- European VAT Notice -->
-            @if (Spark::collectsEuropeanVat())
+            @if (Flare::collectsEuropeanVat())
                 <p class="p-b-lg">
                     All subscription plan prices include applicable VAT.
                 </p>
@@ -79,7 +79,7 @@
                         <!-- Plan Price -->
                         <td>
                             <div class="btn-table-align">
-                                @{{ priceWithTax(plan) | currency spark.currencySymbol }} / @{{ plan.interval | capitalize }}
+                                @{{ priceWithTax(plan) | currency flare.currencySymbol }} / @{{ plan.interval | capitalize }}
                             </div>
                         </td>
 
@@ -100,4 +100,4 @@
             </table>
         </div>
     </div>
-</spark-resume-subscription>
+</flare-resume-subscription>

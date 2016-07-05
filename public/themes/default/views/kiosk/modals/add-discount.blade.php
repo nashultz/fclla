@@ -1,4 +1,4 @@
-<spark-kiosk-add-discount inline-template>
+<flare-kiosk-add-discount inline-template>
     <div>
         <div class="modal fade" id="modal-add-discount" tabindex="-1" role="dialog">
             <div class="modal-dialog" v-if="discountingUser">
@@ -124,4 +124,4 @@
             </div>
         </div>
     </div>
-</spark-kiosk-add-discount>
+</flare-kiosk-add-discount>

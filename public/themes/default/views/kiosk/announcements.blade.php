@@ -1,4 +1,4 @@
-<spark-kiosk-announcements inline-template>
+<flare-kiosk-announcements inline-template>
     <div>
         <div class="panel panel-default">
             <div class="panel-heading">Create Announcement</div>
@@ -83,7 +83,7 @@
                         <tr v-for="announcement in announcements">
                             <!-- Photo -->
                             <td>
-                                <img :src="announcement.creator.photo_url" class="spark-profile-photo">
+                                <img :src="announcement.creator.photo_url" class="flare-profile-photo">
                             </td>
 
                             <!-- Date -->
@@ -209,4 +209,4 @@
             </div>
         </div>
     </div>
-</spark-kiosk-announcements>
+</flare-kiosk-announcements>

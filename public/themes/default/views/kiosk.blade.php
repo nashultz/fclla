@@ -1,4 +1,4 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('scripts')
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mousetrap/1.4.6/mousetrap.min.js"></script>
@@ -6,7 +6,7 @@
 @endsection
 
 @section('content')
-<spark-kiosk :user="user" inline-template>
+<flare-kiosk :user="user" inline-template>
     <div class="container-fluid">
         <div class="row">
             <!-- Tabs -->
@@ -17,8 +17,8 @@
                     </div>
 
                     <div class="panel-body">
-                        <div class="spark-settings-tabs">
-                            <ul class="nav spark-settings-stacked-tabs" role="tablist">
+                        <div class="flare-settings-tabs">
+                            <ul class="nav flare-settings-stacked-tabs" role="tablist">
                                 <!-- Announcements Link -->
                                 <li role="presentation" class="active">
                                     <a href="#announcements" aria-controls="announcements" role="tab" data-toggle="tab">
@@ -50,21 +50,21 @@
                 <div class="tab-content">
                     <!-- Announcements -->
                     <div role="tabpanel" class="tab-pane active" id="announcements">
-                        @include('spark::kiosk.announcements')
+                        @include('flare::kiosk.announcements')
                     </div>
 
                     <!-- Metrics -->
                     <div role="tabpanel" class="tab-pane" id="metrics">
-                        @include('spark::kiosk.metrics')
+                        @include('flare::kiosk.metrics')
                     </div>
 
                     <!-- User Management -->
                     <div role="tabpanel" class="tab-pane" id="users">
-                        @include('spark::kiosk.users')
+                        @include('flare::kiosk.users')
                     </div>
                 </div>
             </div>
         </div>
     </div>
-</spark-kiosk>
+</flare-kiosk>
 @endsection

@@ -1,4 +1,4 @@
-<spark-cancel-subscription :user="user" :team="team" :billable-type="billableType" inline-template>
+<flare-cancel-subscription :user="user" :team="team" :billable-type="billableType" inline-template>
     <div class="panel panel-default">
         <div class="panel-body">
             <button class="btn btn-danger-outline"
@@ -43,4 +43,4 @@
             </div>
         </div>
     </div>
-</spark-cancel-subscription>
+</flare-cancel-subscription>

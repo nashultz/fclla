@@ -1,4 +1,4 @@
-<spark-send-invitation :user="user" :team="team" inline-template>
+<flare-send-invitation :user="user" :team="team" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Send Invitation</div>
 
@@ -42,4 +42,4 @@
             </form>
         </div>
     </div>
-</spark-send-invitation>
+</flare-send-invitation>

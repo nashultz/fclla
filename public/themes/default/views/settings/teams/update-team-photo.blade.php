@@ -1,4 +1,4 @@
-<spark-update-team-photo :user="user" :team="team" inline-template>
+<flare-update-team-photo :user="user" :team="team" inline-template>
     <div>
         <div class="panel panel-default">
             <div class="panel-heading">Team Photo</div>
@@ -36,4 +36,4 @@
             </div>
         </div>
     </div>
-</spark-update-team-photo>
+</flare-update-team-photo>

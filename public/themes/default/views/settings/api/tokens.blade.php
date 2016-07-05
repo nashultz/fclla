@@ -1,4 +1,4 @@
-<spark-tokens :tokens="tokens" :available-abilities="availableAbilities" inline-template>
+<flare-tokens :tokens="tokens" :available-abilities="availableAbilities" inline-template>
     <div>
         <div>
             <div class="panel panel-default" v-if="tokens.length > 0">
@@ -149,4 +149,4 @@
             </div>
         </div>
     </div>
-</spark-tokens>
+</flare-tokens>

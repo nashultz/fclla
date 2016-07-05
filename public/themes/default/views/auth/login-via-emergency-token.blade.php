@@ -1,4 +1,4 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('content')
 <div class="container">
@@ -8,7 +8,7 @@
                 <div class="panel-heading">Login Via Emergency Token</div>
 
                 <div class="panel-body">
-                    @include('spark::shared.errors')
+                    @include('flare::shared.errors')
 
                     <!-- Warning Message -->
                     <div class="alert alert-warning">

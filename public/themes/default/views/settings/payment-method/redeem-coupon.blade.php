@@ -1,4 +1,4 @@
-<spark-redeem-coupon :user="user" :team="team" :billable-type="billableType" inline-template>
+<flare-redeem-coupon :user="user" :team="team" :billable-type="billableType" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Redeem Coupon</div>
 
@@ -41,4 +41,4 @@
             </form>
         </div>
     </div>
-</spark-redeem-coupon>
+</flare-redeem-coupon>

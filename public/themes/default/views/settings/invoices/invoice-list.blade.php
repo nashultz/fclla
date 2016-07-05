@@ -1,4 +1,4 @@
-<spark-invoice-list :user="user" :team="team"
+<flare-invoice-list :user="user" :team="team"
                     :invoices="invoices" :billable-type="billableType" inline-template>
 
     <div class="panel panel-default">
@@ -19,7 +19,7 @@
 
                         <!-- Invoice Total -->
                         <td>
-                            <div class="btn-table-align">@{{ invoice.total | currency spark.currencySymbol }}</div>
+                            <div class="btn-table-align">@{{ invoice.total | currency flare.currencySymbol }}</div>
                         </td>
 
                         <!-- Invoice Download Button -->
@@ -35,4 +35,4 @@
             </table>
         </div>
     </div>
-</spark-invoice-list>
+</flare-invoice-list>

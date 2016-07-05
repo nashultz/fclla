@@ -1,4 +1,4 @@
-@extends('spark::layouts.app')
+@extends('flare::layouts.app')
 
 @section('content')
 <div class="container">

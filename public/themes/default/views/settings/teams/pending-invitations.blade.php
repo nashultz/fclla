@@ -1,4 +1,4 @@
-<spark-pending-invitations inline-template>
+<flare-pending-invitations inline-template>
     <div>
         <div class="panel panel-default" v-if="invitations.length > 0">
             <div class="panel-heading">Pending Invitations</div>
@@ -39,4 +39,4 @@
             </div>
         </div>
     </div>
-</spark-pending-invitations>
+</flare-pending-invitations>

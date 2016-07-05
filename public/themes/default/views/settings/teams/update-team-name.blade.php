@@ -1,4 +1,4 @@
-<spark-update-team-name :user="user" :team="team" inline-template>
+<flare-update-team-name :user="user" :team="team" inline-template>
     <div class="panel panel-default">
         <div class="panel-heading">Update Team Name</div>
 
@@ -36,4 +36,4 @@
             </form>
         </div>
     </div>
-</spark-update-team-name>
+</flare-update-team-name>

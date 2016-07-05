@@ -1,4 +1,4 @@
-<spark-update-payment-method-stripe :user="user" :team="team" :billable-type="billableType" inline-template>
+<flare-update-payment-method-stripe :user="user" :team="team" :billable-type="billableType" inline-template>
     <div class="panel panel-default">
         <!-- Update Payment Method Heading -->
         <div class="panel-heading">
@@ -30,10 +30,10 @@
 
             <form class="form-horizontal" role="form">
                 <!-- Billing Address Fields -->
-                @if (Spark::collectsBillingAddress())
+                @if (Flare::collectsBillingAddress())
                     <h2><i class="fa fa-btn fa-map-marker"></i>Billing Address</h2>
 
-                    @include('spark::settings.payment-method.update-payment-method-address')
+                    @include('flare::settings.payment-method.update-payment-method-address')
 
                     <h2><i class="fa fa-btn fa-credit-card"></i>Credit Card</h2>
                 @endif
@@ -92,7 +92,7 @@
                 </div>
 
                 <!-- Zip Code -->
-                <div class="form-group" v-if=" ! spark.collectsBillingAddress">
+                <div class="form-group" v-if=" ! flare.collectsBillingAddress">
                     <label for="zip" class="col-md-4 control-label">ZIP / Postal Code</label>
 
                     <div class="col-md-6">
@@ -117,4 +117,4 @@
             </form>
         </div>
     </div>
-</spark-update-payment-method-stripe>
+</flare-update-payment-method-stripe>

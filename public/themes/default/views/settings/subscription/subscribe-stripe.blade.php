@@ -1,8 +1,8 @@
-<spark-subscribe-stripe :user="user" :team="team"
+<flare-subscribe-stripe :user="user" :team="team"
                 :plans="plans" :billable-type="billableType" inline-template>
 
     <!-- Common Subscribe Form Contents -->
-    @include('spark::settings.subscription.subscribe-common')
+    @include('flare::settings.subscription.subscribe-common')
 
     <!-- Billing Information -->
     <div class="panel panel-default">
@@ -17,10 +17,10 @@
 
             <form class="form-horizontal" role="form">
                 <!-- Billing Address Fields -->
-                @if (Spark::collectsBillingAddress())
+                @if (Flare::collectsBillingAddress())
                     <h2><i class="fa fa-btn fa-map-marker"></i>Billing Address</h2>
 
-                    @include('spark::settings.subscription.subscribe-address')
+                    @include('flare::settings.subscription.subscribe-address')
 
                     <h2><i class="fa fa-btn fa-credit-card"></i>Credit Card</h2>
                 @endif
@@ -74,7 +74,7 @@
                 </div>
 
                 <!-- ZIP Code -->
-                <div class="form-group" v-if=" ! spark.collectsBillingAddress">
+                <div class="form-group" v-if=" ! flare.collectsBillingAddress">
                     <label for="number" class="col-md-4 control-label">ZIP / Postal Code</label>
 
                     <div class="col-sm-6">
@@ -96,15 +96,15 @@
                 </div>
 
                 <!-- Tax / Price Information -->
-                <div class="form-group" v-if="spark.collectsEuropeanVat && countryCollectsVat && selectedPlan">
+                <div class="form-group" v-if="flare.collectsEuropeanVat && countryCollectsVat && selectedPlan">
                     <label class="col-md-4 control-label">&nbsp;</label>
 
                     <div class="col-md-6">
                         <div class="alert alert-info" style="margin: 0;">
-                            <strong>Tax:</strong> @{{ taxAmount(selectedPlan) | currency spark.currencySymbol }}
+                            <strong>Tax:</strong> @{{ taxAmount(selectedPlan) | currency flare.currencySymbol }}
                             <br><br>
                             <strong>Total Price Including Tax:</strong>
-                            @{{ priceWithTax(selectedPlan) | currency spark.currencySymbol }} / @{{ selectedPlan.interval | capitalize }}
+                            @{{ priceWithTax(selectedPlan) | currency flare.currencySymbol }} / @{{ selectedPlan.interval | capitalize }}
                         </div>
                     </div>
                 </div>
@@ -126,4 +126,4 @@
             </form>
         </div>
     </div>
-</spark-subscribe-stripe>
+</flare-subscribe-stripe>

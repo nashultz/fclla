@@ -1,20 +1,20 @@
-<spark-team-membership :user="user" :team="team" inline-template>
+<flare-team-membership :user="user" :team="team" inline-template>
     <div>
         @if (Auth::user()->ownsTeam($team))
             <!-- Send Invitation -->
             <div v-if="user && team">
-                @include('spark::settings.teams.send-invitation')
+                @include('flare::settings.teams.send-invitation')
             </div>
 
             <!-- Pending Invitations -->
             <div v-if="invitations && invitations.length > 0">
-                @include('spark::settings.teams.mailed-invitations')
+                @include('flare::settings.teams.mailed-invitations')
             </div>
         @endif
 
         <!-- Team Members -->
         <div v-if="user && team">
-            @include('spark::settings.teams.team-members')
+            @include('flare::settings.teams.team-members')
         </div>
     </div>
-</spark-team-membership>
+</flare-team-membership>

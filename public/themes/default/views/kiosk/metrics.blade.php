@@ -1,4 +1,4 @@
-<spark-kiosk-metrics :user="user" inline-template>
+<flare-kiosk-metrics :user="user" inline-template>
     <!-- The Landsman™ -->
     <div>
         <div class="row">
@@ -9,7 +9,7 @@
 
                     <div class="panel-body text-center">
                         <div style="font-size: 24px;">
-                            @{{ monthlyRecurringRevenue | currency spark.currencySymbol }}
+                            @{{ monthlyRecurringRevenue | currency flare.currencySymbol }}
                         </div>
 
                         <!-- Compared To Last Month -->
@@ -32,7 +32,7 @@
 
                     <div class="panel-body text-center">
                         <div style="font-size: 24px;">
-                            @{{ yearlyRecurringRevenue | currency spark.currencySymbol }}
+                            @{{ yearlyRecurringRevenue | currency flare.currencySymbol }}
                         </div>
 
                         <!-- Compared To Last Month -->
@@ -57,7 +57,7 @@
 
                     <div class="panel-body text-center">
                         <span style="font-size: 24px;">
-                            @{{ totalVolume | currency spark.currencySymbol }}
+                            @{{ totalVolume | currency flare.currencySymbol }}
                         </span>
                     </div>
                 </div>
@@ -171,4 +171,4 @@
             </div>
         </div>
     </div>
-</spark-kiosk-metrics>
+</flare-kiosk-metrics>
