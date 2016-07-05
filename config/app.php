@@ -163,6 +163,7 @@ return [
         Laravel\Cashier\CashierServiceProvider::class,
         Mpociot\VatCalculator\VatCalculatorServiceProvider::class,
         FCLLA\Providers\FlareServiceProvider::class,
+        FCLLA\Flare\Providers\FlareServiceProvider::class,
 
     ],
 
