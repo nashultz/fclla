@@ -2,11 +2,13 @@
 
 namespace FCLLA\Flare;
 
+use GuzzleHttp\Client as HttpClient;
 
-trait InteractsWithFlareAPI
+trait InteractsWithFlareApi
 {
     /**
      * The Flare base URL.
+     * changed something
      * @var string
      */
     protected $flareUrl = 'https://flare.nathonscott.com';
