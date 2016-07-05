@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="google-site-verification" content="8aFZ5BaWsmVkD9VY_0oHv7b-Fsd0UE3r5UJAdT-onm4" />
 
-    <title>Nathon Scott</title>
+    <title>Faulkner County Landlords Association</title>
 
     <!-- Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,600' rel='stylesheet' type='text/css'>
