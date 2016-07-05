@@ -28,6 +28,7 @@ class UpdateCommand extends Command
 
     /**
      * Execute the console command.
+     * change something
      *
      * @return mixed
      */
