@@ -2,8 +2,8 @@
 
 namespace FCLLA\Flare;
 
-use Laravel\Cashier\Billable as CashierBillable;
 use Mpociot\VatCalculator\VatCalculator;
+use Laravel\Cashier\Billable as CashierBillable;
 
 trait Billable
 {
@@ -11,6 +11,7 @@ trait Billable
 
     /**
      * Determine if the user is connected to any payment provider.
+     *
      * @return bool
      */
     public function hasBillingProvider()
@@ -20,6 +21,7 @@ trait Billable
 
     /**
      * Get all of the subscriptions for the user.
+     *
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function subscriptions()
@@ -28,8 +30,10 @@ trait Billable
     }
 
     /**
-     * Get the Spark plan that corresponds with the given subscription.
+     * Get the Flare plan that corresponds with the given subscription.
+     *
      * If they are not subscribed and a free plan exists, that will be returned.
+     *
      * @param  string  $subscription
      * @return \FCLLA\Flare\Plan|null
      */
@@ -50,6 +54,7 @@ trait Billable
 
     /**
      * Get the available billing plans for the given entity.
+     *
      * @return \Illuminate\Support\Collection
      */
     public function availablePlans()
@@ -67,6 +72,7 @@ trait Billable
 
     /**
      * Get the tax percentage to apply to the subscription.
+     *
      * @return int
      */
     public function taxPercentage()

@@ -2,28 +2,31 @@
 
 namespace FCLLA\Flare\Console\Commands;
 
-
 use Carbon\Carbon;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\DB;
-use FCLLA\Flare\Repositories\PerformanceIndicatorsRepository;
+use FCLLA\Flare\Console\Installation;
+use FCLLA\Flare\Contracts\Repositories\PerformanceIndicatorsRepository;
 
 class StorePerformanceIndicatorsCommand extends Command
 {
     /**
      * The name and signature of the console command.
+     *
      * @var string
      */
     protected $signature = 'flare:kpi';
 
     /**
      * The console command description.
+     *
      * @var string
      */
     protected $description = 'Store the performance indicators for the application';
 
     /**
      * Execute the console command.
+     *
      * @param  PerformanceIndicatorsRepository  $indicators
      * @return mixed
      */

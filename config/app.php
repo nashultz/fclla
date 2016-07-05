@@ -162,7 +162,7 @@ return [
         Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
         Laravel\Cashier\CashierServiceProvider::class,
         Mpociot\VatCalculator\VatCalculatorServiceProvider::class,
-        //FCLLA\Providers\FlareServiceProvider::class,
+        FCLLA\Providers\FlareServiceProvider::class,
 
     ],
 

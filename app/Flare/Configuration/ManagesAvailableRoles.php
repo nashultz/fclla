@@ -2,23 +2,25 @@
 
 namespace FCLLA\Flare\Configuration;
 
-
 trait ManagesAvailableRoles
 {
     /**
-     * The available team member roles
+     * The available team member roles.
+     *
      * @var array
      */
     public static $roles = [];
 
     /**
      * The default role to be applied to new team members.
+     *
      * @var string
      */
     public static $defaultRole = 'member';
 
     /**
      * Get the available team member roles.
+     *
      * @return array
      */
     public static function roles()
@@ -28,7 +30,8 @@ trait ManagesAvailableRoles
 
     /**
      * Define the roles available to team members.
-     * @param array $roles
+     *
+     * @param  array  $roles
      * @return void
      */
     public static function useRoles(array $roles)
@@ -38,6 +41,7 @@ trait ManagesAvailableRoles
 
     /**
      * Get the default role to be used by new team members.
+     *
      * @return string
      */
     public static function defaultRole()
@@ -47,7 +51,8 @@ trait ManagesAvailableRoles
 
     /**
      * Set the default role to be used by new team members.
-     * @param $role
+     *
+     * @param  string  $role
      * @return void
      */
     public static function useDefaultRole($role)

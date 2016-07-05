@@ -11,14 +11,16 @@ trait CallsInteractions
 {
     /**
      * The alternative implementation of interaction methods.
+     *
      * @var array
      */
     public static $interactions = [];
 
     /**
      * Run an interaction method.
-     * @param string $interaction
-     * @param array $parameters
+     *
+     * @param  string  $interaction
+     * @param  array  $parameters
      * @return mixed
      */
     public static function call($interaction, array $parameters = [])
@@ -28,50 +30,53 @@ trait CallsInteractions
 
     /**
      * Run an interaction method.
-     * @param string $interaction
-     * @param array $parameters
+     *
+     * @param  string  $interaction
+     * @param  array  $parameters
      * @return mixed
      */
     public static function interact($interaction, array $parameters = [])
     {
-        if(!Str::contains($interaction, '@')) {
+        if (! Str::contains($interaction, '@')) {
             $interaction = $interaction.'@handle';
         }
-        
+
         list($class, $method) = explode('@', $interaction);
-        
-        if(isset(static::$interactions[$interaction])) {
+
+        if (isset(static::$interactions[$interaction])) {
             return static::callSwappedInteraction($interaction, $parameters);
         }
-        
+
         $base = class_basename($class);
-        
-        if(isset(static::$interactions[$base.'@'.$method])) {
+
+        if (isset(static::$interactions[$base.'@'.$method])) {
             return static::callSwappedInteraction($base.'@'.$method, $parameters);
         }
-        
+
         return call_user_func_array([app($class), $method], $parameters);
     }
 
     /**
      * Run a swapped interaction method.
-     * @param string $interaction
-     * @param array $parameters
+     *
+     * @param  string  $interaction
+     * @param  array  $parameters
      * @return mixed
      */
     protected static function callSwappedInteraction($interaction, array $parameters)
     {
-        if(is_string(static::$interactions[$interaction])) {
+        if (is_string(static::$interactions[$interaction])) {
             return static::interact(static::$interactions[$interaction], $parameters);
         }
-        
+
         return call_user_func_array(static::$interactions[$interaction], $parameters);
     }
 
     /**
      * Swap the implementation of an interaction method.
-     * @param string $interaction
-     * @param mixed $callback
+     *
+     * @param  string  $interaction
+     * @param  mixed  $callback
      * @return void
      */
     public static function swap($interaction, $callback)
@@ -81,7 +86,8 @@ trait CallsInteractions
 
     /**
      * Register a callback to provide the rules for new users.
-     * @param mixed $callback
+     *
+     * @param  mixed  $callback
      * @return void
      */
     public static function validateUsersWith($callback)
@@ -91,7 +97,8 @@ trait CallsInteractions
 
     /**
      * Register a callback to create new users.
-     * @param mixed $callback
+     *
+     * @param  mixed  $callback
      * @return void
      */
     public static function createUsersWith($callback)
@@ -101,7 +108,8 @@ trait CallsInteractions
 
     /**
      * Set a callback to be used to check plan eligibility.
-     * @param \Closure $callback
+     *
+     * @param  \Closure  $callback
      * @return void
      */
     public static function checkPlanEligibilityUsing($callback)
@@ -111,8 +119,9 @@ trait CallsInteractions
 
     /**
      * Determine if the user is eligible for the given plan.
-     * @param \Illuminate\Contracts\Auth\Authenticatable $user
-     * @param \FCLLA\Flare\Plan $plan
+     *
+     * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
+     * @param  \FCLLA\Flare\Plan  $plan
      * @return bool
      */
     public static function eligibleForPlan($user, $plan)
@@ -122,22 +131,24 @@ trait CallsInteractions
 
     /**
      * Set a callback to be used to check team plan eligibility.
-     * @param \Closure $callback
+     *
+     * @param  \Closure  $callback
      * @return void
      */
-    public static function checkTeamPlanEligibilityUsing($callback)
+    public static function checkTeamPlanEligibilityUsing(Closure $callback)
     {
         static::swap('CheckTeamPlanEligibility@handle', $callback);
     }
 
     /**
      * Determine if the team is eligible for the given plan.
-     * @param \FCLLA\Flare\Team $team
-     * @param \FCLLA\Flare\Plan $plan
+     *
+     * @param  \FCLLA\Flare\Team  $team
+     * @param  \FCLLA\Flare\Plan  $plan
      * @return bool
      */
     public static function eligibleForTeamPlan($team, $plan)
     {
-        return static::call(CheckTeamPlanEligibility::class.'handle', [$team, $plan]);
+        return static::call(CheckTeamPlanEligibility::class.'@handle', [$team, $plan]);
     }
 }

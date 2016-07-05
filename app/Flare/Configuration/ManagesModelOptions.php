@@ -2,25 +2,27 @@
 
 namespace FCLLA\Flare\Configuration;
 
-
 use FCLLA\Flare\CanJoinTeams;
 
 trait ManagesModelOptions
 {
     /**
      * The user model class name.
+     *
      * @var string
      */
-    public static $userModel = 'FCLLA\User';
+    public static $userModel = 'App\User';
 
     /**
      * The team model class name.
+     *
      * @var string
      */
-    public static $teamModel = 'FCLLA\Team';
+    public static $teamModel = 'App\Team';
 
     /**
      * Set the user model class name.
+     *
      * @param  string  $userModel
      * @return void
      */
@@ -31,6 +33,7 @@ trait ManagesModelOptions
 
     /**
      * Get the user model class name.
+     *
      * @return string
      */
     public static function userModel()
@@ -40,6 +43,7 @@ trait ManagesModelOptions
 
     /**
      * Get a new user model instance.
+     *
      * @return \Illuminate\Contracts\Auth\Authenticatable
      */
     public static function user()
@@ -49,6 +53,7 @@ trait ManagesModelOptions
 
     /**
      * Set the team model class name.
+     *
      * @param  string  $teamModel
      * @return void
      */
@@ -59,6 +64,7 @@ trait ManagesModelOptions
 
     /**
      * Determine if the application offers support for teams.
+     *
      * @return bool
      */
     public static function usesTeams()
@@ -68,6 +74,7 @@ trait ManagesModelOptions
 
     /**
      * Get the team model class name.
+     *
      * @return string
      */
     public static function teamModel()
@@ -77,6 +84,7 @@ trait ManagesModelOptions
 
     /**
      * Get a new team model instance.
+     *
      * @return \FCLLA\Flare\Team
      */
     public static function team()

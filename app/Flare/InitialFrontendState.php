@@ -2,8 +2,10 @@
 
 namespace FCLLA\Flare;
 
-
-use FCLLA\Flare\Repositories\UserRepository;
+use Illuminate\Support\Facades\Auth;
+use FCLLA\Flare\Contracts\Repositories\UserRepository;
+use FCLLA\Flare\Contracts\Repositories\TeamRepository;
+use FCLLA\Flare\Contracts\InitialFrontendState as Contract;
 
 class InitialFrontendState implements Contract
 {
@@ -21,6 +23,7 @@ class InitialFrontendState implements Contract
 
     /**
      * Get the currently authenticated user.
+     *
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
     protected function currentUser()
@@ -30,6 +33,7 @@ class InitialFrontendState implements Contract
 
     /**
      * Get all of the teams for the user.
+     *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @return \Illuminate\Database\Eloquent\Collection|null
      */
@@ -42,6 +46,7 @@ class InitialFrontendState implements Contract
 
     /**
      * Get the current team for the user.
+     *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @return \FCLLA\Flare\Team|null
      */

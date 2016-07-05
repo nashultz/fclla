@@ -2,6 +2,8 @@
 
 namespace FCLLA\Flare;
 
+use FCLLA\Flare\Billable;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Database\Eloquent\Model;
 
 class Team extends Model
@@ -10,18 +12,21 @@ class Team extends Model
 
     /**
      * The database table used by the model.
+     *
      * @var string
      */
     protected $table = 'teams';
 
     /**
      * The attributes that are mass assignable.
+     *
      * @var array
      */
     protected $fillable = ['name'];
 
     /**
      * The attributes excluded from the model's JSON form.
+     *
      * @var array
      */
     protected $hidden = [
@@ -39,6 +44,7 @@ class Team extends Model
 
     /**
      * The attributes that should be cast to native types.
+     *
      * @var array
      */
     protected $casts = [
@@ -47,6 +53,7 @@ class Team extends Model
 
     /**
      * Get the owner's email address.
+     *
      * @return string
      */
     public function getEmailAttribute()
@@ -74,6 +81,7 @@ class Team extends Model
 
     /**
      * Get the total number of users and pending invitations.
+     *
      * @return int
      */
     public function totalPotentialUsers()
@@ -91,6 +99,7 @@ class Team extends Model
 
     /**
      * Get all of the subscriptions for the team.
+     *
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function subscriptions()
@@ -100,6 +109,7 @@ class Team extends Model
 
     /**
      * Get the available billing plans for the given entity.
+     *
      * @return \Illuminate\Support\Collection
      */
     public function availablePlans()
@@ -109,18 +119,20 @@ class Team extends Model
 
     /**
      * Get the team photo URL attribute.
+     *
      * @param  string|null  $value
      * @return string|null
      */
     public function getPhotoUrlAttribute($value)
     {
         return empty($value)
-            ? 'https://www.gravatar.com/avatar/'.md5($this->name.'@nathonscott.com').'.jpg?s=200&d=identicon'
-            : url($value);
+                ? 'https://www.gravatar.com/avatar/'.md5($this->name.'@flare.laravel.com').'.jpg?s=200&d=identicon'
+                : url($value);
     }
 
     /**
      * Make the team attributes visible for an owner.
+     *
      * @return void
      */
     public function shouldHaveOwnerVisibility()
@@ -141,6 +153,7 @@ class Team extends Model
 
     /**
      * Detach all of the users from the team and delete the team.
+     *
      * @return void
      */
     public function detachUsersAndDestroy()
@@ -160,6 +173,7 @@ class Team extends Model
 
     /**
      * Convert the model instance to an array.
+     *
      * @return array
      */
     public function toArray()

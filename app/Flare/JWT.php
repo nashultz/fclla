@@ -2,7 +2,6 @@
 
 namespace FCLLA\Flare;
 
-
 use Illuminate\Support\Str;
 use Firebase\JWT\JWT as FirebaseJWT;
 
@@ -10,6 +9,7 @@ class JWT
 {
     /**
      * Encode the given array as a JWT token.
+     *
      * @param  array  $token
      * @return string
      */
@@ -20,6 +20,7 @@ class JWT
 
     /**
      * Decode the given token to an array.
+     *
      * @param  string  $token
      * @return array
      */
@@ -30,6 +31,7 @@ class JWT
 
     /**
      * Get the encryption key for the application.
+     *
      * @return string
      */
     protected static function getKey()

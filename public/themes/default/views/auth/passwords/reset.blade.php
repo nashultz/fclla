@@ -1,4 +1,4 @@
-@extends('layouts.frontendalt')
+@extends('spark::layouts.app')
 
 @section('content')
 <div class="container">
@@ -13,20 +13,22 @@
 
                         <input type="hidden" name="token" value="{{ $token }}">
 
+                        <!-- E-Mail Address -->
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">E-Mail Address</label>
 
                             <div class="col-md-6">
-                                <input type="email" class="form-control" name="email" value="{{ $email or old('email') }}">
+                                <input type="email" class="form-control" name="email" value="{{ $email or old('email') }}" autofocus>
 
                                 @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        {{ $errors->first('email') }}
                                     </span>
                                 @endif
                             </div>
                         </div>
 
+                        <!-- Password -->
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Password</label>
 
@@ -35,12 +37,13 @@
 
                                 @if ($errors->has('password'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password') }}</strong>
+                                        {{ $errors->first('password') }}
                                     </span>
                                 @endif
                             </div>
                         </div>
 
+                        <!-- Password Confirmation -->
                         <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                             <label class="col-md-4 control-label">Confirm Password</label>
                             <div class="col-md-6">
@@ -48,16 +51,17 @@
 
                                 @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('password_confirmation') }}</strong>
+                                        {{ $errors->first('password_confirmation') }}
                                     </span>
                                 @endif
                             </div>
                         </div>
 
+                        <!-- Reset Button -->
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    <i class="fa fa-btn fa-refresh"></i> Reset Password
+                                    <i class="fa fa-btn fa-refresh"></i>Reset Password
                                 </button>
                             </div>
                         </div>

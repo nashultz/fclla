@@ -52,7 +52,7 @@ class TokenRespository implements Contract
         ]);
 
         return cookie(
-            'spark_token', $token, 5, null,
+            'flare_token', $token, 5, null,
             config('session.domain'), config('session.secure'), true
         );
     }

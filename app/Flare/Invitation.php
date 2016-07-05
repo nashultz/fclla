@@ -2,7 +2,6 @@
 
 namespace FCLLA\Flare;
 
-
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,24 +9,28 @@ class Invitation extends Model
 {
     /**
      * The database table used by the model.
+     *
      * @var string
      */
     protected $table = 'invitations';
 
     /**
      * Indicates if the IDs are auto-incrementing.
+     *
      * @var bool
      */
     public $incrementing = false;
 
     /**
      * The guarded attributes on the model.
+     *
      * @var array
      */
     protected $guarded = [];
 
     /**
      * The attributes excluded from the model's JSON form.
+     *
      * @var array
      */
     protected $hidden = [];
@@ -42,6 +45,7 @@ class Invitation extends Model
 
     /**
      * Determine if the coupon is expired.
+     *
      * @return bool
      */
     public function isExpired()

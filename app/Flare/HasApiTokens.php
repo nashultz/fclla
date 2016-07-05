@@ -2,11 +2,11 @@
 
 namespace FCLLA\Flare;
 
-
 trait HasApiTokens
 {
     /**
      * The current authentication token in use.
+     *
      * @var \FCLLA\Flare\Token
      */
     protected $currentToken;
@@ -21,6 +21,7 @@ trait HasApiTokens
 
     /**
      * Determine if the current API token is granted a given ability.
+     *
      * @param  string  $ability
      * @return bool
      */
@@ -31,6 +32,7 @@ trait HasApiTokens
 
     /**
      * Get the currently used API token for the user.
+     *
      * @return \FCLLA\Flare\Token
      */
     public function token()
@@ -40,6 +42,7 @@ trait HasApiTokens
 
     /**
      * Set the current API token for the user.
+     *
      * @param  \FCLLA\Flare\Token  $token
      * @return $this
      */

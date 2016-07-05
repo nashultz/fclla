@@ -7,20 +7,23 @@ use Illuminate\Support\HtmlString;
 trait ManagesAppDetails
 {
     /**
-     * The application details
+     * The application / product details.
+     *
      * @var array
      */
     public static $details = [];
 
     /**
-     * Application developers
+     * The e-mail addresses of all of the application's developers.
+     *
      * @var array
      */
     public static $developers = [];
 
     /**
-     * Application information
-     * @param array $details
+     * Define the application information.
+     *
+     * @param  array  $details
      * @return void
      */
     public static function details(array $details)
@@ -29,7 +32,8 @@ trait ManagesAppDetails
     }
 
     /**
-     * Get the product name from the application information
+     * Get the product name from the application information.
+     *
      * @return string
      */
     public static function product()
@@ -38,7 +42,8 @@ trait ManagesAppDetails
     }
 
     /**
-     * Get the invoice meta information
+     * Get the invoice meta information, such as product, etc.
+     *
      * @return array
      */
     public static function generateInvoicesWith()
@@ -54,7 +59,8 @@ trait ManagesAppDetails
 
     /**
      * Get the invoice data payload for the given billable entity.
-     * @param $billable
+     *
+     * @param  mixed  $billable
      * @return array
      */
     public static function invoiceDataFor($billable)
@@ -67,18 +73,19 @@ trait ManagesAppDetails
     }
 
     /**
-     * Determine if the given email address belongs to a developer.
-     * @param string $email
+     * Determine if the given e-mail address belongs to a developer.
+     *
+     * @param  string  $email
      * @return bool
      */
     public static function developer($email)
     {
-        if(in_array($email, static::$developers)) {
+        if (in_array($email, static::$developers)) {
             return true;
         }
 
-        foreach(static::$developers as $developer) {
-            if(str_is($developer, $email)) {
+        foreach (static::$developers as $developer) {
+            if (str_is($developer, $email)) {
                 return true;
             }
         }
@@ -87,8 +94,9 @@ trait ManagesAppDetails
     }
 
     /**
-     * Set the email addresses that are registered to developers
-     * @param array $developers
+     * Set the e-mail addresses that are registered to developers.
+     *
+     * @param  array  $developers
      * @return void
      */
     public static function developers(array $developers)

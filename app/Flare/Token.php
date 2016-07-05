@@ -2,7 +2,6 @@
 
 namespace FCLLA\Flare;
 
-
 use Carbon\Carbon;
 use Illuminate\Support\Arr;
 use Illuminate\Database\Eloquent\Model;

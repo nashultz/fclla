@@ -2,37 +2,41 @@
 
 namespace FCLLA\Flare\Configuration;
 
-
 use Exception;
 
 trait ManagesBillingProviders
 {
     /**
      * Indicates if the application requires a credit card up-front.
+     *
      * @var bool
      */
     public static $cardUpFront = true;
 
     /**
      * Indicates the service the application uses for billing.
+     *
      * @var bool
      */
     public static $billsUsing = 'stripe';
 
     /**
      * Indicates if the application collects the customer's billing address.
+     *
      * @var bool
      */
     public static $collectsBillingAddress = false;
 
     /**
      * Indicates if the application collects European VAT.
+     *
      * @var bool
      */
     public static $collectsEuropeanVat = false;
 
     /**
      * The application's home country where the business is incorporated.
+     *
      * This value should be a two-digit country code.
      *
      * @var string
@@ -41,6 +45,7 @@ trait ManagesBillingProviders
 
     /**
      * Indicates that the application does not require a card up front.
+     *
      * @return static
      */
     public static function noCardUpFront()
@@ -52,6 +57,7 @@ trait ManagesBillingProviders
 
     /**
      * Determine if the application requires a card up front.
+     *
      * @return bool
      */
     public static function needsCardUpFront()
@@ -61,6 +67,7 @@ trait ManagesBillingProviders
 
     /**
      * Determine if the application bills customers using a given provider.
+     *
      * @param  string  $provider
      * @return bool
      */
@@ -71,6 +78,7 @@ trait ManagesBillingProviders
 
     /**
      * Determine if the application bills customers using Stripe.
+     *
      * @return bool
      */
     public static function billsUsingStripe()
@@ -80,6 +88,7 @@ trait ManagesBillingProviders
 
     /**
      * Indicate that the application should use Stripe for billing.
+     *
      * @return static
      */
     public static function useStripe()
@@ -91,6 +100,7 @@ trait ManagesBillingProviders
 
     /**
      * Determine if the application bills customers using Braintree.
+     *
      * @return bool
      */
     public static function billsUsingBraintree()
@@ -100,7 +110,9 @@ trait ManagesBillingProviders
 
     /**
      * Indicate that the application should use Braintree for billing.
+     *
      * Swaps out bindings in the container for Braintree.
+     *
      * @return static
      */
     public static function useBraintree()
@@ -123,7 +135,7 @@ trait ManagesBillingProviders
         $app = app();
 
         foreach ($services as $key => $value) {
-            $app->singleton('Laravel\Flare\\'.$key, 'Laravel\Flare\\'.$value);
+            $app->singleton('FCLLA\Flare\\'.$key, 'FCLLA\Flare\\'.$value);
         }
 
         return new static;
@@ -131,8 +143,8 @@ trait ManagesBillingProviders
 
     /**
      * Indicate that the application should collect the customer's billing address.
-     * @param  bool $value
-     * @throws Exception
+     *
+     * @param  bool  $value
      * @return static
      */
     public static function collectBillingAddress($value = true)
@@ -148,6 +160,7 @@ trait ManagesBillingProviders
 
     /**
      * Determine if the application collects the customer's billing address.
+     *
      * @return bool
      */
     public static function collectsBillingAddress()
@@ -157,6 +170,7 @@ trait ManagesBillingProviders
 
     /**
      * Indicate that the application should collect European VAT.
+     *
      * @param  string|null  $homeCountry
      * @param  bool  $value
      * @return static
@@ -171,6 +185,7 @@ trait ManagesBillingProviders
 
     /**
      * Determine if the application collects European VAT.
+     *
      * @return bool
      */
     public static function collectsEuropeanVat()
@@ -180,6 +195,7 @@ trait ManagesBillingProviders
 
     /**
      * Get the home country the business is incorporated in.
+     *
      * @return string|null
      */
     public static function homeCountry()

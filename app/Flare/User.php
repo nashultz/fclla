@@ -2,7 +2,6 @@
 
 namespace FCLLA\Flare;
 
-
 use Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
@@ -12,6 +11,7 @@ class User extends Authenticatable
 
     /**
      * Get the profile photo URL attribute.
+     *
      * @param  string|null  $value
      * @return string|null
      */
@@ -22,6 +22,7 @@ class User extends Authenticatable
 
     /**
      * Make the team user visible for the current user.
+     *
      * @return $this
      */
     public function shouldHaveSelfVisibility()
@@ -45,6 +46,7 @@ class User extends Authenticatable
 
     /**
      * Convert the model instance to an array.
+     *
      * @return array
      */
     public function toArray()

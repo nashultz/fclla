@@ -2,9 +2,10 @@
 
 namespace FCLLA\Flare\Repositories;
 
-
 use Carbon\Carbon;
 use FCLLA\Flare\Flare;
+use FCLLA\Flare\Events\PaymentMethod\VatIdUpdated;
+use FCLLA\Flare\Events\PaymentMethod\BillingAddressUpdated;
 use FCLLA\Flare\Contracts\Repositories\TeamRepository as TeamRepositoryContract;
 
 class TeamRepository implements TeamRepositoryContract
@@ -52,7 +53,7 @@ class TeamRepository implements TeamRepositoryContract
             'billing_country' => array_get($data, 'country'),
         ])->save();
 
-        //event(new BillingAddressUpdated($team));
+        event(new BillingAddressUpdated($team));
     }
 
     /**
@@ -62,6 +63,6 @@ class TeamRepository implements TeamRepositoryContract
     {
         $team->forceFill(['vat_id' => $vatId])->save();
 
-        //event(new VatIdUpdated($team));
+        event(new VatIdUpdated($team));
     }
 }

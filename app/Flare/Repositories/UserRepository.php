@@ -2,10 +2,11 @@
 
 namespace FCLLA\Flare\Repositories;
 
-
 use Carbon\Carbon;
 use FCLLA\Flare\Flare;
 use Illuminate\Support\Facades\Auth;
+use FCLLA\Flare\Events\PaymentMethod\VatIdUpdated;
+use FCLLA\Flare\Events\PaymentMethod\BillingAddressUpdated;
 use FCLLA\Flare\Contracts\Repositories\UserRepository as UserRepositoryContract;
 
 class UserRepository implements UserRepositoryContract
@@ -32,6 +33,7 @@ class UserRepository implements UserRepositoryContract
 
     /**
      * Load the relationships for the given user.
+     *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @return \Illuminate\Contracts\Auth\Authenticatable
      */
@@ -64,7 +66,7 @@ class UserRepository implements UserRepositoryContract
 
         return $search->where(function ($search) use ($query) {
             $search->where('email', 'like', $query)
-                ->orWhere('name', 'like', $query);
+                   ->orWhere('name', 'like', $query);
         })->get();
     }
 
@@ -101,7 +103,7 @@ class UserRepository implements UserRepositoryContract
             'billing_country' => array_get($data, 'country'),
         ])->save();
 
-        //event(new BillingAddressUpdated($user));
+        event(new BillingAddressUpdated($user));
     }
 
     /**
@@ -111,6 +113,6 @@ class UserRepository implements UserRepositoryContract
     {
         $user->forceFill(['vat_id' => $vatId])->save();
 
-        //event(new VatIdUpdated($user));
+        event(new VatIdUpdated($user));
     }
 }

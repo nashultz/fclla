@@ -2,17 +2,18 @@
 
 namespace FCLLA\Flare\Configuration;
 
-
 trait ManagesSupportOptions
 {
     /**
      * The e-mail address where customer support e-mails should be sent.
+     *
      * @var string
      */
     public static $sendsSupportEmailsTo;
 
     /**
      * Determine if a support address has been configured.
+     *
      * @return bool
      */
     public static function hasSupportAddress()
@@ -22,6 +23,7 @@ trait ManagesSupportOptions
 
     /**
      * Get the e-mail address to send customer support e-mails to.
+     *
      * @return string|null
      */
     public static function supportAddress()
@@ -31,6 +33,7 @@ trait ManagesSupportOptions
 
     /**
      * Set the e-mail address to send customer support e-mails to.
+     *
      * @param  string  $address
      * @return void
      */

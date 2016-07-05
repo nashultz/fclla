@@ -2,56 +2,67 @@
 
 namespace FCLLA\Flare\Configuration;
 
-
+use Closure;
+use Exception;
+use LogicException;
 use FCLLA\Flare\Plan;
+use FCLLA\Flare\Flare;
 use FCLLA\Flare\TeamPlan;
 
 trait ManagesAvailablePlans
 {
     /**
      * Indicates that the application will bill customers.
+     *
      * @var bool
      */
     public static $billsCustomers = false;
 
     /**
      * Indicates that the application will bill teams.
+     *
      * @var bool
      */
     public static $billsTeams = false;
 
     /**
      * The coupon code for the current application wide promotion.
+     *
      * @var string
      */
     public static $promotion;
 
     /**
      * The number of days to grant to generic trials.
+     *
      * @var int
      */
     public static $trialDays;
 
     /**
      * The number of days to grant to generic team trials.
+     *
      * @var int
      */
     public static $teamTrialDays;
 
     /**
      * All of the plans defined for the application.
+     *
      * @var array
      */
     public static $plans = [];
 
     /**
      * All of the team plans defined for the application.
+     *
      * @var array
      */
     public static $teamPlans = [];
 
     /**
-     * Indicates that the application will bill customers
+     * Indicates that the application will bill customers.
+     *
      * @return void
      */
     public static function billsCustomers()
@@ -61,6 +72,7 @@ trait ManagesAvailablePlans
 
     /**
      * Determine if the application bills customers.
+     *
      * @return bool
      */
     public static function canBillCustomers()
@@ -69,7 +81,8 @@ trait ManagesAvailablePlans
     }
 
     /**
-     * Indicates that the application bill bill teams.
+     * Indicates that the application will bill teams.
+     *
      * @return void
      */
     public static function billsTeams()
@@ -78,7 +91,8 @@ trait ManagesAvailablePlans
     }
 
     /**
-     * Determines if the application bills teams.
+     * Determine if the application bills customers.
+     *
      * @return bool
      */
     public static function canBillTeams()
@@ -88,12 +102,13 @@ trait ManagesAvailablePlans
 
     /**
      * Define or retrieve an application wide promotion for new registrations.
-     * @param string|null $coupon
+     *
+     * @param  string|null  $coupon
      * @return void
      */
     public static function promotion($coupon = null)
     {
-        if(is_null($coupon)) {
+        if (is_null($coupon)) {
             return static::$promotion;
         } else {
             static::$promotion = $coupon;
@@ -102,12 +117,13 @@ trait ManagesAvailablePlans
 
     /**
      * Get or set the number of days for the generic trial.
-     * @param int|null $trialDays
-     * @return int|static
+     *
+     * @param  int|null  $trialDays
+     * @return static|int
      */
     public static function trialDays($trialDays = null)
     {
-        if(is_null($trialDays)) {
+        if (is_null($trialDays)) {
             return static::$trialDays;
         }
 
@@ -118,12 +134,13 @@ trait ManagesAvailablePlans
 
     /**
      * Get or set the number of days for the generic team trial.
-     * @param int|null $teamTrialDays
-     * @return int|static
+     *
+     * @param  int|null  $teamTrialDays
+     * @return static|int
      */
     public static function teamTrialDays($teamTrialDays = null)
     {
-        if(is_null($teamTrialDays)) {
+        if (is_null($teamTrialDays)) {
             return static::$teamTrialDays;
         }
 
@@ -134,7 +151,9 @@ trait ManagesAvailablePlans
 
     /**
      * Create a new free plan instance.
-     * @param string $name
+     *
+     * @param  string  $name
+     * @param  string  $id
      * @return \FCLLA\Flare\Plan
      */
     public static function freePlan($name = 'Free')
@@ -144,8 +163,10 @@ trait ManagesAvailablePlans
 
     /**
      * Create a new free team plan instance.
-     * @param string $name
-     * @return \FCLLA\Flare\Team
+     *
+     * @param  string  $name
+     * @param  string  $id
+     * @return \FCLLA\Flare\Plan
      */
     public static function freeTeamPlan($name = 'Free')
     {
@@ -153,9 +174,10 @@ trait ManagesAvailablePlans
     }
 
     /**
-     * Create new plan instance.
-     * @param string $name
-     * @param string $id
+     * Create a new plan instance.
+     *
+     * @param  string  $name
+     * @param  string  $id
      * @return \FCLLA\Flare\Plan
      */
     public static function plan($name, $id)
@@ -166,10 +188,11 @@ trait ManagesAvailablePlans
     }
 
     /**
-     * Create new team plan instance.
-     * @param $name
-     * @param $id
-     * @return \FCLLA\Flare\Team
+     * Create a new team plan instance.
+     *
+     * @param  string  $name
+     * @param  string  $id
+     * @return \FCLLA\Flare\Plan
      */
     public static function teamPlan($name, $id)
     {
@@ -180,6 +203,7 @@ trait ManagesAvailablePlans
 
     /**
      * Determine if paid plans are defined for the application.
+     *
      * @return bool
      */
     public static function hasPaidPlans()
@@ -191,6 +215,7 @@ trait ManagesAvailablePlans
 
     /**
      * Determine if active yearly plans are defined.
+     *
      * @return bool
      */
     public static function hasYearlyPlans()
@@ -199,9 +224,10 @@ trait ManagesAvailablePlans
             return $plan->interval === 'yearly';
         })->count() > 0;
     }
-    
+
     /**
      * Get the active plans defined for the application.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function activePlans()
@@ -210,36 +236,40 @@ trait ManagesAvailablePlans
             return $plan->active;
         });
     }
-    
+
     /**
      * Get the plans defined for the application.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function plans()
     {
         return collect(static::$plans);
     }
-    
+
     /**
      * Get an array of all of the active plan IDs.
+     *
      * @return array
      */
     public static function activePlanIds()
     {
         return static::activePlans()->pluck('id')->all();
     }
-    
+
     /**
      * Get a comma delimited list of active Flare plan IDs.
+     *
      * @return string
      */
     public static function activePlanIdList()
     {
         return implode(',', static::activePlanIds());
     }
-    
+
     /**
      * Determine if paid team plans are defined for the application.
+     *
      * @return bool
      */
     public static function hasPaidTeamPlans()
@@ -248,10 +278,11 @@ trait ManagesAvailablePlans
             return $plan->price > 0;
         })) > 0;
     }
-    
+
     /**
      * Determine if active team yearly plans are defined.
-     * @return \Illuminate\Support\Collection
+     *
+     * @return bool
      */
     public static function hasYearlyTeamPlans()
     {
@@ -259,9 +290,10 @@ trait ManagesAvailablePlans
             return $plan->interval === 'yearly';
         })->count() > 0;
     }
-    
+
     /**
      * Get the active team plans defined for the application.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function activeTeamPlans()
@@ -270,36 +302,40 @@ trait ManagesAvailablePlans
             return $plan->active;
         });
     }
-    
+
     /**
      * Get the team plans defined for the application.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function teamPlans()
     {
         return collect(static::$teamPlans);
     }
-    
+
     /**
      * Get an array of all of the active team plan IDs.
+     *
      * @return array
      */
     public static function activeTeamPlanIds()
     {
         return static::activeTeamPlans()->pluck('id')->all();
     }
-    
+
     /**
      * Get a comma delimited list of active Flare team plan IDs.
+     *
      * @return string
      */
     public static function activeTeamPlanIdList()
     {
         return implode(',', static::activeTeamPlanIds());
     }
-    
+
     /**
      * Get all of the plans, both individual and teams.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function allPlans()
@@ -309,6 +345,7 @@ trait ManagesAvailablePlans
 
     /**
      * Get all of the monthly plans, both individual and teams.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function allMonthlyPlans()
@@ -321,6 +358,7 @@ trait ManagesAvailablePlans
 
     /**
      * Get all of the yearly plans, both individual and teams.
+     *
      * @return \Illuminate\Support\Collection
      */
     public static function allYearlyPlans()

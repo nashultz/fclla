@@ -2,62 +2,72 @@
 
 namespace FCLLA\Flare;
 
-
 use JsonSerializable;
 
 class Plan implements JsonSerializable
 {
     /**
      * The plan's Stripe ID.
+     *
      * @var string
      */
     public $id;
 
     /**
      * The plan's displayable name.
+     *
      * @var string
      */
     public $name;
 
     /**
      * The plan's price.
+     *
      * @var integer
      */
     public $price = 0;
 
     /**
      * The plan's interval.
+     *
      * @var string
      */
     public $interval = 'monthly';
 
     /**
      * The number of trial days that come with the plan.
-     * @var integer
+     *
+     * @var int
      */
     public $trialDays = 0;
 
     /**
      * The plan's features.
+     *
      * @var array
      */
     public $features = [];
-    
-    /** 
+
+    /**
      * The plan's attributes.
+     *
+     * @var array
      */
     public $attributes = [];
 
     /**
      * Indicates if the plan is active.
+     *
      * @var bool
      */
     public $active = true;
 
     /**
      * Create a new plan instance.
-     * @param string $name
-     * @param string $id
+     *
+     * @param  string  $name
+     * @param  string  $id
+     * @return void
      */
     public function __construct($name, $id)
     {
@@ -67,30 +77,33 @@ class Plan implements JsonSerializable
 
     /**
      * Set the price of the plan.
-     * @param string|integer $price
+     *
+     * @param  string|integer  $price
      * @return $this
      */
     public function price($price)
     {
         $this->price = $price;
-        
+
         return $this;
     }
 
     /**
      * Specify that the plan is on a yearly interval.
+     *
      * @return $this
      */
     public function yearly()
     {
         $this->interval = 'yearly';
-        
+
         return $this;
     }
 
     /**
      * Specify the number of trial days that come with the plan.
-     * @param int $trialDays
+     *
+     * @param  int  $trialDays
      * @return $this
      */
     public function trialDays($trialDays)
@@ -102,7 +115,8 @@ class Plan implements JsonSerializable
 
     /**
      * Specify the plan's features.
-     * @param array $features
+     *
+     * @param  array  $features
      * @return $this
      */
     public function features(array $features)
@@ -114,8 +128,9 @@ class Plan implements JsonSerializable
 
     /**
      * Get a given attribute from the plan.
-     * @param string $key
-     * @param null $default
+     *
+     * @param  string  $key
+     * @param  mixed  $default
      * @return mixed
      */
     public function attribute($key, $default = null)
@@ -125,37 +140,41 @@ class Plan implements JsonSerializable
 
     /**
      * Set the maximum number of teams that can be owned for this plan.
-     * @param int $max
+     *
+     * @param  int  $max
      * @return $this
      */
     public function maxTeams($max)
     {
-        return $this->attributes(['teams'=>$max]);
+        return $this->attributes(['teams' => $max]);
     }
 
     /**
-     * Set the maximum number of collaborators an account may have.
-     * @param int $max
+     * Set the maximum number of total collaborators an account may have.
+     *
+     * @param  int  $max
      * @return $this
      */
     public function maxCollaborators($max)
     {
-        return $this->attributes(['collaborators'=>$max]);
+        return $this->attributes(['collaborators' => $max]);
     }
 
     /**
      * Set the maximum number of team members that a team may have.
-     * @param int $max
+     *
+     * @param  int  $max
      * @return $this
      */
     public function maxTeamMembers($max)
     {
-        return $this->attributes(['teamMembers'=>$max]);
+        return $this->attributes(['teamMembers' => $max]);
     }
 
     /**
      * Specify the plan's attributes.
-     * @param array $attributes
+     *
+     * @param  array  $attributes
      * @return $this
      */
     public function attributes(array $attributes)
@@ -167,6 +186,7 @@ class Plan implements JsonSerializable
 
     /**
      * Indicate that the plan should be archived.
+     *
      * @return bool
      */
     public function archived()
@@ -178,6 +198,7 @@ class Plan implements JsonSerializable
 
     /**
      * Get the array form of the plan for serialization.
+     *
      * @return array
      */
     public function jsonSerialize()
@@ -196,7 +217,8 @@ class Plan implements JsonSerializable
 
     /**
      * Dynamically access the plan's attributes.
-     * @param string $key
+     *
+     * @param  string  $key
      * @return mixed
      */
     public function __get($key)

@@ -2,9 +2,9 @@
 
 namespace FCLLA\Flare;
 
-
 use Exception;
 use Carbon\Carbon;
+use Illuminate\Support\Arr;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use FCLLA\Flare\Contracts\Repositories\TokenRepository;
@@ -13,12 +13,14 @@ class TokenGuard
 {
     /**
      * The token repository implementation.
+     *
      * @var TokenRepository
      */
     protected $tokens;
 
     /**
      * Create a new token guard instance.
+     *
      * @param  TokenRepository  $tokens
      * @return void
      */
@@ -29,6 +31,7 @@ class TokenGuard
 
     /**
      * Get the authenticated user for the given request.
+     *
      * @param  Request  $request
      * @return \Illuminate\Contracts\Auth\Authenticatable|null
      */
@@ -54,6 +57,7 @@ class TokenGuard
 
     /**
      * Return the current user with a fresh transient token.
+     *
      * @return \Illuminate\Contracts\Auth\Authenticatable
      */
     protected function alreadyHasUser()
@@ -65,6 +69,7 @@ class TokenGuard
 
     /**
      * Get the token instance from the database.
+     *
      * @param  Request  $request
      * @return Token
      */
@@ -81,6 +86,7 @@ class TokenGuard
 
     /**
      * Get the token for the given request.
+     *
      * @param  Request  $request
      * @return Token|string
      */
@@ -95,13 +101,14 @@ class TokenGuard
             return $token;
         }
 
-        if ($request->cookie('spark_token')) {
+        if ($request->cookie('flare_token')) {
             return $this->getTokenFromCookie($request);
         }
     }
 
     /**
      * Get the token for the given request cookie.
+     *
      * @param  Request  $request
      * @return Token
      */
@@ -111,7 +118,7 @@ class TokenGuard
         // first decrypt the cookie and then attempt to find the token value within the
         // database. If we can't decrypt the value we'll bail out with a null return.
         try {
-            $token = JWT::decode(decrypt($request->cookie('spark_token')));
+            $token = JWT::decode(decrypt($request->cookie('flare_token')));
         } catch (Exception $e) {
             return;
         }
@@ -135,6 +142,7 @@ class TokenGuard
 
     /**
      * Create a new transient token instance for the given user.
+     *
      * @param  int  $userId
      * @param  Carbon  $expiration
      * @return Token
@@ -150,6 +158,7 @@ class TokenGuard
 
     /**
      * Determine if the XSRF / header are valid and match.
+     *
      * @param  string  $xsrf
      * @param  string  $header
      * @return bool
@@ -163,6 +172,7 @@ class TokenGuard
 
     /**
      * Decrypt the XSRF header on the given request.
+     *
      * @param  Request  $request
      * @return string|null
      */

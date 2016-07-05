@@ -8,6 +8,7 @@ interface TeamRepository
 {
     /**
      * Get the team matching the given ID.
+     *
      * @param  string|int  $id
      * @return Team
      */
@@ -15,13 +16,15 @@ interface TeamRepository
 
     /**
      * Get all of the teams for a given user.
+     *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @return \Illuminate\Database\Eloquent\Collection
      */
     public function forUser($user);
 
     /**
-     * Create a new team with the given owner.
+     * Create a new team with the given ownwer.
+     *
      * @param  \Illuminate\Contracts\Auth\Authenticatable  $user
      * @param  array  $data
      * @return Team
@@ -30,6 +33,7 @@ interface TeamRepository
 
     /**
      * Update the billing address information with the given data.
+     *
      * @param  \FCLLA\Flare\Team  $team
      * @param  array  $data
      * @return void
@@ -38,6 +42,7 @@ interface TeamRepository
 
     /**
      * Update the European VAT ID number for the given team.
+     *
      * @param  \FCLLA\Flare\Team  $team
      * @param  string  $vatId
      * @return void

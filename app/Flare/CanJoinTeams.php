@@ -2,13 +2,13 @@
 
 namespace FCLLA\Flare;
 
-
 use InvalidArgumentException;
 
 trait CanJoinTeams
 {
     /**
      * Determine if the user is a member of any teams.
+     *
      * @return bool
      */
     public function hasTeams()
@@ -36,6 +36,7 @@ trait CanJoinTeams
 
     /**
      * Determine if the user is on the given team.
+     *
      * @param  \FCLLA\Flare\Team  $team
      * @return bool
      */
@@ -46,6 +47,7 @@ trait CanJoinTeams
 
     /**
      * Determine if the given team is owned by the user.
+     *
      * @param  \FCLLA\Flare\Team  $team
      * @return bool
      */
@@ -77,6 +79,7 @@ trait CanJoinTeams
 
     /**
      * Accessor for the currentTeam method.
+     *
      * @return \Illuminate\Database\Eloquent\Model|null
      */
     public function getCurrentTeamAttribute()
@@ -86,6 +89,7 @@ trait CanJoinTeams
 
     /**
      * Get the team that user is currently viewing.
+     *
      * @return \Illuminate\Database\Eloquent\Model|null
      */
     public function currentTeam()
@@ -103,6 +107,7 @@ trait CanJoinTeams
 
     /**
      * Determine if the current team is on a trial.
+     *
      * @return bool
      */
     public function currentTeamOnTrial()
@@ -112,8 +117,9 @@ trait CanJoinTeams
 
     /**
      * Switch the current team for the user.
-     * @param  \FCLLA\Flare\Team $team
-     * @throws InvalidArgumentException
+     *
+     * @param  \FCLLA\Flare\Teams\Team  $team
+     * @return void
      */
     public function switchToTeam($team)
     {
@@ -128,7 +134,8 @@ trait CanJoinTeams
 
     /**
      * Refresh the current team for the user.
-     * @return  \FCLLA\Flare\Team
+     *
+     * @return  \FCLLA\Flare\Teams\Team
      */
     public function refreshCurrentTeam()
     {
@@ -141,7 +148,9 @@ trait CanJoinTeams
 
     /**
      * Get the total number of potential collaborators across all teams.
+     *
      * This does not include the current user instance.
+     *
      * @return int
      */
     public function totalPotentialCollaborators()

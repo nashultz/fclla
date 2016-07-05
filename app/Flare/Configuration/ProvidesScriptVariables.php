@@ -2,11 +2,10 @@
 
 namespace FCLLA\Flare\Configuration;
 
-
 use FCLLA\Flare\Flare;
 use Laravel\Cashier\Cashier;
 use Illuminate\Support\Facades\Auth;
-use FCLLA\Flare\InitialFrontendState;
+use FCLLA\Flare\Contracts\InitialFrontendState;
 use Braintree\ClientToken as BraintreeClientToken;
 
 trait ProvidesScriptVariables

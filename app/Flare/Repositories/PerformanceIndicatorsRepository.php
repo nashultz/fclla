@@ -37,9 +37,9 @@ class PerformanceIndicatorsRepository implements Contract
         $teamIds = Flare::usesTeams() ? $user->teams->pluck('id')->all() : [];
 
         return DB::table('invoices')
-            ->where('user_id', $user->id)
-            ->orWhereIn('team_id', $teamIds)
-            ->sum('total');
+                        ->where('user_id', $user->id)
+                        ->orWhereIn('team_id', $teamIds)
+                        ->sum('total');
     }
 
     /**
@@ -60,16 +60,18 @@ class PerformanceIndicatorsRepository implements Contract
 
     /**
      * Get the monthly recurring revenue.
+     *
      * @return float
      */
     public function monthlyRecurringRevenue()
     {
         return $this->recurringRevenueByInterval('monthly') +
-        ($this->recurringRevenueByInterval('yearly') / 12);
+              ($this->recurringRevenueByInterval('yearly') / 12);
     }
 
     /**
      * Get the recurring revenue for the given interval.
+     *
      * @param  string  $interval
      * @return float
      */
@@ -81,13 +83,13 @@ class PerformanceIndicatorsRepository implements Contract
 
         foreach ($plans as $plan) {
             $total += DB::table($plan instanceof TeamPlan ? 'team_subscriptions' : 'subscriptions')
-                    ->where($this->planColumn(), $plan->id)
-                    ->where(function ($query) {
-                        $query->whereNull('trial_ends_at')
-                            ->orWhere('trial_ends_at', '<=', Carbon::now());
-                    })
-                    ->whereNull('ends_at')
-                    ->sum('quantity') * $plan->price;
+                            ->where($this->planColumn(), $plan->id)
+                            ->where(function ($query) {
+                                $query->whereNull('trial_ends_at')
+                                      ->orWhere('trial_ends_at', '<=', Carbon::now());
+                            })
+                            ->whereNull('ends_at')
+                            ->sum('quantity') * $plan->price;
         }
 
         return $total;
@@ -99,13 +101,13 @@ class PerformanceIndicatorsRepository implements Contract
     public function subscribers(Plan $plan)
     {
         return DB::table($plan instanceof TeamPlan ? 'team_subscriptions' : 'subscriptions')
-            ->where($this->planColumn(), $plan->id)
-            ->where(function ($query) {
-                $query->whereNull('trial_ends_at')
-                    ->orWhere('trial_ends_at', '<=', Carbon::now());
-            })
-            ->whereNull('ends_at')
-            ->count();
+                            ->where($this->planColumn(), $plan->id)
+                            ->where(function ($query) {
+                                $query->whereNull('trial_ends_at')
+                                      ->orWhere('trial_ends_at', '<=', Carbon::now());
+                            })
+                            ->whereNull('ends_at')
+                            ->count();
     }
 
     /**
@@ -114,14 +116,15 @@ class PerformanceIndicatorsRepository implements Contract
     public function trialing(Plan $plan)
     {
         return DB::table($plan instanceof TeamPlan ? 'team_subscriptions' : 'subscriptions')
-            ->where($this->planColumn(), $plan->id)
-            ->where('trial_ends_at', '>', Carbon::now())
-            ->whereNull('ends_at')
-            ->count();
+                        ->where($this->planColumn(), $plan->id)
+                        ->where('trial_ends_at', '>', Carbon::now())
+                        ->whereNull('ends_at')
+                        ->count();
     }
 
     /**
      * Get the plan column name.
+     *
      * @return string
      */
     protected function planColumn()
