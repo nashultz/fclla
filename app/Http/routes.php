@@ -1,11 +1,13 @@
 <?php
 
 /* HOME ROUTE */
-Route::get('/', 'PagesController@index')->name('home');
+//Route::get('/', 'PagesController@index')->name('home');
+Route::get('/', 'WelcomeController@show');
 
-Route::get('home', function() {
+/*Route::get('home', function() {
     return redirect('/');
-});
+});*/
+Route::get('home', 'WelcomeController@home');
 
 
 /* JOIN ROUTE */
