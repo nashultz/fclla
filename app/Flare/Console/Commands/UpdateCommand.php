@@ -4,9 +4,9 @@ namespace FCLLA\Flare\Console\Commands;
 
 use Exception;
 use FCLLA\Flare\Flare;
+use FCLLA\Flare\InteractsWithFlareApi;
 use Illuminate\Console\Command;
 use FCLLA\Flare\Console\Updating;
-use FCLLA\Flare\InteractsWithFlareApi;
 
 class UpdateCommand extends Command
 {
