@@ -161,6 +161,8 @@ return [
         Riari\Forum\ForumServiceProvider::class,
         Riari\Forum\Frontend\ForumFrontendServiceProvider::class,
         Laravel\Cashier\CashierServiceProvider::class,
+        Mpociot\VatCalculator\VatCalculatorServiceProvider::class,
+        //FCLLA\Providers\FlareServiceProvider::class,
 
     ],
 
@@ -211,6 +213,7 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'PDF' => Barryvdh\DomPDF\Facade::class,
+        'VatCalculator' => Mpociot\VatCalculator\Facades\VatCalculator::class,
 
     ],
 

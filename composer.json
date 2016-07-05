@@ -18,7 +18,12 @@
         "fzaninotto/faker": "~1.4",
         "barryvdh/laravel-dompdf": "0.6.*",
         "riari/laravel-forum": "^3.1",
-        "riari/laravel-forum-frontend": "^1.1"
+        "riari/laravel-forum-frontend": "^1.1",
+        "mpociot/vat-calculator": "^2.0",
+        "braintree/braintree_php": "^3.14",
+        "erusev/parsedown": "^1.6",
+        "firebase/php-jwt": "^3.0",
+        "ramsey/uuid": "^3.4"
     },
     "require-dev": {
         "mockery/mockery": "0.9.*",
