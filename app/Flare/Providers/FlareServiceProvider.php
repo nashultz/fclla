@@ -3,15 +3,22 @@
 namespace FCLLA\Flare\Providers;
 
 
+use FCLLA\Flare\Console\Commands\InstallCommand;
 use FCLLA\Flare\Console\Commands\StorePerformanceIndicatorsCommand;
+use FCLLA\Flare\Console\Commands\UpdateCommand;
+use FCLLA\Flare\Console\Commands\UpdateViewsCommand;
 use FCLLA\Flare\Console\Commands\VersionCommand;
 use FCLLA\Flare\Flare;
 use FCLLA\Flare\TokenGuard;
+use FCLLA\Flare\Validation\CountryValidator;
+use FCLLA\Flare\Validation\StateValidator;
+use FCLLA\Flare\Validation\VatIdValidator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\ServiceProvider;
 
-class FlareServiceProvider
+class FlareServiceProvider extends ServiceProvider
 {
     /**
      * Boot the service provider.
@@ -47,7 +54,7 @@ class FlareServiceProvider
         // controller namespace. After that we will load the Flare routes file.
         if (! $this->app->routesAreCached()) {
             Route::group([
-                'namespace' => 'Laravel\Flare\Http\Controllers'],
+                'namespace' => 'FCLLA\Flare\Http\Controllers'],
                 function ($router) {
                     require __DIR__.'/../Http/routes.php';
                 }
@@ -141,14 +148,14 @@ class FlareServiceProvider
         }
 
         if (! class_exists('Flare')) {
-            class_alias('Laravel\Flare\Flare', 'Flare');
+            class_alias('FCLLA\Flare\Flare', 'Flare');
         }
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                //InstallCommand::class,
-                //UpdateCommand::class,
-                //UpdateViewsCommand::class,
+                InstallCommand::class,
+                UpdateCommand::class,
+                UpdateViewsCommand::class,
                 StorePerformanceIndicatorsCommand::class,
                 VersionCommand::class,
             ]);
@@ -205,7 +212,7 @@ class FlareServiceProvider
         ];
 
         foreach ($services as $key => $value) {
-            $this->app->singleton('Laravel\Flare\\'.$key, 'Laravel\Flare\\'.$value);
+            $this->app->singleton('FCLLA\Flare\\'.$key, 'FCLLA\Flare\\'.$value);
         }
     }
 
@@ -216,7 +223,7 @@ class FlareServiceProvider
      */
     protected function registerAuthyService()
     {
-        $this->app->when('Laravel\Flare\Services\Security\Authy')
+        $this->app->when('FCLLA\Flare\Services\Security\Authy')
             ->needs('$key')
             ->give(function () {
                 return config('services.authy.secret');

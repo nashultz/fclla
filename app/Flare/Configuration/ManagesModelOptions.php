@@ -11,7 +11,7 @@ trait ManagesModelOptions
      *
      * @var string
      */
-    public static $userModel = 'App\User';
+    public static $userModel = 'FCLLA\User';
 
     /**
      * The team model class name.
