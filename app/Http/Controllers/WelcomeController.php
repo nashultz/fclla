@@ -12,6 +12,7 @@ class WelcomeController extends Controller
 
     public function home()
     {
+        $this->middleware('auth');
         return view('home');
     }
 }
