@@ -5,7 +5,7 @@
 
     <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
 
-    <link href="themes/default/assets/css/app.css" rel="stylesheet" type="text/css">
+    <link href="{{asset('css/frontend.css')}}" rel="stylesheet" type="text/css">
 </head>
 <body id="page-top">
 
@@ -76,6 +76,6 @@
     </a>
 </div>
 
-<script src="themes/default/assets/js/all.js"></script>
+<script src="{{asset('js/all.js')}}"></script>
 </body>
 </html>
