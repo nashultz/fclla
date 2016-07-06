@@ -41,5 +41,10 @@ class FlareServiceProvider extends ServiceProvider
     public function booted()
     {
         Flare::useStripe()->needsCardUpFront();
+
+        Flare::freePlan()
+            ->features([
+                'Trial Plan allows you to pick which option is right for you.', 'Offers good for 30 days.'
+            ]);
     }
 }
