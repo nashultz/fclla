@@ -1,10 +1,23 @@
-// jQuery for page scrolling feature - requires jQuery Easing plugin
-$(function() {
-    $('body').on('click', '.page-scroll a', function(event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
+
+/*
+ |--------------------------------------------------------------------------
+ | Laravel Flare Bootstrap
+ |--------------------------------------------------------------------------
+ |
+ | First, we will load all of the "core" dependencies for Flare which are
+ | libraries such as Vue and jQuery. This also loads the Flare helpers
+ | for things such as HTTP calls, forms, and form validation errors.
+ |
+ | Next, we'll create the root Vue application for Flare. This will start
+ | the entire application and attach it to the DOM. Of course, you may
+ | customize this script as you desire and load your own components.
+ |
+ */
+
+require('flare-bootstrap');
+
+require('./components/bootstrap');
+
+var app = new Vue({
+    mixins: [require('flare')]
 });
