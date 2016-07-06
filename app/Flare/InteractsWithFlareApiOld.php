@@ -8,7 +8,6 @@ trait InteractsWithFlareApi
 {
     /**
      * The Flare base URL.
-     * changed something
      * @var string
      */
     protected $flareUrl = 'https://flare.nathonscott.com';
