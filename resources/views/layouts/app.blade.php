@@ -13,8 +13,8 @@
     <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet' type='text/css'>
 
     <!-- CSS -->
-    <link href="/css/sweetalert.css" rel="stylesheet">
-    <link href="/css/app.css" rel="stylesheet">
+    <link href="assets/css/sweetalert.css" rel="stylesheet">
+    <link href="assets/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
     @yield('scripts', '')
@@ -46,8 +46,8 @@
         @endif
 
         <!-- JavaScript -->
-        <script src="/js/app.js"></script>
-        <script src="/js/sweetalert.min.js"></script>
+        <script src="{{link_to('js/app.js')}}"></script>
+        <script src="js/sweetalert.min.js"></script>
     </div>
 </body>
 </html>
