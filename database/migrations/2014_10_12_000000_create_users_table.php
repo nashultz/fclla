@@ -30,6 +30,12 @@ class CreateUsersTable extends Migration
             $table->string('card_brand')->nullable();
             $table->string('card_last_four')->nullable();
             $table->string('card_country')->nullable();
+            $table->string('address')->nullable();
+            $table->string('address_line_2')->nullable();
+            $table->string('city')->nullable();
+            $table->string('state')->nullable();
+            $table->string('zip', 25)->nullable();
+            $table->string('country', 2)->nullable();
             $table->string('billing_address')->nullable();
             $table->string('billing_address_line_2')->nullable();
             $table->string('billing_city')->nullable();
