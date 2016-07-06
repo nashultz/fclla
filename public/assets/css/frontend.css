@@ -7960,7 +7960,7 @@ body {
 
 .brand {
   height: 300px;
-  background-image: url("../img/background.jpg");
+  background-image: url("../../img/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
