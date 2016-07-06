@@ -2,7 +2,7 @@
 
 namespace FCLLA\Flare;
 
-use Illuminate\Support\Str;
+Illuminate\Support\Str;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
