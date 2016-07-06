@@ -27,7 +27,8 @@ class FlareServiceProvider extends ServiceProvider
      * Application developers
      */
     protected $developers = [
-        'nashultz07@gmail.com'
+        'nashultz07@gmail.com',
+        'nathon@nathonshultz.com'
     ];
     
     /**
