@@ -145,7 +145,7 @@ class FlareServiceProvider extends ServiceProvider
     public function register()
     {
         if (! defined('FLARE_PATH')) {
-            define('FLARE_PATH', realpath(__DIR__.'/../'));
+            define('FLARE_PATH', realpath(__DIR__.'/../../../'));
         }
 
         if (! class_exists('Flare')) {
