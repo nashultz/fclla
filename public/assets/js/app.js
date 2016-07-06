@@ -33760,45 +33760,45 @@ module.exports = Vue;
 
 /*
  |--------------------------------------------------------------------------
- | Laravel Spark Bootstrap
+ | Laravel Flare Bootstrap
  |--------------------------------------------------------------------------
  |
- | First, we will load all of the "core" dependencies for Spark which are
- | libraries such as Vue and jQuery. This also loads the Spark helpers
+ | First, we will load all of the "core" dependencies for Flare which are
+ | libraries such as Vue and jQuery. This also loads the Flare helpers
  | for things such as HTTP calls, forms, and form validation errors.
  |
- | Next, we'll create the root Vue application for Spark. This will start
+ | Next, we'll create the root Vue application for Flare. This will start
  | the entire application and attach it to the DOM. Of course, you may
  | customize this script as you desire and load your own components.
  |
  */
 
-require('spark-bootstrap');
+require('flare-bootstrap');
 
 require('./components/bootstrap');
 
 var app = new Vue({
-  mixins: [require('spark')]
+  mixins: [require('flare')]
 });
 
-},{"./components/bootstrap":36,"spark":150,"spark-bootstrap":149}],36:[function(require,module,exports){
+},{"./components/bootstrap":36,"flare":150,"flare-bootstrap":149}],36:[function(require,module,exports){
 'use strict';
 
 /*
  |--------------------------------------------------------------------------
- | Laravel Spark Components
+ | Laravel Flare Components
  |--------------------------------------------------------------------------
  |
- | Here we will load the Spark components which makes up the core client
+ | Here we will load the Flare components which makes up the core client
  | application. This is also a convenient spot for you to load all of
  | your components that you write while building your applications.
  */
 
-require('./../spark-components/bootstrap');
+require('./../flare-components/bootstrap');
 
 require('./home');
 
-},{"./../spark-components/bootstrap":40,"./home":37}],37:[function(require,module,exports){
+},{"./../flare-components/bootstrap":40,"./home":37}],37:[function(require,module,exports){
 'use strict';
 
 Vue.component('home', {
@@ -33814,7 +33814,7 @@ Vue.component('home', {
 
 var base = require('auth/register-braintree');
 
-Vue.component('spark-register-braintree', {
+Vue.component('flare-register-braintree', {
     mixins: [base]
 });
 
@@ -33823,7 +33823,7 @@ Vue.component('spark-register-braintree', {
 
 var base = require('auth/register-stripe');
 
-Vue.component('spark-register-stripe', {
+Vue.component('flare-register-stripe', {
     mixins: [base]
 });
 
@@ -33927,7 +33927,7 @@ require('./kiosk/add-discount');
 
 var base = require('kiosk/add-discount');
 
-Vue.component('spark-kiosk-add-discount', {
+Vue.component('flare-kiosk-add-discount', {
     mixins: [base]
 });
 
@@ -33936,7 +33936,7 @@ Vue.component('spark-kiosk-add-discount', {
 
 var base = require('kiosk/announcements');
 
-Vue.component('spark-kiosk-announcements', {
+Vue.component('flare-kiosk-announcements', {
     mixins: [base]
 });
 
@@ -33945,7 +33945,7 @@ Vue.component('spark-kiosk-announcements', {
 
 var base = require('kiosk/kiosk');
 
-Vue.component('spark-kiosk', {
+Vue.component('flare-kiosk', {
     mixins: [base]
 });
 
@@ -33954,7 +33954,7 @@ Vue.component('spark-kiosk', {
 
 var base = require('kiosk/metrics');
 
-Vue.component('spark-kiosk-metrics', {
+Vue.component('flare-kiosk-metrics', {
     mixins: [base]
 });
 
@@ -33963,7 +33963,7 @@ Vue.component('spark-kiosk-metrics', {
 
 var base = require('kiosk/profile');
 
-Vue.component('spark-kiosk-profile', {
+Vue.component('flare-kiosk-profile', {
     mixins: [base]
 });
 
@@ -33972,7 +33972,7 @@ Vue.component('spark-kiosk-profile', {
 
 var base = require('kiosk/users');
 
-Vue.component('spark-kiosk-users', {
+Vue.component('flare-kiosk-users', {
     mixins: [base]
 });
 
@@ -33981,7 +33981,7 @@ Vue.component('spark-kiosk-users', {
 
 var base = require('navbar/navbar');
 
-Vue.component('spark-navbar', {
+Vue.component('flare-navbar', {
     mixins: [base]
 });
 
@@ -33990,7 +33990,7 @@ Vue.component('spark-navbar', {
 
 var base = require('notifications/notifications');
 
-Vue.component('spark-notifications', {
+Vue.component('flare-notifications', {
     mixins: [base]
 });
 
@@ -33999,7 +33999,7 @@ Vue.component('spark-notifications', {
 
 var base = require('settings/api');
 
-Vue.component('spark-api', {
+Vue.component('flare-api', {
     mixins: [base]
 });
 
@@ -34008,7 +34008,7 @@ Vue.component('spark-api', {
 
 var base = require('settings/api/create-token');
 
-Vue.component('spark-create-token', {
+Vue.component('flare-create-token', {
     mixins: [base]
 });
 
@@ -34017,7 +34017,7 @@ Vue.component('spark-create-token', {
 
 var base = require('settings/api/tokens');
 
-Vue.component('spark-tokens', {
+Vue.component('flare-tokens', {
     mixins: [base]
 });
 
@@ -34026,7 +34026,7 @@ Vue.component('spark-tokens', {
 
 var base = require('settings/invoices');
 
-Vue.component('spark-invoices', {
+Vue.component('flare-invoices', {
     mixins: [base]
 });
 
@@ -34035,7 +34035,7 @@ Vue.component('spark-invoices', {
 
 var base = require('settings/invoices/invoice-list');
 
-Vue.component('spark-invoice-list', {
+Vue.component('flare-invoice-list', {
     mixins: [base]
 });
 
@@ -34044,7 +34044,7 @@ Vue.component('spark-invoice-list', {
 
 var base = require('settings/invoices/update-extra-billing-information');
 
-Vue.component('spark-update-extra-billing-information', {
+Vue.component('flare-update-extra-billing-information', {
     mixins: [base]
 });
 
@@ -34053,7 +34053,7 @@ Vue.component('spark-update-extra-billing-information', {
 
 var base = require('settings/payment-method-braintree');
 
-Vue.component('spark-payment-method-braintree', {
+Vue.component('flare-payment-method-braintree', {
     mixins: [base]
 });
 
@@ -34062,7 +34062,7 @@ Vue.component('spark-payment-method-braintree', {
 
 var base = require('settings/payment-method-stripe');
 
-Vue.component('spark-payment-method-stripe', {
+Vue.component('flare-payment-method-stripe', {
     mixins: [base]
 });
 
@@ -34071,7 +34071,7 @@ Vue.component('spark-payment-method-stripe', {
 
 var base = require('settings/payment-method/redeem-coupon');
 
-Vue.component('spark-redeem-coupon', {
+Vue.component('flare-redeem-coupon', {
     mixins: [base]
 });
 
@@ -34080,7 +34080,7 @@ Vue.component('spark-redeem-coupon', {
 
 var base = require('settings/payment-method/update-payment-method-braintree');
 
-Vue.component('spark-update-payment-method-braintree', {
+Vue.component('flare-update-payment-method-braintree', {
     mixins: [base]
 });
 
@@ -34089,7 +34089,7 @@ Vue.component('spark-update-payment-method-braintree', {
 
 var base = require('settings/payment-method/update-payment-method-stripe');
 
-Vue.component('spark-update-payment-method-stripe', {
+Vue.component('flare-update-payment-method-stripe', {
     mixins: [base]
 });
 
@@ -34098,7 +34098,7 @@ Vue.component('spark-update-payment-method-stripe', {
 
 var base = require('settings/payment-method/update-vat-id');
 
-Vue.component('spark-update-vat-id', {
+Vue.component('flare-update-vat-id', {
     mixins: [base]
 });
 
@@ -34107,7 +34107,7 @@ Vue.component('spark-update-vat-id', {
 
 var base = require('settings/profile');
 
-Vue.component('spark-profile', {
+Vue.component('flare-profile', {
     mixins: [base]
 });
 
@@ -34116,7 +34116,7 @@ Vue.component('spark-profile', {
 
 var base = require('settings/profile/update-contact-information');
 
-Vue.component('spark-update-contact-information', {
+Vue.component('flare-update-contact-information', {
     mixins: [base]
 });
 
@@ -34125,7 +34125,7 @@ Vue.component('spark-update-contact-information', {
 
 var base = require('settings/profile/update-profile-photo');
 
-Vue.component('spark-update-profile-photo', {
+Vue.component('flare-update-profile-photo', {
     mixins: [base]
 });
 
@@ -34134,7 +34134,7 @@ Vue.component('spark-update-profile-photo', {
 
 var base = require('settings/security');
 
-Vue.component('spark-security', {
+Vue.component('flare-security', {
     mixins: [base]
 });
 
@@ -34143,7 +34143,7 @@ Vue.component('spark-security', {
 
 var base = require('settings/security/disable-two-factor-auth');
 
-Vue.component('spark-disable-two-factor-auth', {
+Vue.component('flare-disable-two-factor-auth', {
     mixins: [base]
 });
 
@@ -34152,7 +34152,7 @@ Vue.component('spark-disable-two-factor-auth', {
 
 var base = require('settings/security/enable-two-factor-auth');
 
-Vue.component('spark-enable-two-factor-auth', {
+Vue.component('flare-enable-two-factor-auth', {
     mixins: [base]
 });
 
@@ -34161,7 +34161,7 @@ Vue.component('spark-enable-two-factor-auth', {
 
 var base = require('settings/security/update-password');
 
-Vue.component('spark-update-password', {
+Vue.component('flare-update-password', {
     mixins: [base]
 });
 
@@ -34170,7 +34170,7 @@ Vue.component('spark-update-password', {
 
 var base = require('settings/settings');
 
-Vue.component('spark-settings', {
+Vue.component('flare-settings', {
     mixins: [base]
 });
 
@@ -34179,7 +34179,7 @@ Vue.component('spark-settings', {
 
 var base = require('settings/subscription');
 
-Vue.component('spark-subscription', {
+Vue.component('flare-subscription', {
     mixins: [base]
 });
 
@@ -34188,7 +34188,7 @@ Vue.component('spark-subscription', {
 
 var base = require('settings/subscription/cancel-subscription');
 
-Vue.component('spark-cancel-subscription', {
+Vue.component('flare-cancel-subscription', {
     mixins: [base]
 });
 
@@ -34197,7 +34197,7 @@ Vue.component('spark-cancel-subscription', {
 
 var base = require('settings/subscription/resume-subscription');
 
-Vue.component('spark-resume-subscription', {
+Vue.component('flare-resume-subscription', {
     mixins: [base]
 });
 
@@ -34206,7 +34206,7 @@ Vue.component('spark-resume-subscription', {
 
 var base = require('settings/subscription/subscribe-braintree');
 
-Vue.component('spark-subscribe-braintree', {
+Vue.component('flare-subscribe-braintree', {
     mixins: [base]
 });
 
@@ -34215,7 +34215,7 @@ Vue.component('spark-subscribe-braintree', {
 
 var base = require('settings/subscription/subscribe-stripe');
 
-Vue.component('spark-subscribe-stripe', {
+Vue.component('flare-subscribe-stripe', {
     mixins: [base]
 });
 
@@ -34224,7 +34224,7 @@ Vue.component('spark-subscribe-stripe', {
 
 var base = require('settings/subscription/update-subscription');
 
-Vue.component('spark-update-subscription', {
+Vue.component('flare-update-subscription', {
     mixins: [base]
 });
 
@@ -34233,7 +34233,7 @@ Vue.component('spark-update-subscription', {
 
 var base = require('settings/teams');
 
-Vue.component('spark-teams', {
+Vue.component('flare-teams', {
     mixins: [base]
 });
 
@@ -34242,7 +34242,7 @@ Vue.component('spark-teams', {
 
 var base = require('settings/teams/create-team');
 
-Vue.component('spark-create-team', {
+Vue.component('flare-create-team', {
     mixins: [base]
 });
 
@@ -34251,7 +34251,7 @@ Vue.component('spark-create-team', {
 
 var base = require('settings/teams/current-teams');
 
-Vue.component('spark-current-teams', {
+Vue.component('flare-current-teams', {
     mixins: [base]
 });
 
@@ -34260,7 +34260,7 @@ Vue.component('spark-current-teams', {
 
 var base = require('settings/teams/mailed-invitations');
 
-Vue.component('spark-mailed-invitations', {
+Vue.component('flare-mailed-invitations', {
     mixins: [base]
 });
 
@@ -34269,7 +34269,7 @@ Vue.component('spark-mailed-invitations', {
 
 var base = require('settings/teams/pending-invitations');
 
-Vue.component('spark-pending-invitations', {
+Vue.component('flare-pending-invitations', {
     mixins: [base]
 });
 
@@ -34278,7 +34278,7 @@ Vue.component('spark-pending-invitations', {
 
 var base = require('settings/teams/send-invitation');
 
-Vue.component('spark-send-invitation', {
+Vue.component('flare-send-invitation', {
     mixins: [base]
 });
 
@@ -34287,7 +34287,7 @@ Vue.component('spark-send-invitation', {
 
 var base = require('settings/teams/team-members');
 
-Vue.component('spark-team-members', {
+Vue.component('flare-team-members', {
     mixins: [base]
 });
 
@@ -34296,7 +34296,7 @@ Vue.component('spark-team-members', {
 
 var base = require('settings/teams/team-membership');
 
-Vue.component('spark-team-membership', {
+Vue.component('flare-team-membership', {
     mixins: [base]
 });
 
@@ -34305,7 +34305,7 @@ Vue.component('spark-team-membership', {
 
 var base = require('settings/teams/team-profile');
 
-Vue.component('spark-team-profile', {
+Vue.component('flare-team-profile', {
     mixins: [base]
 });
 
@@ -34314,7 +34314,7 @@ Vue.component('spark-team-profile', {
 
 var base = require('settings/teams/team-settings');
 
-Vue.component('spark-team-settings', {
+Vue.component('flare-team-settings', {
     mixins: [base]
 });
 
@@ -34323,7 +34323,7 @@ Vue.component('spark-team-settings', {
 
 var base = require('settings/teams/update-team-name');
 
-Vue.component('spark-update-team-name', {
+Vue.component('flare-update-team-name', {
     mixins: [base]
 });
 
@@ -34332,7 +34332,7 @@ Vue.component('spark-update-team-name', {
 
 var base = require('settings/teams/update-team-photo');
 
-Vue.component('spark-update-team-photo', {
+Vue.component('flare-update-team-photo', {
     mixins: [base]
 });
 
@@ -34355,7 +34355,7 @@ module.exports = {
             coupon: null,
             invalidCoupon: false,
 
-            registerForm: $.extend(true, new SparkForm({
+            registerForm: $.extend(true, new FlareForm({
                 braintree_type: '',
                 braintree_token: '',
                 plan: '',
@@ -34367,7 +34367,7 @@ module.exports = {
                 terms: false,
                 coupon: null,
                 invitation: null
-            }), Spark.forms.register)
+            }), Flare.forms.register)
         };
     },
 
@@ -34406,7 +34406,7 @@ module.exports = {
         configureBraintree: function configureBraintree() {
             var _this = this;
 
-            if (!Spark.cardUpFront) {
+            if (!Flare.cardUpFront) {
                 return;
             }
 
@@ -34437,7 +34437,7 @@ module.exports = {
          * Attempt to register with the application.
          */
         register: function register() {
-            Spark.post('/register', this.registerForm).then(function (response) {
+            Flare.post('/register', this.registerForm).then(function (response) {
                 window.location = response.redirect;
             });
         }
@@ -34450,7 +34450,7 @@ module.exports = {
 
         discount: function discount() {
             if (this.coupon) {
-                return Vue.filter('currency')(this.coupon.amount_off, Spark.currencySymbol);
+                return Vue.filter('currency')(this.coupon.amount_off, Flare.currencySymbol);
             }
         }
     }
@@ -34478,7 +34478,7 @@ module.exports = {
             country: null,
             taxRate: 0,
 
-            registerForm: $.extend(true, new SparkForm({
+            registerForm: $.extend(true, new FlareForm({
                 stripe_token: '',
                 plan: '',
                 team: '',
@@ -34496,9 +34496,9 @@ module.exports = {
                 terms: false,
                 coupon: null,
                 invitation: null
-            }), Spark.forms.register),
+            }), Flare.forms.register),
 
-            cardForm: new SparkForm({
+            cardForm: new FlareForm({
                 name: '',
                 number: '',
                 cvc: '',
@@ -34514,7 +34514,7 @@ module.exports = {
          * Watch for changes on the entire billing address.
          */
         'currentBillingAddress': function currentBillingAddress(value) {
-            if (!Spark.collectsEuropeanVat) {
+            if (!Flare.collectsEuropeanVat) {
                 return;
             }
 
@@ -34526,7 +34526,7 @@ module.exports = {
      * The component has been created by Vue.
      */
     created: function created() {
-        Stripe.setPublishableKey(Spark.stripeKey);
+        Stripe.setPublishableKey(Flare.stripeKey);
 
         this.getPlans();
 
@@ -34601,7 +34601,7 @@ module.exports = {
             this.registerForm.busy = true;
             this.registerForm.errors.forget();
 
-            if (!Spark.cardUpFront || this.selectedPlan.price == 0) {
+            if (!Flare.cardUpFront || this.selectedPlan.price == 0) {
                 return this.sendRegistration();
             }
 
@@ -34641,10 +34641,10 @@ module.exports = {
 
 
         /*
-         * After obtaining the Stripe token, send the registration to Spark.
+         * After obtaining the Stripe token, send the registration to Flare.
          */
         sendRegistration: function sendRegistration() {
-            Spark.post('/register', this.registerForm).then(function (response) {
+            Flare.post('/register', this.registerForm).then(function (response) {
                 window.location = response.redirect;
             });
         }
@@ -34668,7 +34668,7 @@ module.exports = {
                 if (this.coupon.percent_off) {
                     return this.coupon.percent_off + '%';
                 } else {
-                    return Vue.filter('currency')(this.coupon.amount_off / 100, Spark.currencySymbol);
+                    return Vue.filter('currency')(this.coupon.amount_off / 100, Flare.currencySymbol);
                 }
             }
         },
@@ -34731,28 +34731,28 @@ Vue.filter('relative', function (value) {
 'use strict';
 
 /**
- * Initialize the Spark form extension points.
+ * Initialize the Flare form extension points.
  */
-Spark.forms = {
+Flare.forms = {
   register: {},
   updateContactInformation: {},
   updateTeamMember: {}
 };
 
 /**
- * Load the SparkForm helper class.
+ * Load the FlareForm helper class.
  */
 require('./form');
 
 /**
- * Define the SparkFormError collection class.
+ * Define the FlareFormError collection class.
  */
 require('./errors');
 
 /**
- * Add additional HTTP / form helpers to the Spark object.
+ * Add additional HTTP / form helpers to the Flare object.
  */
-$.extend(Spark, require('./http'));
+$.extend(Flare, require('./http'));
 
 },{"./errors":91,"./form":92,"./http":93}],91:[function(require,module,exports){
 'use strict';
@@ -34760,9 +34760,9 @@ $.extend(Spark, require('./http'));
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) { return typeof obj; } : function (obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol ? "symbol" : typeof obj; };
 
 /**
- * Spark form error collection class.
+ * Flare form error collection class.
  */
-window.SparkFormErrors = function () {
+window.FlareFormErrors = function () {
     this.errors = {};
 
     /**
@@ -34825,9 +34825,9 @@ window.SparkFormErrors = function () {
 "use strict";
 
 /**
- * SparkForm helper class. Used to set common properties on all forms.
+ * FlareForm helper class. Used to set common properties on all forms.
  */
-window.SparkForm = function (data) {
+window.FlareForm = function (data) {
     var form = this;
 
     $.extend(this, data);
@@ -34835,7 +34835,7 @@ window.SparkForm = function (data) {
     /**
      * Create the form error helper instance.
      */
-    this.errors = new SparkFormErrors();
+    this.errors = new FlareFormErrors();
 
     this.busy = false;
     this.successful = false;
@@ -34884,7 +34884,7 @@ module.exports = {
      */
 
     post: function post(uri, form) {
-        return Spark.sendForm('post', uri, form);
+        return Flare.sendForm('post', uri, form);
     },
 
 
@@ -34892,7 +34892,7 @@ module.exports = {
      * Helper method for making PUT HTTP requests.
      */
     put: function put(uri, form) {
-        return Spark.sendForm('put', uri, form);
+        return Flare.sendForm('put', uri, form);
     },
 
 
@@ -34900,7 +34900,7 @@ module.exports = {
      * Helper method for making DELETE HTTP requests.
      */
     delete: function _delete(uri, form) {
-        return Spark.sendForm('delete', uri, form);
+        return Flare.sendForm('delete', uri, form);
     },
 
 
@@ -34989,7 +34989,7 @@ module.exports = {
             currentDiscount: null,
 
             discountingUser: null,
-            form: new SparkForm(kioskAddDiscountForm())
+            form: new FlareForm(kioskAddDiscountForm())
         };
     },
 
@@ -35000,7 +35000,7 @@ module.exports = {
          */
 
         addDiscount: function addDiscount(user) {
-            this.form = new SparkForm(kioskAddDiscountForm());
+            this.form = new FlareForm(kioskAddDiscountForm());
 
             this.setUser(user);
 
@@ -35024,7 +35024,7 @@ module.exports = {
          * Apply the discount to the user.
          */
         applyDiscount: function applyDiscount() {
-            Spark.post('/spark/kiosk/users/discount/' + this.discountingUser.id, this.form).then(function () {
+            Flare.post('/flare/kiosk/users/discount/' + this.discountingUser.id, this.form).then(function () {
                 $('#modal-add-discount').modal('hide');
             });
         }
@@ -35053,10 +35053,10 @@ module.exports = {
             updatingAnnouncement: null,
             deletingAnnouncement: null,
 
-            createForm: new SparkForm(announcementsCreateForm()),
-            updateForm: new SparkForm(announcementsCreateForm()),
+            createForm: new FlareForm(announcementsCreateForm()),
+            updateForm: new FlareForm(announcementsCreateForm()),
 
-            deleteForm: new SparkForm({})
+            deleteForm: new FlareForm({})
         };
     },
 
@@ -35065,7 +35065,7 @@ module.exports = {
         /**
          * Handle this component becoming the active tab.
          */
-        sparkHashChanged: function sparkHashChanged(hash) {
+        flareHashChanged: function flareHashChanged(hash) {
             if (hash == 'announcements' && this.announcements.length === 0) {
                 this.getAnnouncements();
             }
@@ -35080,7 +35080,7 @@ module.exports = {
         getAnnouncements: function getAnnouncements() {
             var _this = this;
 
-            this.$http.get('/spark/kiosk/announcements').then(function (response) {
+            this.$http.get('/flare/kiosk/announcements').then(function (response) {
                 _this.announcements = response.data;
             });
         },
@@ -35092,8 +35092,8 @@ module.exports = {
         create: function create() {
             var _this2 = this;
 
-            Spark.post('/spark/kiosk/announcements', this.createForm).then(function () {
-                _this2.createForm = new SparkForm(announcementsCreateForm());
+            Flare.post('/flare/kiosk/announcements', this.createForm).then(function () {
+                _this2.createForm = new FlareForm(announcementsCreateForm());
 
                 _this2.getAnnouncements();
             });
@@ -35120,7 +35120,7 @@ module.exports = {
         update: function update() {
             var _this3 = this;
 
-            Spark.put('/spark/kiosk/announcements/' + this.updatingAnnouncement.id, this.updateForm).then(function () {
+            Flare.put('/flare/kiosk/announcements/' + this.updatingAnnouncement.id, this.updateForm).then(function () {
                 _this3.getAnnouncements();
 
                 $('#modal-update-announcement').modal('hide');
@@ -35144,7 +35144,7 @@ module.exports = {
         delete: function _delete() {
             var _this4 = this;
 
-            Spark.delete('/spark/kiosk/announcements/' + this.deletingAnnouncement.id, this.deleteForm).then(function () {
+            Flare.delete('/flare/kiosk/announcements/' + this.deletingAnnouncement.id, this.deleteForm).then(function () {
                 _this4.getAnnouncements();
 
                 $('#modal-delete-announcement').modal('hide');
@@ -35168,16 +35168,16 @@ module.exports = {
      * Prepare the component.
      */
     ready: function ready() {
-        this.usePushStateForTabs('.spark-settings-tabs');
+        this.usePushStateForTabs('.flare-settings-tabs');
     },
 
 
     events: {
         /**
-         * Handle the Spark tab changed event.
+         * Handle the Flare tab changed event.
          */
 
-        sparkHashChanged: function sparkHashChanged(hash) {
+        flareHashChanged: function flareHashChanged(hash) {
             if (hash == 'users') {
                 setTimeout(function () {
                     $('#kiosk-users-search').focus();
@@ -35218,7 +35218,7 @@ module.exports = {
         /**
          * Handle this component becoming the active tab.
          */
-        sparkHashChanged: function sparkHashChanged(hash) {
+        flareHashChanged: function flareHashChanged(hash) {
             if (hash == 'metrics' && this.yearlyRecurringRevenue === 0) {
                 this.getRevenue();
                 this.getPlans();
@@ -35236,7 +35236,7 @@ module.exports = {
         getRevenue: function getRevenue() {
             var _this = this;
 
-            this.$http.get('/spark/kiosk/performance-indicators/revenue').then(function (response) {
+            this.$http.get('/flare/kiosk/performance-indicators/revenue').then(function (response) {
                 _this.yearlyRecurringRevenue = response.data.yearlyRecurringRevenue;
                 _this.monthlyRecurringRevenue = response.data.monthlyRecurringRevenue;
                 _this.totalVolume = response.data.totalVolume;
@@ -35250,7 +35250,7 @@ module.exports = {
         getPlans: function getPlans() {
             var _this2 = this;
 
-            this.$http.get('/spark/kiosk/performance-indicators/plans').then(function (response) {
+            this.$http.get('/flare/kiosk/performance-indicators/plans').then(function (response) {
                 _this2.plans = response.data;
             });
         },
@@ -35262,7 +35262,7 @@ module.exports = {
         getTrialUsers: function getTrialUsers() {
             var _this3 = this;
 
-            this.$http.get('/spark/kiosk/performance-indicators/trialing').then(function (response) {
+            this.$http.get('/flare/kiosk/performance-indicators/trialing').then(function (response) {
                 _this3.genericTrialUsers = response.data;
             });
         },
@@ -35274,7 +35274,7 @@ module.exports = {
         getPerformanceIndicators: function getPerformanceIndicators() {
             var _this4 = this;
 
-            this.$http.get('/spark/kiosk/performance-indicators').then(function (response) {
+            this.$http.get('/flare/kiosk/performance-indicators').then(function (response) {
                 _this4.indicators = response.data.indicators;
                 _this4.lastMonthsIndicators = response.data.last_month;
                 _this4.lastYearsIndicators = response.data.last_year;
@@ -35342,7 +35342,7 @@ module.exports = {
          */
         drawCurrencyChart: function drawCurrencyChart(id, days, dataGatherer) {
             return this.drawChart(id, days, dataGatherer, function (value) {
-                return Vue.filter('currency')(value.value, Spark.currencySymbol);
+                return Vue.filter('currency')(value.value, Flare.currencySymbol);
             });
         },
 
@@ -35523,7 +35523,7 @@ module.exports = {
 
             this.loading = true;
 
-            this.$http.get('/spark/kiosk/users/' + id + '/profile').then(function (response) {
+            this.$http.get('/flare/kiosk/users/' + id + '/profile').then(function (response) {
                 _this2.profile = response.data.user;
                 _this2.revenue = response.data.revenue;
 
@@ -35536,7 +35536,7 @@ module.exports = {
          * Impersonate the given user.
          */
         impersonate: function impersonate(user) {
-            window.location = '/spark/kiosk/users/impersonate/' + user.id;
+            window.location = '/flare/kiosk/users/impersonate/' + user.id;
         },
 
 
@@ -35602,12 +35602,12 @@ module.exports = {
                 return;
             }
 
-            if (this.spark.usesStripe) {
+            if (this.flare.usesStripe) {
                 return 'https://dashboard.stripe.com/customers/' + billable.stripe_id;
             } else {
-                var domain = Spark.env == 'production' ? '' : 'sandbox.';
+                var domain = Flare.env == 'production' ? '' : 'sandbox.';
 
-                return 'https://' + domain + 'braintreegateway.com/merchants/' + Spark.braintreeMerchantId + '/customers/' + billable.braintree_id;
+                return 'https://' + domain + 'braintreegateway.com/merchants/' + Flare.braintreeMerchantId + '/customers/' + billable.braintree_id;
             }
         },
 
@@ -35636,7 +35636,7 @@ module.exports = {
         return {
             plans: [],
 
-            searchForm: new SparkForm({
+            searchForm: new FlareForm({
                 query: ''
             }),
 
@@ -35668,9 +35668,9 @@ module.exports = {
 
 
         /**
-         * Handle the Spark tab changed event.
+         * Handle the Flare tab changed event.
          */
-        sparkHashChanged: function sparkHashChanged(hash, parameters) {
+        flareHashChanged: function flareHashChanged(hash, parameters) {
             if (hash != 'users') {
                 return true;
             }
@@ -35691,7 +35691,7 @@ module.exports = {
          */
 
         getPlans: function getPlans() {
-            this.$http.get('/spark/plans').then(function (response) {
+            this.$http.get('/flare/plans').then(function (response) {
                 this.plans = response.data;
             });
         },
@@ -35706,7 +35706,7 @@ module.exports = {
             this.searching = true;
             this.noSearchResults = false;
 
-            this.$http.post('/spark/kiosk/users/search', JSON.stringify(this.searchForm)).then(function (response) {
+            this.$http.post('/flare/kiosk/users/search', JSON.stringify(this.searchForm)).then(function (response) {
                 _this.searchResults = response.data;
                 _this.noSearchResults = _this.searchResults.length === 0;
 
@@ -35785,10 +35785,10 @@ module.exports = {
 
 
         /**
-         * Access the global Spark object.
+         * Access the global Flare object.
          */
-        spark: function spark() {
-            return window.Spark;
+        flare: function flare() {
+            return window.Flare;
         }
     }
 };
@@ -35815,7 +35815,7 @@ module.exports = {
 
             return braintree;
         }(function (containerName, callback) {
-            braintree.setup(Spark.braintreeToken, 'dropin', {
+            braintree.setup(Flare.braintreeToken, 'dropin', {
                 container: containerName,
                 paypal: {
                     singleUse: false,
@@ -35914,7 +35914,7 @@ module.exports = {
             if (discount.percent_off) {
                 return discount.percent_off + '%';
             } else {
-                return Vue.filter('currency')(this.calculateAmountOff(discount.amount_off), Spark.currencySymbol);
+                return Vue.filter('currency')(this.calculateAmountOff(discount.amount_off), Flare.currencySymbol);
             }
         },
 
@@ -36103,11 +36103,11 @@ module.exports = {
          */
 
         getPlans: function getPlans() {
-            if (!Spark.cardUpFront) {
+            if (!Flare.cardUpFront) {
                 return;
             }
 
-            this.$http.get('/spark/plans').then(function (response) {
+            this.$http.get('/flare/plans').then(function (response) {
                 this.plans = response.data;
 
                 this.selectAppropriateDefaultPlan();
@@ -36211,7 +36211,7 @@ module.exports = {
         return {
             selectingPlan: null,
 
-            planForm: new SparkForm({})
+            planForm: new FlareForm({})
         };
     },
 
@@ -36455,8 +36455,8 @@ module.exports = {
          * Broadcast that a tab change happened.
          */
         broadcastTabChange: function broadcastTabChange(hash, parameters) {
-            this.$dispatch('sparkHashChanged', hash, parameters);
-            this.$broadcast('sparkHashChanged', hash, parameters);
+            this.$dispatch('flareHashChanged', hash, parameters);
+            this.$broadcast('flareHashChanged', hash, parameters);
         }
     }
 };
@@ -36471,7 +36471,7 @@ module.exports = {
          */
 
         collectsVat: function collectsVat(country) {
-            return Spark.collectsEuropeanVat ? _.contains(['BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE', 'GB'], country) : false;
+            return Flare.collectsEuropeanVat ? _.contains(['BE', 'BG', 'CZ', 'DK', 'DE', 'EE', 'IE', 'EL', 'ES', 'FR', 'HR', 'IT', 'CY', 'LV', 'LT', 'LU', 'HU', 'MT', 'NL', 'AT', 'PL', 'PT', 'RO', 'SI', 'SK', 'FI', 'SE', 'GB'], country) : false;
         },
 
 
@@ -36687,7 +36687,7 @@ module.exports = {
             showingToken: null,
             allAbilitiesAssigned: false,
 
-            form: new SparkForm({
+            form: new FlareForm({
                 name: '',
                 abilities: []
             })
@@ -36769,7 +36769,7 @@ module.exports = {
         create: function create() {
             var _this = this;
 
-            Spark.post('/settings/api/token', this.form).then(function (response) {
+            Flare.post('/settings/api/token', this.form).then(function (response) {
                 _this.showToken(response.token);
 
                 _this.resetForm();
@@ -36816,12 +36816,12 @@ module.exports = {
             updatingToken: null,
             deletingToken: null,
 
-            updateTokenForm: new SparkForm({
+            updateTokenForm: new FlareForm({
                 name: '',
                 abilities: []
             }),
 
-            deleteTokenForm: new SparkForm({})
+            deleteTokenForm: new FlareForm({})
         };
     },
 
@@ -36856,7 +36856,7 @@ module.exports = {
         updateToken: function updateToken() {
             var _this = this;
 
-            Spark.put('/settings/api/token/' + this.updatingToken.id, this.updateTokenForm).then(function (response) {
+            Flare.put('/settings/api/token/' + this.updatingToken.id, this.updateTokenForm).then(function (response) {
                 _this.$dispatch('updateTokens');
 
                 $('#modal-update-token').modal('hide');
@@ -36902,7 +36902,7 @@ module.exports = {
         deleteToken: function deleteToken() {
             var _this2 = this;
 
-            Spark.delete('/settings/api/token/' + this.deletingToken.id, this.deleteTokenForm).then(function () {
+            Flare.delete('/settings/api/token/' + this.deletingToken.id, this.deleteTokenForm).then(function () {
                 _this2.$dispatch('updateTokens');
 
                 $('#modal-delete-token').modal('hide');
@@ -36990,7 +36990,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 information: ''
             })
         };
@@ -37011,7 +37011,7 @@ module.exports = {
          */
 
         update: function update() {
-            Spark.put(this.urlForUpdate, this.form);
+            Flare.put(this.urlForUpdate, this.form);
         }
     },
 
@@ -37156,7 +37156,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 coupon: ''
             })
         };
@@ -37171,7 +37171,7 @@ module.exports = {
         redeem: function redeem() {
             var _this = this;
 
-            Spark.post(this.urlForRedemption, this.form).then(function () {
+            Flare.post(this.urlForRedemption, this.form).then(function () {
                 _this.form.coupon = '';
 
                 _this.$dispatch('updateDiscount');
@@ -37206,7 +37206,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 braintree_type: '',
                 braintree_token: ''
             })
@@ -37230,7 +37230,7 @@ module.exports = {
         update: function update() {
             var _this = this;
 
-            Spark.put(this.urlForUpdate, this.form).then(function () {
+            Flare.put(this.urlForUpdate, this.form).then(function () {
                 _this.$dispatch('updateUser');
                 _this.$dispatch('updateTeam');
 
@@ -37299,7 +37299,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 stripe_token: '',
                 address: '',
                 address_line_2: '',
@@ -37309,7 +37309,7 @@ module.exports = {
                 country: 'US'
             }),
 
-            cardForm: new SparkForm({
+            cardForm: new FlareForm({
                 name: '',
                 number: '',
                 cvc: '',
@@ -37324,7 +37324,7 @@ module.exports = {
      * Prepare the component.
      */
     ready: function ready() {
-        Stripe.setPublishableKey(Spark.stripeKey);
+        Stripe.setPublishableKey(Flare.stripeKey);
 
         this.initializeBillingAddress();
     },
@@ -37336,7 +37336,7 @@ module.exports = {
          */
 
         initializeBillingAddress: function initializeBillingAddress() {
-            if (!Spark.collectsBillingAddress) {
+            if (!Flare.collectsBillingAddress) {
                 return;
             }
 
@@ -37400,7 +37400,7 @@ module.exports = {
 
             this.form.stripe_token = token;
 
-            Spark.put(this.urlForUpdate, this.form).then(function () {
+            Flare.put(this.urlForUpdate, this.form).then(function () {
                 _this2.$dispatch('updateUser');
                 _this2.$dispatch('updateTeam');
 
@@ -37410,7 +37410,7 @@ module.exports = {
                 _this2.cardForm.month = '';
                 _this2.cardForm.year = '';
 
-                if (!Spark.collectsBillingAddress) {
+                if (!Flare.collectsBillingAddress) {
                     _this2.form.zip = '';
                 }
             });
@@ -37486,7 +37486,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({ vat_id: '' })
+            form: new FlareForm({ vat_id: '' })
         };
     },
 
@@ -37505,7 +37505,7 @@ module.exports = {
          */
 
         update: function update() {
-            Spark.put(this.urlForUpdate, this.form);
+            Flare.put(this.urlForUpdate, this.form);
         }
     },
 
@@ -37538,10 +37538,10 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: $.extend(true, new SparkForm({
+            form: $.extend(true, new FlareForm({
                 name: '',
                 email: ''
-            }), Spark.forms.updateContactInformation)
+            }), Flare.forms.updateContactInformation)
         };
     },
 
@@ -37563,7 +37563,7 @@ module.exports = {
         update: function update() {
             var _this = this;
 
-            Spark.put('/settings/contact', this.form).then(function () {
+            Flare.put('/settings/contact', this.form).then(function () {
                 _this.$dispatch('updateUser');
             });
         }
@@ -37581,7 +37581,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({})
+            form: new FlareForm({})
         };
     },
 
@@ -37672,7 +37672,7 @@ module.exports = {
   */
 	data: function data() {
 		return {
-			form: new SparkForm({})
+			form: new FlareForm({})
 		};
 	},
 
@@ -37685,7 +37685,7 @@ module.exports = {
 		disable: function disable() {
 			var _this = this;
 
-			Spark.delete('/settings/two-factor-auth', this.form).then(function () {
+			Flare.delete('/settings/two-factor-auth', this.form).then(function () {
 				_this.$dispatch('updateUser');
 			});
 		}
@@ -37703,7 +37703,7 @@ module.exports = {
   */
 	data: function data() {
 		return {
-			form: new SparkForm({
+			form: new FlareForm({
 				country_code: '',
 				phone: ''
 			})
@@ -37728,7 +37728,7 @@ module.exports = {
 		enable: function enable() {
 			var _this = this;
 
-			Spark.post('/settings/two-factor-auth', this.form).then(function (code) {
+			Flare.post('/settings/two-factor-auth', this.form).then(function (code) {
 				_this.$dispatch('receivedTwoFactorResetCode', code);
 
 				_this.$dispatch('updateUser');
@@ -37747,7 +37747,7 @@ module.exports = {
 
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 current_password: '',
                 password: '',
                 password_confirmation: ''
@@ -37762,7 +37762,7 @@ module.exports = {
          */
 
         update: function update() {
-            Spark.put('/settings/password', this.form);
+            Flare.put('/settings/password', this.form);
         }
     }
 };
@@ -37792,7 +37792,7 @@ module.exports = {
      * Prepare the component.
      */
     ready: function ready() {
-        this.usePushStateForTabs('.spark-settings-tabs');
+        this.usePushStateForTabs('.flare-settings-tabs');
     }
 };
 
@@ -37855,7 +37855,7 @@ module.exports = {
          */
 
         urlForPlans: function urlForPlans() {
-            return this.billingUser ? '/spark/plans' : '/spark/team-plans';
+            return this.billingUser ? '/flare/plans' : '/flare/team-plans';
         }
     }
 };
@@ -37871,7 +37871,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({})
+            form: new FlareForm({})
         };
     },
 
@@ -37892,7 +37892,7 @@ module.exports = {
         cancel: function cancel() {
             var _this = this;
 
-            Spark.delete(this.urlForCancellation, this.form).then(function () {
+            Flare.delete(this.urlForCancellation, this.form).then(function () {
                 _this.$dispatch('updateUser');
                 _this.$dispatch('updateTeam');
 
@@ -37970,7 +37970,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 braintree_type: '',
                 braintree_token: '',
                 plan: '',
@@ -38025,7 +38025,7 @@ module.exports = {
         subscribe: function subscribe() {
             var _this2 = this;
 
-            Spark.post(this.urlForNewSubscription, this.form).then(function (response) {
+            Flare.post(this.urlForNewSubscription, this.form).then(function (response) {
                 _this2.$dispatch('updateUser');
                 _this2.$dispatch('updateTeam');
             });
@@ -38071,7 +38071,7 @@ module.exports = {
         return {
             taxRate: 0,
 
-            form: new SparkForm({
+            form: new FlareForm({
                 stripe_token: '',
                 plan: '',
                 coupon: null,
@@ -38084,7 +38084,7 @@ module.exports = {
                 vat_id: ''
             }),
 
-            cardForm: new SparkForm({
+            cardForm: new FlareForm({
                 name: '',
                 number: '',
                 cvc: '',
@@ -38101,7 +38101,7 @@ module.exports = {
          * Watch for changes on the entire billing address.
          */
         'currentBillingAddress': function currentBillingAddress(value) {
-            if (!Spark.collectsEuropeanVat) {
+            if (!Flare.collectsEuropeanVat) {
                 return;
             }
 
@@ -38113,7 +38113,7 @@ module.exports = {
      * Prepare the component.
      */
     ready: function ready() {
-        Stripe.setPublishableKey(Spark.stripeKey);
+        Stripe.setPublishableKey(Flare.stripeKey);
 
         this.initializeBillingAddress();
 
@@ -38197,14 +38197,14 @@ module.exports = {
 
 
         /*
-         * After obtaining the Stripe token, create subscription on the Spark server.
+         * After obtaining the Stripe token, create subscription on the Flare server.
          */
         createSubscription: function createSubscription(token) {
             var _this2 = this;
 
             this.form.stripe_token = token;
 
-            Spark.post(this.urlForNewSubscription, this.form).then(function (response) {
+            Flare.post(this.urlForNewSubscription, this.form).then(function (response) {
                 _this2.$dispatch('updateUser');
                 _this2.$dispatch('updateTeam');
             });
@@ -38370,7 +38370,7 @@ module.exports = {
 
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 name: ''
             })
         };
@@ -38401,7 +38401,7 @@ module.exports = {
         create: function create() {
             var _this = this;
 
-            Spark.post('/settings/teams', this.form).then(function () {
+            Flare.post('/settings/teams', this.form).then(function () {
                 _this.form.name = '';
 
                 _this.$dispatch('updateUser');
@@ -38425,8 +38425,8 @@ module.exports = {
             leavingTeam: null,
             deletingTeam: null,
 
-            leaveTeamForm: new SparkForm({}),
-            deleteTeamForm: new SparkForm({})
+            leaveTeamForm: new FlareForm({}),
+            deleteTeamForm: new FlareForm({})
         };
     },
 
@@ -38457,7 +38457,7 @@ module.exports = {
         leaveTeam: function leaveTeam() {
             var _this = this;
 
-            Spark.delete(this.urlForLeaving, this.leaveTeamForm).then(function () {
+            Flare.delete(this.urlForLeaving, this.leaveTeamForm).then(function () {
                 _this.$dispatch('updateUser');
                 _this.$dispatch('updateTeams');
 
@@ -38482,7 +38482,7 @@ module.exports = {
         deleteTeam: function deleteTeam() {
             var _this2 = this;
 
-            Spark.delete('/settings/teams/' + this.deletingTeam.id, this.deleteTeamForm).then(function () {
+            Flare.delete('/settings/teams/' + this.deletingTeam.id, this.deleteTeamForm).then(function () {
                 _this2.$dispatch('updateUser');
                 _this2.$dispatch('updateTeams');
 
@@ -38614,7 +38614,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 email: ''
             })
         };
@@ -38629,7 +38629,7 @@ module.exports = {
         send: function send() {
             var _this = this;
 
-            Spark.post('/settings/teams/' + this.team.id + '/invitations', this.form).then(function () {
+            Flare.post('/settings/teams/' + this.team.id + '/invitations', this.form).then(function () {
                 _this.form.email = '';
 
                 _this.$dispatch('updateInvitations');
@@ -38654,11 +38654,11 @@ module.exports = {
             updatingTeamMember: null,
             deletingTeamMember: null,
 
-            updateTeamMemberForm: $.extend(true, new SparkForm({
+            updateTeamMemberForm: $.extend(true, new FlareForm({
                 role: ''
-            }), Spark.forms.updateTeamMember),
+            }), Flare.forms.updateTeamMember),
 
-            deleteTeamMemberForm: new SparkForm({})
+            deleteTeamMemberForm: new FlareForm({})
         };
     },
 
@@ -38702,7 +38702,7 @@ module.exports = {
         update: function update() {
             var _this2 = this;
 
-            Spark.put(this.urlForUpdating, this.updateTeamMemberForm).then(function () {
+            Flare.put(this.urlForUpdating, this.updateTeamMemberForm).then(function () {
                 _this2.$dispatch('updateTeam');
 
                 $('#modal-update-team-member').modal('hide');
@@ -38726,7 +38726,7 @@ module.exports = {
         delete: function _delete() {
             var _this3 = this;
 
-            Spark.delete(this.urlForDeleting, this.deleteTeamMemberForm).then(function () {
+            Flare.delete(this.urlForDeleting, this.deleteTeamMemberForm).then(function () {
                 _this3.$dispatch('updateTeam');
 
                 $('#modal-delete-member').modal('hide');
@@ -38879,7 +38879,7 @@ module.exports = {
      * Prepare the component.
      */
     ready: function ready() {
-        this.usePushStateForTabs('.spark-settings-tabs');
+        this.usePushStateForTabs('.flare-settings-tabs');
     },
 
 
@@ -38919,7 +38919,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({
+            form: new FlareForm({
                 name: ''
             })
         };
@@ -38942,7 +38942,7 @@ module.exports = {
         update: function update() {
             var _this = this;
 
-            Spark.put('/settings/teams/' + this.team.id + '/name', this.form).then(function () {
+            Flare.put('/settings/teams/' + this.team.id + '/name', this.form).then(function () {
                 _this.$dispatch('updateTeam');
                 _this.$dispatch('updateTeams');
             });
@@ -38961,7 +38961,7 @@ module.exports = {
      */
     data: function data() {
         return {
-            form: new SparkForm({})
+            form: new FlareForm({})
         };
     },
 
@@ -39027,7 +39027,7 @@ module.exports = {
 'use strict';
 
 /*
- * Load various JavaScript modules that assist Spark.
+ * Load various JavaScript modules that assist Flare.
  */
 window.URI = require('urijs');
 window._ = require('underscore');
@@ -39047,7 +39047,7 @@ require('bootstrap/dist/js/npm');
 /**
  * Load Vue if this application is using Vue as its framework.
  */
-if ($('#spark-app').length > 0) {
+if ($('#flare-app').length > 0) {
   require('vue-bootstrap');
 }
 
@@ -39055,7 +39055,7 @@ if ($('#spark-app').length > 0) {
 'use strict';
 
 /**
- * Export the root Spark application.
+ * Export the root Flare application.
  */
 module.exports = {
     el: 'body',
@@ -39069,14 +39069,14 @@ module.exports = {
      * The application's data.
      */
     data: {
-        user: Spark.state.user,
-        teams: Spark.state.teams,
-        currentTeam: Spark.state.currentTeam,
+        user: Flare.state.user,
+        teams: Flare.state.teams,
+        currentTeam: Flare.state.currentTeam,
 
         loadingNotifications: false,
         notifications: null,
 
-        supportForm: new SparkForm({
+        supportForm: new FlareForm({
             from: '',
             subject: '',
             message: ''
@@ -39087,11 +39087,11 @@ module.exports = {
      * The component has been created by Vue.
      */
     created: function created() {
-        if (Spark.userId) {
+        if (Flare.userId) {
             this.loadDataForAuthenticatedUser();
         }
 
-        if (Spark.userId && Spark.usesApi) {
+        if (Flare.userId && Flare.usesApi) {
             this.refreshApiTokenEveryFewMinutes();
         }
     },
@@ -39195,7 +39195,7 @@ module.exports = {
         refreshApiToken: function refreshApiToken() {
             this.lastRefreshedApiTokenAt = moment();
 
-            this.$http.put('/spark/token').then(function (response) {
+            this.$http.put('/flare/token').then(function (response) {
                 console.log('API Token Refreshed.');
             });
         },
@@ -39279,7 +39279,7 @@ module.exports = {
         sendSupportRequest: function sendSupportRequest() {
             var _this6 = this;
 
-            Spark.post('/support/email', this.supportForm).then(function () {
+            Flare.post('/support/email', this.supportForm).then(function () {
                 $('#modal-support').modal('hide');
 
                 _this6.showSupportRequestSuccessMessage();
@@ -39347,7 +39347,7 @@ module.exports = {
 /*
  * Load Vue & Vue-Resource.
  *
- * Vue is the JavaScript framework used by Spark.
+ * Vue is the JavaScript framework used by Flare.
  */
 if (window.Vue === undefined) {
   window.Vue = require('vue');
@@ -39375,7 +39375,7 @@ Vue.mixin(require('./mixin'));
 require('./filters');
 
 /**
- * Load the Spark form utilities.
+ * Load the Flare form utilities.
  */
 require('./forms/bootstrap');
 

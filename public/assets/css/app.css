@@ -7007,7 +7007,7 @@ fieldset[disabled] .btn-danger-outline.active {
 .fa-btn {
   margin-right: 5px;
 }
-.spark-screen form h2 {
+.flare-screen form h2 {
   background-color: #f5f5f5;
   border-radius: 4px;
   font-size: 14px;
@@ -7023,14 +7023,14 @@ fieldset[disabled] .btn-danger-outline.active {
 .checkbox label {
   font-weight: 300;
 }
-.spark-profile-photo {
+.flare-profile-photo {
   border: 2px solid #d3e0e9;
   border-radius: 50%;
   height: 40px;
   padding: 2px;
   width: 40px;
 }
-.spark-profile-photo-lg {
+.flare-profile-photo-lg {
   border: 2px solid #d3e0e9;
   border-radius: 50%;
   height: 40px;
@@ -7039,7 +7039,7 @@ fieldset[disabled] .btn-danger-outline.active {
   height: 75px;
   width: 75px;
 }
-.spark-profile-photo-xl {
+.flare-profile-photo-xl {
   border: 2px solid #d3e0e9;
   border-radius: 50%;
   height: 40px;
@@ -7048,7 +7048,7 @@ fieldset[disabled] .btn-danger-outline.active {
   height: 125px;
   width: 125px;
 }
-.spark-nav-profile-photo {
+.flare-nav-profile-photo {
   border: 2px solid #d3e0e9;
   border-radius: 50%;
   height: 40px;
@@ -7057,19 +7057,19 @@ fieldset[disabled] .btn-danger-outline.active {
   height: 50px;
   width: 50px;
 }
-.spark-team-photo {
+.flare-team-photo {
   border: 2px solid #d3e0e9;
   border-radius: 50%;
   height: 40px;
   padding: 2px;
   width: 40px;
 }
-.spark-team-photo-xs {
+.flare-team-photo-xs {
   border-radius: 50%;
   height: 1.28571429em;
   width: 1.28571429em;
 }
-.spark-screen .profile-photo-preview {
+.flare-screen .profile-photo-preview {
   border-radius: 6px;
   display: inline-block;
   background-position: center;
@@ -7078,7 +7078,7 @@ fieldset[disabled] .btn-danger-outline.active {
   vertical-align: middle;
   width: 150px;
 }
-.spark-screen .team-photo-preview {
+.flare-screen .team-photo-preview {
   border-radius: 6px;
   display: inline-block;
   background-position: center;
@@ -7245,7 +7245,7 @@ fieldset[disabled] .btn-danger-outline.active {
 #modal-notifications .notification-content .notification-body {
   margin-bottom: 15px;
 }
-#modal-notifications .spark-profile-photo {
+#modal-notifications .flare-profile-photo {
   height: 52px;
   width: 52px;
 }
@@ -7285,29 +7285,29 @@ fieldset[disabled] .btn-danger-outline.active {
 .plan-feature-list li {
   line-height: 35px;
 }
-.spark-settings-stacked-tabs {
+.flare-settings-stacked-tabs {
   border-radius: 4px;
   font-weight: 300;
 }
-.spark-settings-stacked-tabs a {
+.flare-settings-stacked-tabs a {
   border-bottom: 1px solid #e4ecf2;
   border-left: 3px solid transparent;
   color: #636b6f;
 }
-.spark-settings-stacked-tabs a i {
+.flare-settings-stacked-tabs a i {
   color: #a4aaae;
   position: relative;
 }
-.spark-settings-stacked-tabs li:last-child a {
+.flare-settings-stacked-tabs li:last-child a {
   border-bottom: 0;
 }
-.spark-settings-stacked-tabs li.active a {
+.flare-settings-stacked-tabs li.active a {
   border-left: 3px solid #3097D1;
 }
-.spark-settings-stacked-tabs li a:active,
-.spark-settings-stacked-tabs li a:hover,
-.spark-settings-stacked-tabs li a:link,
-.spark-settings-stacked-tabs li a:visited {
+.flare-settings-stacked-tabs li a:active,
+.flare-settings-stacked-tabs li a:hover,
+.flare-settings-stacked-tabs li a:link,
+.flare-settings-stacked-tabs li a:visited {
   background-color: white;
 }
 .terms-of-service h1 {
