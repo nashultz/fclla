@@ -2,34 +2,51 @@
 
 namespace FCLLA;
 
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Laravel\Cashier\Billable;
+use FCLLA\Flare\User as FlareUser;
 
-class User extends Authenticatable
+class User extends FlareUser
 {
-
-    use Billable;
-
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name',
+        'email',
     ];
 
     /**
-     * The attributes that should be hidden for arrays.
+     * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password',
+        'remember_token',
+        'authy_id',
+        'country_code',
+        'phone',
+        'card_brand',
+        'card_last_four',
+        'card_country',
+        'billing_address',
+        'billing_address_line_2',
+        'billing_city',
+        'billing_zip',
+        'billing_country',
+        'extra_billing_information',
     ];
 
+    /**
+     * The attributes that should be cast to native types.
+     *
+     * @var array
+     */
     protected $casts = [
-        'admin' => 'boolean',
+        'trial_ends_at' => 'date',
+        'uses_two_factor_auth' => 'boolean',
+        'admin' => 'boolean'
     ];
 
     public function post()
