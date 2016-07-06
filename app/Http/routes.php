@@ -7,8 +7,9 @@ Route::get('/', 'PagesController@index')->name('home');
 /*Route::get('home', function() {
     return redirect('/');
 });*/
-Route::get('home', 'WelcomeController@home');
-
+Route::group(['middleware'=>'auth'], function() {
+    Route::get('home', 'WelcomeController@home');
+});
 
 /* JOIN ROUTE */
 Route::get('join', 'PagesController@join')->name('join');
