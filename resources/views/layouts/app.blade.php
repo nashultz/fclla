@@ -46,7 +46,8 @@
         @endif
 
         <!-- JavaScript -->
-       <script src="{{asset('assets/js/app.js')}}"></script>
+        <script src="{{asset('assets/js/all.js')}}"></script>
+       <script src="{{asset('assets/js/main.js')}}"></script>
         <script src="{{asset('assets/js/sweetalert.min.js')}}"></script>
     </div>
 </body>

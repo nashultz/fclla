@@ -1,5 +1,7 @@
 var elixir = require('laravel-elixir');
 
+require('laravel-elixir-vueify');
+
 /*
  |--------------------------------------------------------------------------
  | Elixir Asset Management
@@ -11,8 +13,8 @@ var elixir = require('laravel-elixir');
  |
  */
 
-elixir.config.resourcesPath = 'resources/assets';
-elixir.config.publicPath = 'public/themes/default/assets';
+elixir.config.publicPath = 'public/assets';
+elixir.config.resourcePath = 'resources/assets';
 
 elixir.config.css.sass.pluginOptions.includePaths = [
     'node_modules/bootstrap-sass/assets/stylesheets',
@@ -20,26 +22,28 @@ elixir.config.css.sass.pluginOptions.includePaths = [
 ];
 
 elixir(function(mix) {
+    mix.less('app.less')
+        .browserify('main.js', null, null, { paths: 'resources/assets/js' })
+        .copy('node_modules/sweetalert/dist/sweetalert.min.js', 'public/js/sweetalert.min.js')
+        .copy('node_modules/sweetalert/dist/sweetalert.css', 'public/css/sweetalert.css');
+
     mix.copy('node_modules/font-awesome/fonts', elixir.config.publicPath+'/fonts');
-    mix.copy('node_modules/bootstrap-sass/fonts/bootstrap', elixir.config.publicPath+'/fonts');
 
-    mix.copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.js', elixir.config.resourcesPath+'/js/bootstrap.js');
-    mix.copy('node_modules/jquery/dist/jquery.min.js', elixir.config.resourcesPath+'/js/jquery.js');
-    mix.copy('node_modules/moment/min/moment.min.js', elixir.config.resourcesPath+'/js/moment.js');
+    mix.copy('node_modules/jquery/dist/jquery.min.js', elixir.config.resourcePath+'/js/jquery.js');
+    mix.copy('node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js', elixir.config.resourcePath+'/js/bootstrap.js');
+    mix.copy('node_modules/moment/min/moment.min.js', elixir.config.resourcePath+'/js/moment.js');
+    mix.copy('node_modules/simplemde/dist/simplemde.min.js', elixir.config.resourcePath+'/js/simplemde.js');
+    mix.copy('node_modules/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js', elixir.config.resourcePath+'/js/datepicker.js');
 
-    mix.copy('node_modules/simplemde/dist/simplemde.min.css', elixir.config.resourcesPath+'/css/simplemde.css');
-    mix.copy('node_modules/simplemde/dist/simplemde.min.js', elixir.config.resourcesPath+'/js/simplemde.js');
+    mix.copy('node_modules/eonasdan-bootstrap-datetimepicker/src/sass/_bootstrap-datetimepicker.scss', elixir.config.resourcePath+'/sass/datepicker.scss');
+    mix.copy('node_modules/simplemde/dist/simplemde.min.css', elixir.config.resourcePath+'/sass/simplemde.scss');
+
 
     mix.scripts([
-        'jquery.js', 'bootstrap.js', 'moment.js',
-        'simplemde.js', 'app.js'
+        elixir.config.resourcePath+'/js/jquery.js',
+        elixir.config.resourcePath+'/js/bootstrap.js',
+        elixir.config.resourcePath+'/js/moment.js',
+        elixir.config.resourcePath+'/js/simplemde.js',
+        elixir.config.resourcePath+'/js/datepicker.js'
     ]);
-});
-
-elixir(function(mix) {
-    mix.sass('app.scss');
-});
-
-elixir(function(mix) {
-    mix.sass('app2.scss');
 });
