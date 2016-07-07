@@ -47,5 +47,11 @@ class FlareServiceProvider extends ServiceProvider
             ->features([
                 'Trial Plan allows you to pick which option is right for you.', 'Offers good for 30 days.'
             ]);
+
+        Flare::plan('$50 Yearly Membership', 'membership50')
+            ->price(10.99)
+            ->features([
+                'Basic membership.'
+            ]);
     }
 }
