@@ -66,7 +66,7 @@
 
     <div class="col-sm-6">
         <select class="form-control" v-model="form.country">
-            @foreach (app(Laravel\Flare\Repositories\Geography\CountryRepository::class)->all() as $key => $country)
+            @foreach (app(FCLLA\Flare\Repositories\Geography\CountryRepository::class)->all() as $key => $country)
                 <option value="{{ $key }}">{{ $country }}</option>
             @endforeach
         </select>
