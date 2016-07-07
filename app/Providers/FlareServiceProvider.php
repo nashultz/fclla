@@ -41,7 +41,7 @@ class FlareServiceProvider extends ServiceProvider
      */
     public function booted()
     {
-        Flare::useStripe()->needsCardUpFront();
+        Flare::useStripe()->noCardUpFront()->trialDays(10);
 
         Flare::freePlan()
             ->features([
