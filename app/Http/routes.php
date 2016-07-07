@@ -3,7 +3,6 @@
 /* HOME ROUTE */
 Route::get('/', 'PagesController@index')->name('home');
 //Route::get('/', 'WelcomeController@show');
-
 /*Route::get('home', function() {
     return redirect('/');
 });*/
