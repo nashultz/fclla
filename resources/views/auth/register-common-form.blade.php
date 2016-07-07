@@ -161,6 +161,104 @@
         </div>
     </div>
 
+    <!-- Phone -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('phone')}">
+        <label class="col-md-4 control-label">Phone</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="phone" v-model="registerForm.phone">
+
+            <span class="help-block" v-show="registerForm.errors.has('phone')">
+                @{{ registerForm.errors.get('phone') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Business Phone -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('business_phone')}">
+        <label class="col-md-4 control-label">Business Phone</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="business_phone" v-model="registerForm.business_phone">
+
+            <span class="help-block" v-show="registerForm.errors.has('business_phone')">
+                @{{ registerForm.errors.get('business_phone') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Cell Phone -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('cell_phone')}">
+        <label class="col-md-4 control-label">Cell Phone</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="cell_phone" v-model="registerForm.cell_phone">
+
+            <span class="help-block" v-show="registerForm.errors.has('cell_phone')">
+                @{{ registerForm.errors.get('cell_phone') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Units -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('units')}">
+        <label class="col-md-4 control-label">Units</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="units" v-model="registerForm.units">
+
+            <span class="help-block">
+                How many properties (units) do you currently own?
+            </span>
+
+            <span class="help-block" v-show="registerForm.errors.has('units')">
+                @{{ registerForm.errors.get('units') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Membership Renewal -->
+    <div class="form-group" :class="{'has-error': form.errors.has('membership')}">
+        <label class="col-md-4 control-label">Membership Renewal</label>
+
+        <div class="col-sm-6">
+            <select class="form-control" v-model="form.membership">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+        <span class="help-block">
+            Is this membership a renewal?
+        </span>
+
+        <span class="help-block" v-show="form.errors.has('membership')">
+            @{{ form.errors.get('membership') }}
+        </span>
+        </div>
+    </div>
+
+    <!-- Roster -->
+    <div class="form-group" :class="{'has-error': form.errors.has('roster')}">
+        <label class="col-md-4 control-label">Roster</label>
+
+        <div class="col-sm-6">
+            <select class="form-control" v-model="form.roster">
+                <option value="0">No</option>
+                <option value="1">Yes</option>
+            </select>
+
+        <span class="help-block">
+            Would you like to be included on a Membership Roster with your contact information that would be available to other members?
+        </span>
+
+        <span class="help-block" v-show="form.errors.has('roster')">
+            @{{ form.errors.get('roster') }}
+        </span>
+        </div>
+    </div>
+
+    <input type="hidden" name="is_applicant" value="1">
+
     <!-- Terms And Conditions -->
     <div v-if=" ! selectedPlan || selectedPlan.price == 0">
         <div class="form-group" :class="{'has-error': registerForm.errors.has('terms')}">
@@ -182,11 +280,11 @@
             <div class="col-md-6 col-md-offset-4">
                 <button class="btn btn-primary" @click.prevent="register" :disabled="registerForm.busy">
                     <span v-if="registerForm.busy">
-                        <i class="fa fa-btn fa-spinner fa-spin"></i>Registering
+                        <i class="fa fa-btn fa-spinner fa-spin"></i>Submitting Application
                     </span>
 
                     <span v-else>
-                        <i class="fa fa-btn fa-check-circle"></i>Register
+                        <i class="fa fa-btn fa-check-circle"></i>Apply
                     </span>
                 </button>
             </div>
