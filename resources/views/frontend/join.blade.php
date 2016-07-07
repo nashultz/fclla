@@ -40,7 +40,7 @@
                     <li>2125 Harkrider Street, Suite 16, Conway AR 72032</li>
                 </ul>
             </p>
-            <p><a href="{{route('application')}}" title="Online Application" class="btn btn-primary">Launch Online Application</a></p>
+            <p><a href="/register" title="Online Application" class="btn btn-primary">Launch Online Application</a></p>
 
         </div>
     </div>
