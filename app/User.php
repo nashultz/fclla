@@ -2,9 +2,9 @@
 
 namespace FCLLA;
 
-use FCLLA\Flare\User as FlareUser;
+use Illuminate\Foundation\Auth\User as Authenticatable;
 
-class User extends FlareUser
+class User extends Authenticatable
 {
     /**
      * The attributes that are mass assignable.
@@ -12,41 +12,20 @@ class User extends FlareUser
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
+        'name', 'email', 'password',
     ];
 
     /**
-     * The attributes excluded from the model's JSON form.
+     * The attributes that should be hidden for arrays.
      *
      * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
-        'authy_id',
-        'country_code',
-        'phone',
-        'card_brand',
-        'card_last_four',
-        'card_country',
-        'billing_address',
-        'billing_address_line_2',
-        'billing_city',
-        'billing_zip',
-        'billing_country',
-        'extra_billing_information',
+        'password', 'remember_token',
     ];
 
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
-        'trial_ends_at' => 'date',
-        'uses_two_factor_auth' => 'boolean',
-        'admin' => 'boolean'
+        'admin' => 'boolean',
     ];
 
     public function post()

@@ -59,9 +59,5 @@ class Kernel extends HttpKernel
         'can' => \Illuminate\Foundation\Http\Middleware\Authorize::class,
         'guest' => \FCLLA\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
-        'dev' => \FCLLA\Flare\Http\Middleware\VerifyUserIsDeveloper::class,
-        'hasTeam' => \FCLLA\Flare\Http\Middleware\VerifyUserHasTeam::class,
-        'subscribed' => \FCLLA\Flare\Http\Middleware\VerifyUserIsSubscribed::class,
-        'teamSubscribed' => \FCLLA\Flare\Http\Middleware\VerifyTeamIsSubscribed::class,
     ];
 }

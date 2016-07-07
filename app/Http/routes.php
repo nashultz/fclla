@@ -2,14 +2,11 @@
 
 /* HOME ROUTE */
 Route::get('/', 'PagesController@index')->name('home');
-//Route::get('/', 'WelcomeController@show');
 
-/*Route::get('home', function() {
+Route::get('home', function() {
     return redirect('/');
-});*/
-Route::group(['middleware'=>'auth'], function() {
-    Route::get('home', 'WelcomeController@home');
 });
+
 
 /* JOIN ROUTE */
 Route::get('join', 'PagesController@join')->name('join');
@@ -31,7 +28,7 @@ Route::get('news', 'BlogController@index')->name('blogindex');
 Route::get('news/{slug}', 'BlogController@view')->name('blogpost');
 
 /* MEMBER ROUTES*/
-//Route::auth();
+Route::auth();
 
 Route::group(['as'=>'member::', 'prefix'=>'member', 'middleware'=>'auth'], function() {
     Route::get('newpost', 'BlogController@newpost')->name('newpost');

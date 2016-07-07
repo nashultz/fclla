@@ -14,19 +14,16 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('applications', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('bname');
             $table->string('name');
+            $table->string('address');
+            $table->string('city');
+            $table->string('state');
+            $table->integer('zipcode');
+            $table->string('bphone')->default('');
+            $table->string('hphone')->default('');
+            $table->string('cphone')->default('');
             $table->string('email')->unique();
-            $table->string('country_code', 10)->nullable();
-            $table->string('address')->nullable();
-            $table->string('address_line_2')->nullable();
-            $table->string('city')->nullable();
-            $table->string('state')->nullable();
-            $table->string('zip', 25)->nullable();
-            $table->string('country', 2)->nullable();
-            $table->string('business_name');
-            $table->string('phone', 25)->nullable();
-            $table->string('business_phone')->default('');
-            $table->string('cell_phone')->default('');
             $table->integer('units')->default(0);
             $table->tinyInteger('membership')->default(0);
             $table->tinyInteger('roster')->default(0);
