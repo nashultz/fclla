@@ -15,7 +15,7 @@
         <ul class="dropdown-menu">
             <li><a href="https://fclla.org/password/reset">Reset Password</a></li>
             <li role="separator" class="divider"></li>
-            <li><a href="{{action('Auth\AuthController@logout')}}"><i class="fa fa-sign-out"></i> Logout</a></li>
+            <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
         </ul>
     </li>
 </ul>
