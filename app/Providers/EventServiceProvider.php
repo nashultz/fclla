@@ -38,6 +38,57 @@ class EventServiceProvider extends ServiceProvider
             'FCLLA\Listeners\CreateBillingInvoiceForUser',
             'FCLLA\Listeners\EmailUserPaymentReminderWithInvoice'
         ]*/
+
+        'FCLLA\Flare\Events\Auth\UserRegistered' => [
+            'FCLLA\Flare\Listeners\Subscription\CreateTrialEndingNotification',
+        ],
+
+        'FCLLA\Flare\Events\Subscription\UserSubscribed' => [
+            'FCLLA\Flare\Listeners\Subscription\UpdateActiveSubscription',
+            'FCLLA\Flare\Listeners\Subscription\UpdateTrialEndingDate',
+        ],
+
+        'FCLLA\Flare\Events\Profile\ContactInformationUpdated' => [
+            'FCLLA\Flare\Listeners\Profile\UpdateContactInformationOnStripe',
+        ],
+
+        'FCLLA\Flare\Events\PaymentMethod\VatIdUpdated' => [
+            'FCLLA\Flare\Listeners\Subscription\UpdateTaxPercentageOnStripe',
+        ],
+
+        'FCLLA\Flare\Events\PaymentMethod\BillingAddressUpdated' => [
+            'FCLLA\Flare\Listeners\Subscription\UpdateTaxPercentageOnStripe',
+        ],
+
+        'FCLLA\Flare\Events\Subscription\SubscriptionUpdated' => [
+            'FCLLA\Flare\Listeners\Subscription\UpdateActiveSubscription',
+        ],
+
+        'FCLLA\Flare\Events\Subscription\SubscriptionCancelled' => [
+            'FCLLA\Flare\Listeners\Subscription\UpdateActiveSubscription',
+        ],
+
+        // Team Related Events...
+        'FCLLA\Flare\Events\Teams\TeamCreated' => [
+            'FCLLA\Flare\Listeners\Teams\Subscription\CreateTrialEndingNotification',
+        ],
+
+        'FCLLA\Flare\Events\Teams\Subscription\TeamSubscribed' => [
+            'FCLLA\Flare\Listeners\Teams\Subscription\UpdateActiveSubscription',
+            'FCLLA\Flare\Listeners\Teams\Subscription\UpdateTrialEndingDate',
+        ],
+
+        'FCLLA\Flare\Events\Teams\Subscription\SubscriptionUpdated' => [
+            'FCLLA\Flare\Listeners\Teams\Subscription\UpdateActiveSubscription',
+        ],
+
+        'FCLLA\Flare\Events\Teams\Subscription\SubscriptionCancelled' => [
+            'FCLLA\Flare\Listeners\Teams\Subscription\UpdateActiveSubscription',
+        ],
+
+        'FCLLA\Flare\Events\Teams\UserInvitedToTeam' => [
+            'FCLLA\Flare\Listeners\Teams\CreateInvitationNotification',
+        ],
     ];
 
     /**
