@@ -66,6 +66,101 @@
         </div>
     </div>
 
+    <!-- Business Name -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('business_name')}">
+        <label class="col-md-4 control-label">Business Name</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="business_name" v-model="registerForm.business_name">
+
+            <span class="help-block" v-show="registerForm.errors.has('business_name')">
+                @{{ registerForm.errors.get('Business Name') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Address -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('address')}">
+        <label class="col-md-4 control-label">Address</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="address" v-model="registerForm.address">
+
+            <span class="help-block" v-show="registerForm.errors.has('address')">
+                @{{ registerForm.errors.get('address') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Address Line 2 -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('address_line_2')}">
+        <label class="col-md-4 control-label">Address Line 2</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="address_line_2" v-model="registerForm.address_line_2">
+    
+            <span class="help-block" v-show="registerForm.errors.has('address_line_2')">
+                @{{ registerForm.errors.get('address_line_2') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- City -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('city')}">
+        <label class="col-md-4 control-label">City</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="city" v-model="registerForm.city">
+    
+            <span class="help-block" v-show="registerForm.errors.has('city')">
+                @{{ registerForm.errors.get('city') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- State -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('state')}">
+        <label class="col-md-4 control-label">State</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="state" v-model="registerForm.state">
+
+            <span class="help-block" v-show="registerForm.errors.has('state')">
+                @{{ registerForm.errors.get('state') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Zip Code -->
+    <div class="form-group" :class="{'has-error': registerForm.errors.has('zip')}">
+        <label class="col-md-4 control-label">Zip Code</label>
+
+        <div class="col-md-6">
+            <input type="text" class="form-control" name="zip" v-model="registerForm.zip">
+
+            <span class="help-block" v-show="registerForm.errors.has('zip')">
+                @{{ registerForm.errors.get('zip') }}
+            </span>
+        </div>
+    </div>
+
+    <!-- Country -->
+    <div class="form-group" :class="{'has-error': form.errors.has('country')}">
+        <label class="col-md-4 control-label">Country</label>
+
+        <div class="col-sm-6">
+            <select class="form-control" v-model="form.country">
+                @foreach (app(FCLLA\Flare\Repositories\Geography\CountryRepository::class)->all() as $key => $country)
+                    <option value="{{ $key }}">{{ $country }}</option>
+                @endforeach
+            </select>
+
+        <span class="help-block" v-show="form.errors.has('country')">
+            @{{ form.errors.get('country') }}
+        </span>
+        </div>
+    </div>
+
     <!-- Terms And Conditions -->
     <div v-if=" ! selectedPlan || selectedPlan.price == 0">
         <div class="form-group" :class="{'has-error': registerForm.errors.has('terms')}">
