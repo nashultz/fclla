@@ -152,7 +152,7 @@
                 </span>
 
                 <span v-else>
-                    Membership Application
+                    Register
                 </span>
             </div>
 
