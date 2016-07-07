@@ -53,5 +53,7 @@ class FlareServiceProvider extends ServiceProvider
             ->features([
                 'Basic membership.'
             ]);
+
+        Flare::collectBillingAddress();
     }
 }
