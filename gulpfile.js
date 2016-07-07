@@ -24,8 +24,8 @@ elixir.config.css.sass.pluginOptions.includePaths = [
 elixir(function(mix) {
     mix.less('app.less')
         .browserify('main.js', null, null, { paths: 'resources/assets/js' })
-        .copy('node_modules/sweetalert/dist/sweetalert.min.js', 'public/js/sweetalert.min.js')
-        .copy('node_modules/sweetalert/dist/sweetalert.css', 'public/css/sweetalert.css');
+        .copy('node_modules/sweetalert/dist/sweetalert.min.js', 'public/assets/js/sweetalert.min.js')
+        .copy('node_modules/sweetalert/dist/sweetalert.css', 'public/assets/css/sweetalert.css');
 
     mix.copy('node_modules/font-awesome/fonts', elixir.config.publicPath+'/fonts');
 
