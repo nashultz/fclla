@@ -38,7 +38,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    Copyright &copy; Faulkner County Landlord Association {{date('Y')}}. Site maintained by <a href="http://nathonshultz.com" target="_blank">Nathon Shultz</a>.
+                    Copyright &copy; Faulkner County Landlord Association {{date('Y')}}. Site maintained by <a href="http://nathonscott.com" target="_blank">Nathon Scott</a>.
                 </div>
             </div>
         </div>
