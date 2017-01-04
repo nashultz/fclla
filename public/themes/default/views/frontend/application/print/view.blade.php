@@ -31,7 +31,7 @@
             <p>Is this membership a renewal: {{$app->membership}}</p>
             <p>Would you like to be included on a Membership Roster with your contact information that would be available to other members? {{$app->roster}}</p>
 
-            <p>Please return the completed membership application and payment to: <strong>Faulkner County Landlord Association</strong>, 2125 Harkrider Ste. 16, Conway, Arkansas 72032, or bring it to the next meeting. Dues are $50.00 a year, renewed annually during October, or pro-rated.</p>
+            <p>Please return the completed membership application and payment to: <strong>Faulkner County Landlord Association</strong>, 2125 Harkrider Ste. 16, Conway, Arkansas 72032, or bring it to the next meeting. Dues are $75.00 a year, renewed annually during October, or pro-rated.</p>
             <p>Feel free to use the space below (or on the back of this page) to list any suggestions, meeting topics, concerns or ideas you wish to share with the board.</p>
             <p>Thank you,</p>
             <p>Mark Burrier<br>FCLLA President</p>
