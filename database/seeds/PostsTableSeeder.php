@@ -14,6 +14,17 @@ class PostsTableSeeder extends Seeder
     public function run()
     {
         Schema::dropIfExists('posts');
+        Schema::create('posts', function (Blueprint $table) {
+            $table->increments('id');
+            $table->integer('author_id');
+            $table->string('title');
+            $table->string('slug');
+            $table->text('body');
+            $table->text('excerpt');
+            $table->tinyInteger('members_only')->default(0);
+            $table->timestamp('published_at')->nullable();
+            $table->timestamps();
+        });
         DB::table('posts')->insert([
             'author_id' => 2,
             'title' => 'January 2016 FCLLA Meeting',
