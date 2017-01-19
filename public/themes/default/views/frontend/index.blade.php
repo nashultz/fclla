@@ -33,19 +33,19 @@
                         </tr>
                         <tr>
                             <td><strong>Vice President</strong></td>
-                            <td>Belinda Boyd</td>
+                            <td>David DeRosa</td>
                         </tr>
                         <tr>
                             <td><strong>Treasurer</strong></td>
-                            <td>Connie Trent</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Secretary</strong></td>
                             <td>Kris Gilden</td>
                         </tr>
                         <tr>
-                            <td><strong>Board Director</strong></td>
-                            <td>Jerrill Smith</td>
+                            <td><strong>Secretary</strong></td>
+                            <td>Karen Dearsaugh</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Board Directors</strong></td>
+                            <td>Jerril Smith and Connie Trent</td>
                         </tr>
                     </tbody>
                 </table>
