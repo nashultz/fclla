@@ -23,7 +23,7 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h3>2015-2016 Officers</h3>
+            <h3>2016-2017 Officers</h3>
             <div class="col-lg-8 col-lg-offset-2">
                 <table class="table table-responsive table-bordered table-striped">
                     <tbody>
