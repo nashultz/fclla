@@ -2,6 +2,7 @@
 
 use Carbon\Carbon;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\Schema;
 
 class PostsTableSeeder extends Seeder
 {
@@ -12,6 +13,7 @@ class PostsTableSeeder extends Seeder
      */
     public function run()
     {
+        Schema::dropIfExists('posts');
         DB::table('posts')->insert([
             'author_id' => 2,
             'title' => 'January 2016 FCLLA Meeting',
