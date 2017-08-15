@@ -41,7 +41,7 @@
                         </tr>
                         <tr>
                             <td><strong>Secretary</strong></td>
-                            <td>Karen Dearsaugh</td>
+                            <td>Belinda Boyd</td>
                         </tr>
                         <tr>
                             <td><strong>Board Directors</strong></td>
