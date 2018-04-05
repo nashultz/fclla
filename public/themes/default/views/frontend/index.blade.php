@@ -27,7 +27,11 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h3>2018 Convention</h3>
+                    <div>
+                        More information will be available soon!
+                    </div>
                 </div>
+                <div class="clearfix"><br /></div>
             </div>
         </div>
     </div>
