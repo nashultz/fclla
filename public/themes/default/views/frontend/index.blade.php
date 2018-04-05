@@ -104,7 +104,7 @@
                         * Wyndham Riverfront Hotel   #2 Riverfront Place, North Little Rock<br />
                         <br />
                         Lots of great items for auction & Vendors of landlord interest.<br />
-                        <small>Registration is Non refundable
+                        <small>Registration is Non refundable<br />
                         *Member in good standing with a local chapter of the Landlords Association of Arkansas
                             #arkansaslandlord</small>
                     </div>
