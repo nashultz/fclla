@@ -26,9 +26,87 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h3>2018 Convention</h3>
+                    <h3>2018 Annual Landlord Spring Convention & Trade Show</h3>
                     <div>
-                        More information will be available soon!
+                        <h4>Early registration ends
+                            April 5th, 2018</h4>
+                        $95.00-Members*<br />
+                        Non-members $125.00<br />
+                        <br />
+                        Late registration<br />
+                        $110.00-Members*<br />
+                        Non-Members $135.00<br />
+                        <br />
+                        Guest/extra Lunch only ticket $25.00,Extra Travelers game only packet $15.00<br />
+                        <br />
+                        ***Price per person includes Friday night, All day Saturday including lunch buffet, Mr Landlord & Travelers baseball packet with reserved seating & indoor food buffet.<br />
+                        <hr />
+                        <br />
+                        Friday night<br />
+                        April 20th, 2018 6:30 p.m.<br />
+                        <br />
+                        In the Wyndham Hospitality room,
+                        Mix and mingle with other landlords across the state.<br />
+                        Light refreshments will be served.<br />
+                        Brent Stevenson, legislative lobbyist,
+                        will be there for one on one discussion on landlord issues.<br />
+                        <br />
+                        Saturday April 21st, 2018 8:00-5:00 p.m.<br />
+                        <br />
+                        <h4>Featuring Keynote Speaker</h4>
+                        Jeffery Taylor,
+                        MR. LANDLORD <br />
+                        <hr /><br />
+                        Trade Show & Silent Auction all day Saturday!<br />
+                        <br />
+                        <h4>Tentative Agenda</h4>
+                        <br />
+                        Saturday Morning Session; 8:00-11:30<br /><br />
+                        Special speakers:<br />
+                        <br />
+                        Mary Nash, Nash Law Firm, Estate planning,
+                        LLC’s & Trust
+                        (back by popular demand)<br />
+                        <br />
+                        Rick Sellars, Lawyer
+                        Evictions across Arkansas<br />
+                        <br />
+                        John Thurston, Arkansas Land Commissioner.<br />
+                        <br />
+                        Professors Lynn Foster & Amy Pritchard
+                        from Bowen School of Law,
+                        on Arkansas landlord tenant law issues<br />
+                        <br />
+                        US Bank
+                        North Little Rock
+                        Joey Parker
+                        John Scuderi
+                        Collecting Your Rent<br />
+                        <br />
+                        <br />
+                        Buffet Lunch 11:30-1:00<br />
+                        <br />
+                        Saturday Afternoon Session 1:00-4:00<br />
+                        <br />
+                        Jeffery Taylor, Mr. Landlord
+                        Educational, entertaining, motivational speaker<br />
+                        <br />
+                        Saturday Night 6:00 pm<br />
+                        Arkansas Travelers Baseball Game<br />
+                        Dickey Stephens Ball Park<br />
+                        Reserved seating and indoor food buffet<br />
+                        <br />
+                        * Wyndham room reservation call
+                        1-866-657-4458
+                        for hotel discount price call by
+                        April 1st to reserve your room, mention Landlord Convention.<br />
+                        <br />
+                        * Wyndham Riverfront Hotel   #2 Riverfront Place, North Little Rock<br />
+                        <br />
+                        Lots of great items for auction & Vendors of landlord interest.<br />
+                        <small>Registration is Non refundable
+                        *Member in good standing with a local chapter of the Landlords Association of Arkansas
+                            #arkansaslandlord</small>
                     </div>
                 </div>
                 <div class="clearfix"></div>
