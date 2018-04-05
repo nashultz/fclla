@@ -25,15 +25,15 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h3 class="text-center">2017-2018 Officers</h3>
             <div class="col-lg-8 col-lg-offset-2 text-center">
-                <h5>President</h5>
+                <h4>President</h4>
                 <div>Mark Burrier</div>
-                <h5>Vice President</h5>
+                <h4>Vice President</h4>
                 <div>David DeRosa</div>
-                <h5>Treasurer</h5>
+                <h4>Treasurer</h4>
                 <div>Kris Gilden</div>
-                <h5>Secretary</h5>
+                <h4>Secretary</h4>
                 <div>Belinda Boyd</div>
-                <h5>Board Directors</h5>
+                <h4>Board Directors</h4>
                 <div>Jerril Smith</div>
                 <div>Connie Trent</div>
             </div><div class="clearfix"></div>
