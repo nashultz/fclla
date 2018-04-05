@@ -21,11 +21,13 @@
     </div>
 </div>
 </div>
-<div class="container convention">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-10">
-                <h3>2018 Convention</h3>
+<div class="convention">
+    <div class="container convention">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-10">
+                    <h3>2018 Convention</h3>
+                </div>
             </div>
         </div>
     </div>
