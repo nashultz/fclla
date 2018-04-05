@@ -31,7 +31,8 @@
                         More information will be available soon!
                     </div>
                 </div>
-                <div class="clearfix"><br /></div>
+                <div class="clearfix"></div>
+                <div>&nbsp;</div>
             </div>
         </div>
     </div>
