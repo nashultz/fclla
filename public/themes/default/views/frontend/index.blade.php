@@ -22,10 +22,10 @@
 </div>
 </div>
 <div class="convention">
-    <div class="container convention">
+    <div class="container">
         <div class="container">
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-10 col-lg-offset-1">
                     <h3>2018 Convention</h3>
                 </div>
             </div>
