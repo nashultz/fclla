@@ -23,32 +23,19 @@
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
-            <h3>2017-2018 Officers</h3>
-            <div class="col-lg-8 col-lg-offset-2">
-                <table class="table table-responsive table-bordered table-striped">
-                    <tbody>
-                        <tr>
-                            <td><strong>President</strong></td>
-                            <td>Mark Burrier</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Vice President</strong></td>
-                            <td>David DeRosa</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Treasurer</strong></td>
-                            <td>Kris Gilden</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Secretary</strong></td>
-                            <td>Belinda Boyd</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Board Directors</strong></td>
-                            <td>Jerril Smith and Connie Trent</td>
-                        </tr>
-                    </tbody>
-                </table>
+            <h3 class="text-center">2017-2018 Officers</h3>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <h5>President</h5>
+                <div>Mark Burrier</div>
+                <h5>Vice President</h5>
+                <div>David DeRosa</div>
+                <h5>Treasurer</h5>
+                <div>Kris Gilden</div>
+                <h5>Secretary</h5>
+                <div>Belinda Boyd</div>
+                <h5>Board Directors</h5>
+                <div>Jerril Smith</div>
+                <div>Connie Trent</div>
             </div><div class="clearfix"></div>
         </div>
     </div>

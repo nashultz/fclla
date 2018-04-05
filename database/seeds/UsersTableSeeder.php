@@ -32,11 +32,11 @@ class UsersTableSeeder extends Seeder
         //     'admin' => 1
         // ]);
 
-        DB::table('users')->insert([
-            'name' => 'Kristine Gilden',
-            'email' => 'kgilden@sbcglobal.net',
-            'password' => bcrypt('secret'),
-            'admin' => 1
-        ]);
+        // DB::table('users')->insert([
+        //     'name' => 'Kristine Gilden',
+        //     'email' => 'kgilden@sbcglobal.net',
+        //     'password' => bcrypt('secret'),
+        //     'admin' => 1
+        // ]);
     }
 }
