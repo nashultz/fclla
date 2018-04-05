@@ -37,6 +37,8 @@
                         $110.00-Members*<br />
                         Non-Members $135.00<br />
                         <br />
+                        <a href="https://irp-cdn.multiscreensite.com/laofa1mymobisite/files/uploaded/Registration%202018.pdf" target="_blank" class="btn btn-lg btn-danger">Register Now</a>
+                        <br />
                         Guest/extra Lunch only ticket $25.00,Extra Travelers game only packet $15.00<br />
                         <br />
                         ***Price per person includes Friday night, All day Saturday including lunch buffet, Mr Landlord & Travelers baseball packet with reserved seating & indoor food buffet.<br />
@@ -100,6 +102,8 @@
                         1-866-657-4458
                         for hotel discount price call by
                         April 1st to reserve your room, mention Landlord Convention.<br />
+                        <br />
+                        <a href="https://irp-cdn.multiscreensite.com/laofa1mymobisite/files/uploaded/Registration%202018.pdf" target="_blank" class="btn btn-lg btn-danger">Register Now</a>
                         <br />
                         * Wyndham Riverfront Hotel   #2 Riverfront Place, North Little Rock<br />
                         <br />
