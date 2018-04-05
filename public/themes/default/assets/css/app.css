@@ -8124,3 +8124,10 @@ footer a:hover {
   outline: 0; }
 
 /*# sourceMappingURL=app.css.map */
+
+
+.convention {
+  margin: 15px;
+  background: #007700;
+  color: #737373;
+}

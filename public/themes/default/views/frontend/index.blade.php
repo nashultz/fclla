@@ -20,6 +20,13 @@
         </div>
     </div>
 </div>
+<div class="container convention">
+    <div class="row">
+        <div class="col-lg-10">
+            <h3>2018 Convention</h3>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
