@@ -46,12 +46,30 @@
     <div class="row">
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Pay Dues</h2>
-            <div>Pay membership dues: $75 
-                <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
-                    <input type="hidden" name="cmd" value="_s-xclick">
-                    <input type="hidden" name="hosted_button_id" value="PGH78GLM92Z8U">
-                    <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-                    <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+            <div>Pay membership dues: $75
+                <form class="form-row" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                    <div class="col">
+                        <input type="hidden" name="cmd" value="_s-xclick">
+                    </div>
+                    <div class="col">
+                        <input type="hidden" name="hosted_button_id" value="PGH78GLM92Z8U">
+                    </div>
+                    <div class="col">
+                        <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif" border="0" name="submit" alt="Pay dues via PayPal!">
+                    </div>
+                    <div clas="col">
+                        <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                    </div>
+                </form>
+                <form>
+                    <div class="form-row">
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="First name">
+                        </div>
+                        <div class="col">
+                            <input type="text" class="form-control" placeholder="Last name">
+                        </div>
+                    </div>
                 </form>
             </div>
         </div>
