@@ -47,7 +47,7 @@
         <div class="col-lg-8 col-lg-offset-2">
             <h2>Pay Dues</h2>
             <div>Pay membership dues: $75
-                <form class="form-row" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+                <form class="form-inline" target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
                     <div class="col">
                         <input type="hidden" name="cmd" value="_s-xclick">
                     </div>
