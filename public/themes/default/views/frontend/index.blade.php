@@ -26,7 +26,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h3>2018 Annual Landlord Spring Convention & Trade Show</h3>
+                    <!--<h3>2018 Annual Landlord Spring Convention & Trade Show</h3>
                     <div>
                         <h4>Early registration ends
                             April 5th, 2018</h4>
@@ -111,7 +111,7 @@
                         <small>Registration is Non refundable<br />
                         *Member in good standing with a local chapter of the Landlords Association of Arkansas
                             #arkansaslandlord</small>
-                    </div>
+                    </div>-->
                 </div>
                 <div class="clearfix"></div>
                 <div>&nbsp;</div>
